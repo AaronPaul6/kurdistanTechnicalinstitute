@@ -60,25 +60,6 @@ class HomeScreen extends StatelessWidget {
                 physics: BouncingScrollPhysics(),
                 child: Column(
                   children: [
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    //   children: [
-                    //     HomeCard(
-                    //       onPress: () {},
-                    //       icon: 'assets/icons/quiz.svg',
-                    //       title: 'Take Quiz',
-                    //     ),
-                    //     HomeCard(
-                    //       onPress: () {
-                    //         //go to assignment screen here
-                    //         Navigator.pushNamed(
-                    //             context, AssignmentScreen.routeName);
-                    //       },
-                    //       icon: 'assets/icons/assignment.svg',
-                    //       title: 'Assignments',
-                    //     ),
-                    //   ],
-                    // ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -94,24 +75,6 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    //   children: [
-                    //     // HomeCard(
-                    //     //   onPress: () {},
-                    //     //   icon: 'assets/icons/result.svg',
-                    //     //   title: 'Result',
-                    //     // ),
-                    //     HomeCard(
-                    //       onPress: () {
-                    //         Navigator.pushNamed(
-                    //             context, DateSheetScreen.routeName);
-                    //       },
-                    //       icon: 'assets/icons/datesheet.svg',
-                    //       title: 'DateSheet',
-                    //     ),
-                    //   ],
-                    // ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -150,6 +113,11 @@ class HomeScreen extends StatelessWidget {
                           onPress: () {},
                           icon: 'assets/icons/logout.svg',
                           title: 'Logout',
+                        ),
+                        HomeCard(
+                          onPress: () {},
+                          icon: 'assets/icons/logout.svg',
+                          title: 'Profile',
                         ),
                       ],
                     ),

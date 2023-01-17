@@ -34,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
         body: Column(
           children: [
             Container(
-              color: Colors.blueGrey,
+              color: Colors.indigo,
               width: 100.w,
               height: 35.h,
               child: Row(
@@ -46,15 +46,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       Text('WELCOME TO',
                           style: Theme.of(context).textTheme.subtitle1),
-                      Text('Kurdsitan Technical Institute',
+                      Text('Kurdistan Technical Institute',
                           style: Theme.of(context).textTheme.subtitle2),
                       sizedBox,
                     ],
                   ),
                   Image.asset(
                     'assets/images/logo.png',
-                    height: 30.h,
-                    width: 30.w,
+                    height: 40.h,
+                    width: 40.w,
                   ),
                   SizedBox(
                     height: kDefaultPadding / 2,
