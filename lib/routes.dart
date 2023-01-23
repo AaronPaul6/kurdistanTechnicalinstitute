@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:brain_school/screens/login_screen/login_screen.dart';
 import 'package:brain_school/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/cupertino.dart';
