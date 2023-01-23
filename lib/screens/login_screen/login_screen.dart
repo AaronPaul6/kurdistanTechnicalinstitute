@@ -34,15 +34,14 @@ class _LoginScreenState extends State<LoginScreen> {
         body: Column(
           children: [
             Container(
-              color: Colors.blueAccent,
               width: 100.w,
               height: 35.h,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text('WELCOME TO',
                           style: Theme.of(context).textTheme.subtitle1),
