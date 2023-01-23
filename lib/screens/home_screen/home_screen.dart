@@ -16,8 +16,7 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            width: 100.w,
-            height: 25.h,
+            width: double.infinity,
             padding: EdgeInsets.all(kDefaultPadding),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -31,17 +30,19 @@ class HomeScreen extends StatelessWidget {
                         StudentName(
                           studentName: 'WELCOME, ARYA',
                         ),
-
                       ],
                     ),
                     kHalfSizedBox,
-                    StudentPicture(
-                        picAddress: 'assets/images/logo.jpg',
-                        onPress: () {
-                          // go to profile detail screen here
-                          Navigator.pushNamed(
-                              context, MyProfileScreen.routeName);
-                        }),
+                    StoryEffect(
+                      colors: [Colors.purple,Colors.white],
+                      child: StudentPicture(
+                          picAddress: 'assets/images/logo.jpg',
+                          onPress: () {
+                            // go to profile detail screen here
+                            Navigator.pushNamed(
+                                context, MyProfileScreen.routeName);
+                          }),
+                    ),
                   ],
                 ),
               ],
@@ -109,7 +110,6 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-
                         HomeCard(
                           onPress: () {},
                           icon: 'assets/icons/logout.svg',
@@ -143,6 +143,7 @@ class HomeCard extends StatelessWidget {
   final VoidCallback onPress;
   final String icon;
   final String title;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
