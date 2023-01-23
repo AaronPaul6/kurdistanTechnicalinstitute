@@ -28,13 +28,13 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         StudentName(
-                          studentName: 'WELCOME, ARYA',
+                          studentName: 'WELCOME, TO KTI',
                         ),
                       ],
                     ),
                     kHalfSizedBox,
                     StoryEffect(
-                      colors: [Colors.purple,Colors.white],
+                      colors: [Colors.purple, Colors.white],
                       child: StudentPicture(
                           picAddress: 'assets/images/logo.jpg',
                           onPress: () {
