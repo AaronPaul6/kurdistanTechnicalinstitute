@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 5), (){
+    Future.delayed(Duration(seconds: 1), (){
       //no return when user is on login screen and press back, it will not return the
       //user to the splash screen
       Navigator.pushNamedAndRemoveUntil(context, LoginScreen.routeName, (route) => false);
