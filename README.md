@@ -1,1 +1,1 @@
-# Kurdistan Tehcnical Institute
+# Kurdistan Technical Institute
