@@ -34,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
         body: Column(
           children: [
             Container(
-              color: Colors.pink,
+              color: Colors.blueAccent,
               width: 100.w,
               height: 35.h,
               child: Row(

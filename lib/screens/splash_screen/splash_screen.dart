@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
               'assets/images/logo.png',
               //25% of height & 50% of width
               height: 25.h,
-              width: 50.w,
+              width: 44.w,
             ),
           ],
         ),
