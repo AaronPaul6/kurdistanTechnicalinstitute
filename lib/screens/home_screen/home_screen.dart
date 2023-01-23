@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 import 'widgets/student_data.dart';
-// import 'screens/about_us/about_us.dart';
+import 'package:brain_school/screens/about_us/about_us.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -83,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                         HomeCard(
                           onPress: () {},
                           icon: 'assets/icons/ask.svg',
-                          title: 'Ask Us',
+                          title: 'Ask',
                         ),
                         HomeCard(
                           onPress: () {},
