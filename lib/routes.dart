@@ -8,10 +8,9 @@ import 'screens/my_profile/my_profile.dart';
 
 //test hello hello ?
 Map<String, WidgetBuilder> routes = {
-  //all screens will be registered here like manifest in android
   SplashScreen.routeName: (context) => SplashScreen(),
   LoginScreen.routeName: (context) => LoginScreen(),
   HomeScreen.routeName: (context) => HomeScreen(),
   MyProfileScreen.routeName: (context) => MyProfileScreen(),
-  AboutUs.routeName: (context) => AboutUs(),
+  // AboutUs.routeName: (context) => AboutUs(),
 };

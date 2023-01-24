@@ -15,7 +15,6 @@ class MyProfileScreen extends StatelessWidget {
         actions: [
           InkWell(
             onTap: () {
-              //send report to school management, in case if you want some changes to your profile
             },
             child: Container(
               padding: EdgeInsets.only(right: kDefaultPadding / 2),

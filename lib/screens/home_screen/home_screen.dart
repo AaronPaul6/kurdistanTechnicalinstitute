@@ -66,12 +66,18 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            // Navigator.pushNamed(
+                            //     context, MyProfileScreen.routeName);
+                          },
                           icon: 'assets/icons/event.svg',
                           title: 'News',
                         ),
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            // Navigator.pushNamed(
+                            //     context, MyProfileScreen.routeName);
+                          },
                           icon: 'assets/icons/timetable.svg',
                           title: 'Time Table',
                         ),
@@ -81,12 +87,18 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            // Navigator.pushNamed(
+                                // context, MyProfileScreen.routeName);
+                          },
                           icon: 'assets/icons/ask.svg',
                           title: 'Ask',
                         ),
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            // Navigator.pushNamed(
+                                // context, MyProfileScreen.routeName);
+                          },
                           icon: 'assets/icons/gallery.svg',
                           title: 'Photo Gallery',
                         ),
@@ -96,12 +108,18 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            // Navigator.pushNamed(
+                                // context, MyProfileScreen.routeName);
+                          },
                           icon: 'assets/icons/resume.svg',
                           title: 'About Us',
                         ),
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            // Navigator.pushNamed(
+                                // context, MyProfileScreen.routeName);
+                          },
                           icon: 'assets/icons/gallery.svg',
                           title: 'Video Gallery',
                         ),
@@ -111,13 +129,19 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            // Navigator.pushNamed(
+                            //     context, MyProfileScreen.routeName);
+                          },
                           icon: 'assets/icons/logout.svg',
                           title: 'Logout',
                         ),
                         HomeCard(
-                          onPress: () {},
-                          icon: 'assets/icons/profile.svg',
+                          onPress: () {
+                            Navigator.pushNamed(
+                                context, MyProfileScreen.routeName);
+                          },
+                          icon: 'assets/icons/p.svg',
                           title: 'Profile',
                         ),
                       ],
