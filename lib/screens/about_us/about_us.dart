@@ -33,92 +33,103 @@ class _AboutUs extends State<AboutUs> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return Scaffold(
       //when user taps anywhere on the screen, keyboard hides
-      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
-      child: Scaffold(
-        body: Column(
-          children: [
-            Container(
-              width: 100.w,
-              height: 20.h,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text('ABOUT US',
-                          style: Theme.of(context).textTheme.subtitle1),
-                      Text('Kurdistan Technical Institute',
-                          style: Theme.of(context).textTheme.subtitle2),
-                      sizedBox,
-                    ],
-                  ),
-                  Image.asset(
-                    'assets/images/logo.png',
-                    height: 20.h,
-                    width: 20.w,
-                  ),
-                  SizedBox(
-                    height: kDefaultPadding / 2,
-                  ),
-                ],
-              ),
-            ),
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.only(left: 6.w, right: 6.w),
-                decoration: BoxDecoration(
-                  color: kOtherColor,
-                  // borderRadius: kTopBorderRadius,
-                ),
-                child: Form(
-                  key: _formKey,
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        // color: kOtherColor,
-                        sizedBox,
-                        buildEmailField(),
-                        sizedBox,
-                        // buildPasswordField(),
-                        sizedBox,
-                        DefaultButton(
-                          onPress: () {
-                            if (_formKey.currentState!.validate()) {
-                              Navigator.pushNamedAndRemoveUntil(context,
-                                  HomeScreen.routeName, (route) => false);
-                            }
-                          },
-                          title: 'LOGIN',
-                          iconData: Icons.arrow_forward_outlined,
-                        ),
-                        sizedBox,
-                        Align(
-                          alignment: Alignment.bottomRight,
-                          child: Text(
-                            'Forgot Password',
-                            textAlign: TextAlign.end,
-                            style: Theme.of(context)
-                                .textTheme
-                                .subtitle2!
-                                .copyWith(
-                                color: Colors.blueGrey,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ],
+      appBar: AppBar(
+        // Overide the default Back button
+        automaticallyImplyLeading: false,
+        leadingWidth: 100,
+        leading: ElevatedButton.icon(
+          onPressed: () => Navigator.of(context).pop(),
+          icon: const Icon(Icons.arrow_left_sharp),
+          label: const Text('Back'),
+          style: ElevatedButton.styleFrom(
+            elevation: 0,
+            backgroundColor: Colors.transparent,
+          ),
         ),
-      ),
 
+        // body: Column(
+        //   children: [
+        //     Container(
+        //       width: 100.w,
+        //       height: 20.h,
+        //       child: Row(
+        //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+        //         children: [
+        //           Column(
+        //             mainAxisAlignment: MainAxisAlignment.center,
+        //             crossAxisAlignment: CrossAxisAlignment.center,
+        //             children: [
+        //               Text('ABOUT US',
+        //                   style: Theme.of(context).textTheme.subtitle1),
+        //               Text('Kurdistan Technical Institute',
+        //                   style: Theme.of(context).textTheme.subtitle2),
+        //               sizedBox,
+        //             ],
+        //           ),
+        //           Image.asset(
+        //             'assets/images/logo.png',
+        //             height: 20.h,
+        //             width: 20.w,
+        //           ),
+        //           SizedBox(
+        //             height: kDefaultPadding / 2,
+        //           ),
+        //         ],
+        //       ),
+        //     ),
+        //     Expanded(
+        //       child: Container(
+        //         padding: EdgeInsets.only(left: 6.w, right: 6.w),
+        //         decoration: BoxDecoration(
+        //           color: kOtherColor,
+        //           // borderRadius: kTopBorderRadius,
+        //         ),
+        //         child: Form(
+        //           key: _formKey,
+        //           child: SingleChildScrollView(
+        //             child: Column(
+        //               children: [
+        //                 // color: kOtherColor,
+        //                 sizedBox,
+        //                 buildEmailField(),
+        //                 sizedBox,
+        //                 // buildPasswordField(),
+        //                 sizedBox,
+        //                 DefaultButton(
+        //                   onPress: () {
+        //                     if (_formKey.currentState!.validate()) {
+        //                       Navigator.pushNamedAndRemoveUntil(context,
+        //                           HomeScreen.routeName, (route) => false);
+        //                     }
+        //                   },
+        //                   title: 'LOGIN',
+        //                   iconData: Icons.arrow_forward_outlined,
+        //                 ),
+        //                 sizedBox,
+        //                 Align(
+        //                   alignment: Alignment.bottomRight,
+        //                   child: Text(
+        //                     'Forgot Password',
+        //                     textAlign: TextAlign.end,
+        //                     style: Theme.of(context)
+        //                         .textTheme
+        //                         .subtitle2!
+        //                         .copyWith(
+        //                         color: Colors.blueGrey,
+        //                         fontWeight: FontWeight.w500),
+        //                   ),
+        //                 ),
+        //               ],
+        //             ),
+        //           ),
+        //         ),
+        //       ),
+        //     ),
+        //   ],
+        // ),
+      ),
     );
   }
 
