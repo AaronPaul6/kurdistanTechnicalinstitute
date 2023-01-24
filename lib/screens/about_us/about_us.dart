@@ -51,7 +51,7 @@ class _AboutUs extends State<AboutUs> {
                     children: [
                       Text('ABOUT US',
                           style: Theme.of(context).textTheme.subtitle1),
-                      Text('Kurdistan Technical Institute OF SELMANI',
+                      Text('Kurdistan Technical Institute',
                           style: Theme.of(context).textTheme.subtitle2),
                       sizedBox,
                     ],
@@ -118,6 +118,7 @@ class _AboutUs extends State<AboutUs> {
           ],
         ),
       ),
+
     );
   }
 
