@@ -53,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Image.asset(
                     'assets/images/logo.png',
                     height: 40.h,
-                    width: 40.w,
+                    width: 30.w,
                   ),
                   SizedBox(
                     height: kDefaultPadding / 2,
@@ -91,10 +91,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         sizedBox,
                         Align(
-                          alignment: Alignment.bottomRight,
+                          alignment: Alignment.bottomCenter,
                           child: Text(
                             'Forgot Password',
-                            textAlign: TextAlign.end,
+                            textAlign: TextAlign.center,
                             style: Theme.of(context)
                                 .textTheme
                                 .subtitle2!

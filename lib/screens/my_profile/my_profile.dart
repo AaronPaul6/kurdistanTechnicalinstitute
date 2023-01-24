@@ -20,11 +20,10 @@ class MyProfileScreen extends StatelessWidget {
               padding: EdgeInsets.only(right: kDefaultPadding / 2),
               child: Row(
                 children: [
-                  Icon(Icons.report_gmailerrorred_outlined),
-                  kHalfWidthSizedBox,
+
                   Text(
-                    'Report',
-                    style: Theme.of(context).textTheme.subtitle2,
+                    'Edit Profile',
+                    style: Theme.of(context).textTheme.labelLarge,
                   ),
                 ],
               ),
