@@ -117,7 +117,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         HomeCard(
                           onPress: () {},
-                          icon: 'assets/icons/logout.svg',
+                          icon: 'assets/icons/profile.svg',
                           title: 'Profile',
                         ),
                       ],
