@@ -6,48 +6,175 @@ import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
+import 'package:brain_school/components/custom_buttons.dart';
+import 'package:brain_school/constants.dart';
+import 'package:brain_school/screens/home_screen/home_screen.dart';
 
+import 'package:sizer/sizer.dart';
 
+class AboutUs extends StatefulWidget {
+  static String routeName = 'About_Us';
 
-// class AboutUs extends StatelessWidget {
-//   const AboutUs({Key? key}) : super(key: key);
-//   static String routeName = 'ABoutUs';
-//
-//   @override
-//   _AboutUs createState() => _AboutUs();
-//   }
-//
-//   class _AboutUs extends State<AboutUs> {
-//     final _unfocusNode = FocusNode();
-//     final scaffoldKey = GlobalKey<ScaffoldState>();
-//
-//     @override
-//     void dispose() {
-//       _unfocusNode.dispose();
-//       super.dispose();
-//     }
-//   @override
-//   Widget build(BuildContext context) {
-//     // TODO: implement build
-//     return Scaffold(
-//       key: scaffoldKey,
-//       backgroundColor: Colors.lightBlue,
-//       appBar: AppBar(
-//         backgroundColor: Colors.blueGrey,
-//         automaticallyImplyLeading: false,
-//         title: Text(
-//           'About Us',
-//             style: FlutterFlowTheme.of(context).title2.override(
-//               fontFamily: 'Poppins',
-//               color: Colors.white,
-//               fontSize: 22,
-//             ),
-//         ),
-//       ),
-//       ),
-//
-//     throw UnimplementedError();
-//   }
+  @override
+  _AboutUs createState() => _AboutUs();
+}
+
+class _AboutUs extends State<AboutUs> {
+  //validate our form now
+  final _formKey = GlobalKey<FormState>();
+
+  //changes current state
+  @override
+  void initState() {
+
+    // super.initState();
+ //   _ = true;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      //when user taps anywhere on the screen, keyboard hides
+      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+      child: Scaffold(
+        body: Column(
+          children: [
+            Container(
+              width: 100.w,
+              height: 20.h,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text('ABOUT US',
+                          style: Theme.of(context).textTheme.subtitle1),
+                      Text('Kurdistan Technical Institute',
+                          style: Theme.of(context).textTheme.subtitle2),
+                      sizedBox,
+                    ],
+                  ),
+                  Image.asset(
+                    'assets/images/logo.png',
+                    height: 20.h,
+                    width: 20.w,
+                  ),
+                  SizedBox(
+                    height: kDefaultPadding / 2,
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.only(left: 6.w, right: 6.w),
+                decoration: BoxDecoration(
+                  color: kOtherColor,
+                  // borderRadius: kTopBorderRadius,
+                ),
+                child: Form(
+                  key: _formKey,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        // color: kOtherColor,
+                        sizedBox,
+                        buildEmailField(),
+                        sizedBox,
+                        // buildPasswordField(),
+                        sizedBox,
+                        DefaultButton(
+                          onPress: () {
+                            if (_formKey.currentState!.validate()) {
+                              Navigator.pushNamedAndRemoveUntil(context,
+                                  HomeScreen.routeName, (route) => false);
+                            }
+                          },
+                          title: 'LOGIN',
+                          iconData: Icons.arrow_forward_outlined,
+                        ),
+                        sizedBox,
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Text(
+                            'Forgot Password',
+                            textAlign: TextAlign.end,
+                            style: Theme.of(context)
+                                .textTheme
+                                .subtitle2!
+                                .copyWith(
+                                color: Colors.blueGrey,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  TextFormField buildEmailField() {
+    return TextFormField(
+      textAlign: TextAlign.start,
+      keyboardType: TextInputType.emailAddress,
+      style: kInputTextStyle,
+      decoration: InputDecoration(
+        labelText: 'Mobile Number/Email',
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+      ),
+      validator: (value) {
+        //for validation
+        RegExp regExp = new RegExp(emailPattern);
+        if (value == null || value.isEmpty) {
+          return 'Please enter some text';
+          //if it does not matches the pattern, like
+          //it not contains @
+        } else if (!regExp.hasMatch(value)) {
+          return 'Please enter a valid email address';
+        }
+      },
+    );
+  }
+
+  // TextFormField buildPasswordField() {
+  //   return TextFormField(
+  //     // obscureText: _passwordVisible,
+  //     textAlign: TextAlign.start,
+  //     keyboardType: TextInputType.visiblePassword,
+  //     style: kInputTextStyle,
+  //     decoration: InputDecoration(
+  //       labelText: 'Password',
+  //       floatingLabelBehavior: FloatingLabelBehavior.always,
+  //       suffixIcon: IconButton(
+  //         onPressed: () {
+  //           setState(() {
+  //             // _passwordVisible = !_passwordVisible;
+  //           });
+  //         },
+  //         // icon: Icon(
+  //           // _passwordVisible
+  //           //     ? Icons.visibility_off_outlined
+  //               : Icons.visibility_off_outlined,
+  //         // ),
+  //         iconSize: kDefaultPadding,
+  //       ),
+  //     ),
+  //     validator: (value) {
+  //       if (value!.length < 5) {
+  //         return 'Must be more than 5 characters';
+  //       }
+  //     },
+  //   );
+  // }
+}
+
+  // }
 

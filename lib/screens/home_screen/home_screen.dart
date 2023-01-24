@@ -109,8 +109,8 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         HomeCard(
                           onPress: () {
-                            // Navigator.pushNamed(
-                                // context, MyProfileScreen.routeName);
+                            Navigator.pushNamed(
+                                 context, AboutUs.routeName);
                           },
                           icon: 'assets/icons/resume.svg',
                           title: 'About Us',
