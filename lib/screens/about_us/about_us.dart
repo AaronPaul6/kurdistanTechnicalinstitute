@@ -50,9 +50,10 @@ class _AboutUs extends State<AboutUs> {
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
             elevation: 0,
-            backgroundColor: Color(0xFF0D47A1),
+            backgroundColor: Colors.blue.shade800,
           ),
         ),
+
 
         // body: Column(
         //   children: [
@@ -138,28 +139,28 @@ class _AboutUs extends State<AboutUs> {
     );
   }
 
-  TextFormField buildEmailField() {
-    return TextFormField(
-      textAlign: TextAlign.start,
-      keyboardType: TextInputType.emailAddress,
-      style: kInputTextStyle,
-      decoration: InputDecoration(
-        labelText: 'Mobile Number/Email',
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-      ),
-      validator: (value) {
-        //for validation
-        RegExp regExp = new RegExp(emailPattern);
-        if (value == null || value.isEmpty) {
-          return 'Please enter some text';
-          //if it does not matches the pattern, like
-          //it not contains @
-        } else if (!regExp.hasMatch(value)) {
-          return 'Please enter a valid email address';
-        }
-      },
-    );
-  }
+  // TextFormField buildEmailField() {
+  //   return TextFormField(
+  //     textAlign: TextAlign.start,
+  //     keyboardType: TextInputType.emailAddress,
+  //     style: kInputTextStyle,
+  //     decoration: InputDecoration(
+  //       labelText: 'Mobile Number/Email',
+  //       floatingLabelBehavior: FloatingLabelBehavior.always,
+  //     ),
+  //     validator: (value) {
+  //       for validation
+        // RegExp regExp = new RegExp(emailPattern);
+        // if (value == null || value.isEmpty) {
+        //   return 'Please enter some text';
+        //   if it does not matches the pattern, like
+          // it not contains @
+        // } else if (!regExp.hasMatch(value)) {
+        //   return 'Please enter a valid email address';
+        // }
+      // },
+    // );
+  // }
 
   // TextFormField buildPasswordField() {
   //   return TextFormField(
