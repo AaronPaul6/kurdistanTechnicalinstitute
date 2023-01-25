@@ -6,9 +6,6 @@ import 'screens/about_us/about_us.dart';
 import 'screens/home_screen/home_screen.dart';
 import 'screens/my_profile/my_profile.dart';
 
-
-
-//test hello hello ?
 Map<String, WidgetBuilder> routes = {
   SplashScreen.routeName: (context) => SplashScreen(),
   LoginScreen.routeName: (context) => LoginScreen(),

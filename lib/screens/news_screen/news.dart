@@ -44,6 +44,7 @@ class _News extends State<News> {
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
             elevation: 0,
+            // backgroundColor: Colors.blue,
           ),
         ),
 
@@ -51,24 +52,24 @@ class _News extends State<News> {
     );
   }
 
-  TextFormField buildEmailField() {
-    return TextFormField(
-      textAlign: TextAlign.start,
-      keyboardType: TextInputType.emailAddress,
-      style: kInputTextStyle,
-      decoration: InputDecoration(
-        labelText: 'Mobile Number/Email',
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-      ),
-      validator: (value) {
-        //for validation
-        RegExp regExp = new RegExp(emailPattern);
-        if (value == null || value.isEmpty) {
-          return 'Please enter some text';
-        } else if (!regExp.hasMatch(value)) {
-          return 'Please enter a valid email address';
-        }
-      },
-    );
-  }
+  // TextFormField buildEmailField() {
+  //   return TextFormField(
+  //     textAlign: TextAlign.start,
+  //     keyboardType: TextInputType.emailAddress,
+  //     style: kInputTextStyle,
+  //     decoration: InputDecoration(
+  //       labelText: 'Mobile Number/Email',
+  //       floatingLabelBehavior: FloatingLabelBehavior.always,
+  //     ),
+  //     validator: (value) {
+  //       //for validation
+  //       RegExp regExp = new RegExp(emailPattern);
+  //       if (value == null || value.isEmpty) {
+  //         return 'Please enter some text';
+  //       } else if (!regExp.hasMatch(value)) {
+  //         return 'Please enter a valid email address';
+  //       }
+  //     },
+  //   );
+  // }
 }
