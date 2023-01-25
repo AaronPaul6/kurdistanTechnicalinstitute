@@ -59,7 +59,7 @@ class _AboutUs extends State<AboutUs> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Image.asset('assets/images/kti_image.jpg',width: 416.6,height: 239.9,fit: BoxFit.cover,)
+              Image.asset('assets/images/kti_image.jpg',width: 416.5,height: 239.9,fit: BoxFit.cover,)
             ],
           )
 
