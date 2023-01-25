@@ -12,7 +12,7 @@ import 'package:sizer/sizer.dart';
 
 class Ask extends StatefulWidget {
   static String routeName = 'Ask';
-
+String content = "";
   @override
   _Ask createState() => _Ask();
 }
