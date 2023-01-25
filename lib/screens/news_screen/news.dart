@@ -44,7 +44,7 @@ class _News extends State<News> {
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
             elevation: 0,
-            // backgroundColor: Colors.blue,
+            // backgroundColor: HexColor("#f2f2f2"),
           ),
         ),
 

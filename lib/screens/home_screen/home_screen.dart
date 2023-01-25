@@ -1,5 +1,6 @@
 import 'package:brain_school/constants.dart';
 import 'package:brain_school/screens/Timetable/Timetable.dart';
+import 'package:brain_school/screens/login_screen/login_screen.dart';
 import 'package:brain_school/screens/my_profile/my_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -132,8 +133,8 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         HomeCard(
                           onPress: () {
-                            // Navigator.pushNamed(
-                            //     context, MyProfileScreen.routeName);
+                            Navigator.pushNamed(
+                                context, LoginScreen.routeName);
                           },
                           icon: 'assets/icons/logout.svg',
                           title: 'Logout',
