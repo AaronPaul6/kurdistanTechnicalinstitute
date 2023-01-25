@@ -62,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                 borderRadius: kTopBorderRadius,
               ),
               child: SingleChildScrollView(
-                //for padding
+
                 physics: BouncingScrollPhysics(),
                 child: Column(
                   children: [

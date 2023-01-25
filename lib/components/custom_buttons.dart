@@ -25,6 +25,7 @@ class DefaultButton extends StatelessWidget {
             gradient: LinearGradient(
               colors: [kSecondaryColor, kPrimaryColor],
               begin: const FractionalOffset(0.0, 0.0),
+
               end: const FractionalOffset(0.5, 0.0),
               stops: [0.0, 1.0],
               tileMode: TileMode.clamp,

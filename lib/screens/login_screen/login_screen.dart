@@ -1,6 +1,7 @@
 import 'package:brain_school/components/custom_buttons.dart';
 import 'package:brain_school/constants.dart';
 import 'package:brain_school/screens/home_screen/home_screen.dart';
+import 'package:brain_school/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -20,7 +21,6 @@ class _LoginScreenState extends State<LoginScreen> {
   //changes current state
   @override
   void initState() {
-
     super.initState();
     _passwordVisible = true;
   }
@@ -66,7 +66,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding: EdgeInsets.only(left: 6.w, right: 6.w),
                 decoration: BoxDecoration(
                   color: kOtherColor,
-                  // borderRadius: kTopBorderRadius,
                 ),
                 child: Form(
                   key: _formKey,
@@ -78,17 +77,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         buildEmailField(),
                         sizedBox,
                         buildPasswordField(),
-                        sizedBox,
-                        DefaultButton(
-                          onPress: () {
-                            if (_formKey.currentState!.validate()) {
-                              Navigator.pushNamedAndRemoveUntil(context,
-                                  HomeScreen.routeName, (route) => false);
-                            }
-                          },
-                          title: 'LOGIN',
-                          iconData: Icons.arrow_forward_outlined,
-                        ),
                         sizedBox,
                         Align(
                           alignment: Alignment.bottomCenter,
@@ -103,6 +91,28 @@ class _LoginScreenState extends State<LoginScreen> {
                                     fontWeight: FontWeight.w500),
                           ),
                         ),
+                        DefaultButton(
+                          //login
+                          onPress: () {
+                            if (_formKey.currentState!.validate()) {
+                              Navigator.pushNamedAndRemoveUntil(context,
+                                  HomeScreen.routeName, (route) => false);
+                            }
+                          },
+                          title: 'LOGIN',
+                          iconData: Icons.arrow_forward_outlined,
+                        ),
+                        DefaultButton(
+                          //signup
+                          onPress: () {
+                            Navigator.pushNamedAndRemoveUntil(context,
+                                signup.routeName, (route) => false);
+                          },
+                          title: 'Signup',
+
+                          iconData: Icons.person_add,
+                        ),
+                        sizedBox,
                       ],
                     ),
                   ),

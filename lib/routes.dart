@@ -6,10 +6,9 @@ import 'package:flutter/cupertino.dart';
 import 'screens/about_us/about_us.dart';
 import 'screens/home_screen/home_screen.dart';
 import 'screens/my_profile/my_profile.dart';
-import 'screens/Ask/Ask.dart';
+import 'package:brain_school/screens/Ask/Ask.dart';
+import 'package:brain_school/screens/signup/signup.dart';
 
-
-//test hello hello ?
 Map<String, WidgetBuilder> routes = {
   SplashScreen.routeName: (context) => SplashScreen(),
   LoginScreen.routeName: (context) => LoginScreen(),
@@ -19,4 +18,5 @@ Map<String, WidgetBuilder> routes = {
   News.routeName: (context) => News(),
   timetable.routeName: (context) => timetable(),
   Ask.routeName: (context) => Ask(),
+  signup.routeName: (context) => signup(),
 };

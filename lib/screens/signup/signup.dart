@@ -11,14 +11,14 @@ import 'package:brain_school/screens/home_screen/home_screen.dart';
 
 import 'package:sizer/sizer.dart';
 
-class News extends StatefulWidget {
-  static String routeName = 'News_page';
+class signup extends StatefulWidget {
+  static String routeName = 'signup';
 
   @override
-  _News createState() => _News();
+  _signup createState() => _signup();
 }
 
-class _News extends State<News> {
+class _signup extends State<signup> {
   final _formKey = GlobalKey<FormState>();
 
   @override
