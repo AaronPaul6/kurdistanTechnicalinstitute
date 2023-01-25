@@ -12,7 +12,7 @@ import 'package:sizer/sizer.dart';
 
 class Ask extends StatefulWidget {
   static String routeName = 'Ask';
-String content = "";
+//String content = "";
   @override
   _Ask createState() => _Ask();
 }
@@ -27,14 +27,18 @@ class _Ask extends State<Ask> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+
       backgroundColor: Colors.white,
       //when user taps anywhere on the screen, keyboard hides
       appBar: AppBar(
-        centerTitle: true,
+        ,centerTitle: true,
         title: Text(
           'Ask',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        ),
+      ),
+
+
         automaticallyImplyLeading: false,
         leadingWidth: 100,
         leading: ElevatedButton.icon(
@@ -46,7 +50,16 @@ class _Ask extends State<Ask> {
           ),
         ),
 
-      ),
+
+    ),
+
+    body: ListView(
+    children :[
+      InkWell()
+      Container(color: Colors.orange.shade100),
+      Container(color: Colors.orange.shade100),
+    ],
+    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount:  2)),
     );
   }
 
