@@ -33,9 +33,15 @@ class _AboutUs extends State<AboutUs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       //when user taps anywhere on the screen, keyboard hides
       appBar: AppBar(
         // Overide the default Back button
+        centerTitle: true,
+        title: Text(
+          'ABOUT US',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
         automaticallyImplyLeading: false,
         leadingWidth: 100,
         leading: ElevatedButton.icon(
@@ -44,7 +50,7 @@ class _AboutUs extends State<AboutUs> {
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
             elevation: 0,
-            backgroundColor: Colors.transparent,
+            backgroundColor: Colors.blue,
           ),
         ),
 
