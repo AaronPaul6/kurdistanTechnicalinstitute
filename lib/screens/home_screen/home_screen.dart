@@ -1,6 +1,6 @@
 import 'package:brain_school/constants.dart';
+import 'package:brain_school/screens/Timetable/Timetable.dart';
 import 'package:brain_school/screens/my_profile/my_profile.dart';
-import 'package:brain_school/screens/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         StudentName(
-                          studentName: 'KTI',
+                          studentName: 'WELCOME TO KTI',
                         ),
                       ],
                     ),
@@ -77,8 +77,8 @@ class HomeScreen extends StatelessWidget {
                         ),
                         HomeCard(
                           onPress: () {
-                            // Navigator.pushNamed(
-                            //     context, MyProfileScreen.routeName);
+                             Navigator.pushNamed(
+                               context, timetable.routeName);
                           },
                           icon: 'assets/icons/timetable.svg',
                           title: 'Time Table',
@@ -132,8 +132,8 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         HomeCard(
                           onPress: () {
-                            Navigator.pushNamed(
-                                context, LoginScreen.routeName);
+                            // Navigator.pushNamed(
+                            //     context, MyProfileScreen.routeName);
                           },
                           icon: 'assets/icons/logout.svg',
                           title: 'Logout',
