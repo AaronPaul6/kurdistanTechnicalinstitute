@@ -1,4 +1,5 @@
 import 'package:brain_school/screens/login_screen/login_screen.dart';
+import 'package:brain_school/screens/news_screen/news.dart';
 import 'package:brain_school/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'screens/about_us/about_us.dart';
@@ -14,4 +15,5 @@ Map<String, WidgetBuilder> routes = {
   HomeScreen.routeName: (context) => HomeScreen(),
   MyProfileScreen.routeName: (context) => MyProfileScreen(),
   AboutUs.routeName: (context) => AboutUs(),
+  News.routeName: (context) => News(),
 };

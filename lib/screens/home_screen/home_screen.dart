@@ -4,6 +4,7 @@ import 'package:brain_school/screens/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
+import '../news_screen/news.dart';
 import 'widgets/student_data.dart';
 import 'package:brain_school/screens/about_us/about_us.dart';
 
@@ -68,8 +69,8 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         HomeCard(
                           onPress: () {
-                            // Navigator.pushNamed(
-                            //     context, MyProfileScreen.routeName);
+                            Navigator.pushNamed(
+                                context,  News.routeName);
                           },
                           icon: 'assets/icons/event.svg',
                           title: 'News',
