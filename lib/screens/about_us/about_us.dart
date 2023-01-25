@@ -50,7 +50,6 @@ class _AboutUs extends State<AboutUs> {
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
             elevation: 0,
-            backgroundColor: Colors.blue,
           ),
         ),
 
