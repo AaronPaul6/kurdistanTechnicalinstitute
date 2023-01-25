@@ -62,7 +62,7 @@ class StudentPicture extends StatelessWidget {
       onTap: onPress,
       child: CircleAvatar(
 
-        radius: SizerUtil.deviceType == DeviceType.tablet ? 12.w : 14.w,
+        radius: SizerUtil.deviceType == DeviceType.tablet ? 12.w : 13.w,
         backgroundColor: kSecondaryColor,
         backgroundImage: AssetImage(picAddress),
       ),

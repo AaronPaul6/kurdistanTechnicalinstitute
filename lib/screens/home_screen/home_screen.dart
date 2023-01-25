@@ -42,7 +42,6 @@ class HomeScreen extends StatelessWidget {
                       child: StudentPicture(
                           picAddress: 'assets/images/logo.jpg',
                           onPress: () {
-                            // go to profile detail screen here
                             Navigator.pushNamed(
                                 context, MyProfileScreen.routeName);
                           }),
@@ -53,7 +52,6 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
 
-          //other will use all the remaining height of screen
           Expanded(
             child: Container(
               width: 100.w,

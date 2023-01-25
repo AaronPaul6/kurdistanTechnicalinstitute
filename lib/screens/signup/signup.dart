@@ -32,7 +32,7 @@ class _signup extends State<signup> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'News',
+          'Signup',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         automaticallyImplyLeading: false,

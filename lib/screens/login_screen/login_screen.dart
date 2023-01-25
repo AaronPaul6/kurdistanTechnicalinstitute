@@ -105,8 +105,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         DefaultButton(
                           //signup
                           onPress: () {
-                            Navigator.pushNamedAndRemoveUntil(context,
-                                signup.routeName, (route) => false);
+                            Navigator.pushNamed(
+                                context, signup.routeName);
                           },
                           title: 'Signup',
 

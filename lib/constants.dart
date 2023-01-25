@@ -65,7 +65,7 @@ Widget StoryEffect({required Widget child, List<Color>? colors}) {
           borderRadius: BorderRadius.circular(200)),
       child: Container(
         child: child,
-        padding: EdgeInsets.all(3),
+        padding: EdgeInsets.all(2),
         decoration: BoxDecoration(
             color: kPrimaryColor, borderRadius: BorderRadius.circular(200)),
       ));
