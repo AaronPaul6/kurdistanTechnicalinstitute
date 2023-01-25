@@ -7,6 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 import '../news_screen/news.dart';
 import 'widgets/student_data.dart';
+import 'package:brain_school/screens/Ask/Ask.dart';
 import 'package:brain_school/screens/about_us/about_us.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -91,8 +92,8 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         HomeCard(
                           onPress: () {
-                            // Navigator.pushNamed(
-                                // context, MyProfileScreen.routeName);
+                             Navigator.pushNamed(
+                                 context, Ask.routeName);
                           },
                           icon: 'assets/icons/ask.svg',
                           title: 'Ask',

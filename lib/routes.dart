@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'screens/about_us/about_us.dart';
 import 'screens/home_screen/home_screen.dart';
 import 'screens/my_profile/my_profile.dart';
-
+import 'screens/Ask/Ask.dart';
 
 
 //test hello hello ?
@@ -18,4 +18,5 @@ Map<String, WidgetBuilder> routes = {
   AboutUs.routeName: (context) => AboutUs(),
   News.routeName: (context) => News(),
   timetable.routeName: (context) => timetable(),
+  Ask.routeName: (context) => Ask(),
 };

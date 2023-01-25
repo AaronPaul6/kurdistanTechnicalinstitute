@@ -10,14 +10,14 @@ import 'package:brain_school/constants.dart';
 import 'package:brain_school/screens/home_screen/home_screen.dart';
 import 'package:sizer/sizer.dart';
 
-class timetable extends StatefulWidget {
-  static String routeName = 'timetable';
+class Ask extends StatefulWidget {
+  static String routeName = 'Ask';
 
   @override
-  _timetable createState() => _timetable();
+  _Ask createState() => _Ask();
 }
 
-class _timetable extends State<timetable> {
+class _Ask extends State<Ask> {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -32,7 +32,7 @@ class _timetable extends State<timetable> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Time Table',
+          'Ask',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         automaticallyImplyLeading: false,
