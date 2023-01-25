@@ -55,6 +55,7 @@ class _AboutUs extends State<AboutUs> {
         ),
 
 
+
         // body: Column(
         //   children: [
         //     Container(
@@ -136,6 +137,11 @@ class _AboutUs extends State<AboutUs> {
         //   ],
         // ),
       ),
+        body: new Container(
+          child: new
+          Image.asset('assets/images/kti_image.jpg'),
+
+        )
     );
   }
 
