@@ -32,7 +32,7 @@ class _Ask extends State<Ask> {
                 SizedBox( height: 30),
                 Row(
                   children: [
-                    Text("vertical"),
+                    Text(""),
                   ],),
 
                   SingleChildScrollView(
@@ -45,10 +45,212 @@ class _Ask extends State<Ask> {
     padding: EdgeInsets.all(20),
     decoration: BoxDecoration(
     borderRadius: BorderRadius.circular(10),
-    color: Colors.lightBlueAccent,
+    color: Colors.indigo.shade700,
     ),
 
                    child: Center(child: Text("info")),),
+
+
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      height: 70,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.indigo.shade700,
+                      ),
+
+                      child: Center(child: Text("info")),),
+
+
+
+
+
+
+
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      height: 70,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.indigo.shade700,
+                      ),
+
+                      child: Center(child: Text("info")),),
+
+
+
+
+
+
+
+
+
+
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      height: 70,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.indigo.shade700,
+                      ),
+
+                      child: Center(child: Text("info")),),
+
+
+
+
+
+
+
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      height: 70,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.indigo.shade700,
+                      ),
+
+                      child: Center(child: Text("info")),),
+
+
+
+
+
+
+
+
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      height: 70,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.indigo.shade700,
+                      ),
+
+                      child: Center(child: Text("info")),),
+
+
+
+
+
+
+
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      height: 70,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.indigo.shade700,
+                      ),
+
+                      child: Center(child: Text("info")),),
+
+
+
+
+
+
+
+
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      height: 70,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.indigo.shade700,
+                      ),
+
+                      child: Center(child: Text("info")),),
+
+
+
+
+
+
+
+
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      height: 70,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color:Colors.indigo.shade700,
+                      ),
+
+                      child: Center(child: Text("info")),),
+
+
+
+
+
+
+
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      height: 70,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color:Colors.indigo.shade700,
+                      ),
+
+                      child: Center(child: Text("info")),),
+
+
+
+
+
+
+
+
+
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      height: 70,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.indigo.shade700,
+                      ),
+
+                      child: Center(child: Text("info")),)
+
+
+
+
+
+
+
+
+
     ]),
                   ),
 
