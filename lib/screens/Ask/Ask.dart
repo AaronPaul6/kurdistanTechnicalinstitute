@@ -21,12 +21,57 @@ class _Ask extends State<Ask> {
   final _formKey = GlobalKey<FormState>();
 
   @override
-  void initState() {
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
+        body: Padding(
+            padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox( height: 30),
+                Row(
+                  children: [
+                    Text("vertical"),
+                  ],),
+
+                  SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Column(children: [
+                  Container(
+                   margin: EdgeInsets.all(10),
+    width: 300,
+    height: 70,
+    padding: EdgeInsets.all(20),
+    decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(10),
+    color: Colors.lightBlueAccent,
+    ),
+
+                   child: Center(child: Text("info")),),
+    ]),
+                  ),
+
+    ],
+    ),
+
+      ),
+
+));
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
       //   //
       //   //
       //   //   backgroundColor: Colors.white,
@@ -52,15 +97,4 @@ class _Ask extends State<Ask> {
       //
       //
       //   ),
-      //
-      //   body: ListView(
-      //   children :[
-      //     InkWell()
-      //     Container(color: Colors.orange.shade100),
-      //     Container(color: Colors.orange.shade100),
-      //   ],
-      //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount:  2)),
-    );
-  }
 
-}
