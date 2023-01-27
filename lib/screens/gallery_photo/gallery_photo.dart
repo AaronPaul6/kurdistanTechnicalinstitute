@@ -36,19 +36,29 @@ class PhotoGalleryState extends State<PhotoGallery> {
       appBar: AppBar(
         centerTitle: true,
         title:Center(
-          child: Row(
-            children:[
-            SizedBox(
-
-              child: Text(
-                'Photo Gallery',
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          child: Container(
+            // decoration: BoxDecoration(
+            //   border: Border.all(color:Colors.black38,width: 1.0, style: BorderStyle.solid)
+            // ),
+            child: Center(
+              child: Row(
+                children:[
+                Container(
+                  margin: EdgeInsets.fromLTRB(25, 0, 15, 0),
+                  child: Text(
+                    'Photo Gallery',
+                    style:
+                        TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                    child: Icon(Icons.image, size: 40.0, color: Colors.green,
+                    ),
+                  )
+                ]
               ),
             ),
-              Icon(Icons.image, size: 23.0, color: Colors.black38
-              )
-            ]
           )
 
 
