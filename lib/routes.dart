@@ -1,3 +1,5 @@
+import 'package:brain_school/screens/gallery_photo/gallery_photo.dart';
+import 'package:brain_school/screens/gallery_video/gallery_video.dart';
 import 'package:brain_school/screens/login_screen/login_screen.dart';
 import 'package:brain_school/screens/news_screen/news.dart';
 import 'package:brain_school/screens/splash_screen/splash_screen.dart';
@@ -19,4 +21,7 @@ Map<String, WidgetBuilder> routes = {
   timetable.routeName: (context) => timetable(),
   Ask.routeName: (context) => Ask(),
   signup.routeName: (context) => signup(),
+  VideoGallery.routeName: (context) => VideoGallery(),
+  PhotoGallery.routeName: (context) => PhotoGallery()
+
 };

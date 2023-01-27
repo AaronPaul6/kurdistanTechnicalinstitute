@@ -1,5 +1,7 @@
 import 'package:brain_school/constants.dart';
 import 'package:brain_school/screens/Timetable/Timetable.dart';
+import 'package:brain_school/screens/gallery_photo/gallery_photo.dart';
+import 'package:brain_school/screens/gallery_video/gallery_video.dart';
 import 'package:brain_school/screens/login_screen/login_screen.dart';
 import 'package:brain_school/screens/my_profile/my_profile.dart';
 import 'package:flutter/material.dart';
@@ -98,8 +100,8 @@ class HomeScreen extends StatelessWidget {
                         ),
                         HomeCard(
                           onPress: () {
-                            // Navigator.pushNamed(
-                                // context, MyProfileScreen.routeName);
+                            Navigator.pushNamed(
+                                context, PhotoGallery.routeName);
                           },
                           icon: 'assets/icons/gallery.svg',
                           title: 'Photo Gallery',
@@ -119,8 +121,8 @@ class HomeScreen extends StatelessWidget {
                         ),
                         HomeCard(
                           onPress: () {
-                            // Navigator.pushNamed(
-                                // context, MyProfileScreen.routeName);
+                            Navigator.pushNamed(
+                                context, VideoGallery.routeName);
                           },
                           icon: 'assets/icons/gallery.svg',
                           title: 'Video Gallery',

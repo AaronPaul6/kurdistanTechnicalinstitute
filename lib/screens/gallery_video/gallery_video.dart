@@ -11,16 +11,16 @@ import 'package:brain_school/screens/home_screen/home_screen.dart';
 import 'package:sizer/sizer.dart';
 
 
-class PhotoGallery extends StatefulWidget {
-  static String routeName = 'PhotoGallery';
+class VideoGallery extends StatefulWidget {
+  static String routeName = 'VideoGallery';
 
   @override
-  PhotoGalleryState createState() => PhotoGalleryState();
+  VideoGalleryState createState() => VideoGalleryState();
 
 }
 
 
-class PhotoGalleryState extends State<PhotoGallery> {
+class VideoGalleryState extends State<VideoGallery> {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -30,6 +30,7 @@ class PhotoGalleryState extends State<PhotoGallery> {
   }
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Colors.white,
       //when user taps anywhere on the screen, keyboard hides
@@ -52,6 +53,8 @@ class PhotoGalleryState extends State<PhotoGallery> {
 
       ),
     );
+    // // TODO: implement build
+    // throw UnimplementedError();
   }
 }
 
@@ -75,4 +78,5 @@ TextFormField buildEmailField() {
     },
   );
 }
+
 
