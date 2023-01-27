@@ -35,10 +35,27 @@ class PhotoGalleryState extends State<PhotoGallery> {
       //when user taps anywhere on the screen, keyboard hides
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          'Time Table',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        ),
+        title:Center(
+          child: Row(
+            children:[
+            SizedBox(
+
+              child: Text(
+                'Photo Gallery',
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+            ),
+              Icon(Icons.image, size: 23.0, color: Colors.black38
+              )
+            ]
+          )
+
+
+
+        )
+
+        ,
         automaticallyImplyLeading: false,
         leadingWidth: 100,
         leading: ElevatedButton.icon(
@@ -51,6 +68,24 @@ class PhotoGalleryState extends State<PhotoGallery> {
         ),
 
       ),
+      body:
+      Container(
+          child: Row(
+            children: [
+              Column(
+               children: [
+                 Text("data", style: TextStyle(
+                   fontSize: 25,
+
+                 ))
+               ] 
+              ) ,
+              Column(
+
+              )
+            ],
+          )
+      )
     );
   }
 }

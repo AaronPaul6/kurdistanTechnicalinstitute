@@ -37,7 +37,7 @@ class VideoGalleryState extends State<VideoGallery> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Time Table',
+          'Video Gallery',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         automaticallyImplyLeading: false,
