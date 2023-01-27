@@ -23,7 +23,40 @@ class _Ask extends State<Ask> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+
+
+
+      backgroundColor: Colors.white,
+      //when user taps anywhere on the screen, keyboard hides
+      appBar: AppBar(
+      centerTitle: true,
+      title: Text(
+      'Ask',
+      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+    ),
+
+
+
+        automaticallyImplyLeading: false,
+        leadingWidth: 100,
+        leading: ElevatedButton.icon(
+          onPressed: () => Navigator.of(context).pop(),
+          icon: const Icon(Icons.arrow_left_sharp),
+          label: const Text('Back'),
+          style: ElevatedButton.styleFrom(
+            elevation: 0,
+          ),
+        ),
+
+
+      ),
+
+
+
+
+
+
+
         body: Padding(
             padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
@@ -278,29 +311,4 @@ class _Ask extends State<Ask> {
 
 
 
-      //   //
-      //   //
-      //   //   backgroundColor: Colors.white,
-      //   //   //when user taps anywhere on the screen, keyboard hides
-      //   //   appBar: AppBar(
-      //   //     ,centerTitle: true,
-      //   //     title: Text(
-      //   //       'Ask',
-      //   //       style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-      //   //   ),
-      //
-      //
-      //       automaticallyImplyLeading: false,
-      //       leadingWidth: 100,
-      //       leading: ElevatedButton.icon(
-      //         onPressed: () => Navigator.of(context).pop(),
-      //         icon: const Icon(Icons.arrow_left_sharp),
-      //         label: const Text('Back'),
-      //         style: ElevatedButton.styleFrom(
-      //           elevation: 0,
-      //         ),
-      //       ),
-      //
-      //
-      //   ),
 
