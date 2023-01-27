@@ -75,12 +75,12 @@ class _Ask extends State<Ask> {
                     //1
                   Container(
                    margin: EdgeInsets.all(10),
-    width: 300,
+    width: 500,
     height: 70,
     padding: EdgeInsets.all(20),
     decoration: BoxDecoration(
     borderRadius: BorderRadius.circular(10),
-    color: Colors.indigo.shade700,
+    color: Colors.blue.shade800,
     ),
 
                    child: Center(child: Text("info")),),
@@ -98,7 +98,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.indigo.shade700,
+                        color: Colors.blue.shade800,
                       ),
 
                       child: Center(child: Text("info")),),
@@ -117,7 +117,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.indigo.shade700,
+                        color: Colors.blue.shade800,
                       ),
 
                       child: Center(child: Text("info")),),
@@ -139,7 +139,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.indigo.shade700,
+                        color: Colors.blue.shade800,
                       ),
 
                       child: Center(child: Text("info")),),
@@ -158,7 +158,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.indigo.shade700,
+                        color: Colors.blue.shade800,
                       ),
 
                       child: Center(child: Text("info")),),
@@ -178,7 +178,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.indigo.shade700,
+                        color: Colors.blue.shade800,
                       ),
 
                       child: Center(child: Text("info")),),
@@ -197,7 +197,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.indigo.shade700,
+                        color: Colors.blue.shade800,
                       ),
 
                       child: Center(child: Text("info")),),
@@ -217,7 +217,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.indigo.shade700,
+                        color: Colors.blue.shade800,
                       ),
 
                       child: Center(child: Text("info")),),
@@ -237,7 +237,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color:Colors.indigo.shade700,
+                        color:Colors.blue.shade800,
                       ),
 
                       child: Center(child: Text("info")),),
@@ -255,7 +255,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color:Colors.indigo.shade700,
+                        color:Colors.blue.shade800,
                       ),
 
                       child: Center(child: Text("info")),),
@@ -275,7 +275,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.indigo.shade700,
+                        color: Colors.blue.shade800,
                       ),
 
                       child: Center(child: Text("info")),)
