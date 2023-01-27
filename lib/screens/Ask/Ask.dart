@@ -38,6 +38,8 @@ class _Ask extends State<Ask> {
                   SingleChildScrollView(
                   scrollDirection: Axis.vertical,
                   child: Column(children: [
+
+                    //1
                   Container(
                    margin: EdgeInsets.all(10),
     width: 300,
@@ -52,6 +54,10 @@ class _Ask extends State<Ask> {
 
 
 
+
+
+
+                    //2
                     Container(
                       margin: EdgeInsets.all(10),
                       width: 300,
@@ -70,48 +76,7 @@ class _Ask extends State<Ask> {
 
 
 
-
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      width: 300,
-                      height: 70,
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.indigo.shade700,
-                      ),
-
-                      child: Center(child: Text("info")),),
-
-
-
-
-
-
-
-
-
-
-
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      width: 300,
-                      height: 70,
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.indigo.shade700,
-                      ),
-
-                      child: Center(child: Text("info")),),
-
-
-
-
-
-
-
-
+                   //3
                     Container(
                       margin: EdgeInsets.all(10),
                       width: 300,
@@ -132,6 +97,27 @@ class _Ask extends State<Ask> {
 
 
 
+
+                   //4
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      height: 70,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.indigo.shade700,
+                      ),
+
+                      child: Center(child: Text("info")),),
+
+
+
+
+
+
+
+                   //5
                     Container(
                       margin: EdgeInsets.all(10),
                       width: 300,
@@ -151,6 +137,26 @@ class _Ask extends State<Ask> {
 
 
 
+                  //6
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      height: 70,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.indigo.shade700,
+                      ),
+
+                      child: Center(child: Text("info")),),
+
+
+
+
+
+
+                   //7
+
                     Container(
                       margin: EdgeInsets.all(10),
                       width: 300,
@@ -169,7 +175,7 @@ class _Ask extends State<Ask> {
 
 
 
-
+                  //8
 
                     Container(
                       margin: EdgeInsets.all(10),
@@ -189,8 +195,26 @@ class _Ask extends State<Ask> {
 
 
 
+                  //9
+
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: 300,
+                      height: 70,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color:Colors.indigo.shade700,
+                      ),
+
+                      child: Center(child: Text("info")),),
 
 
+
+
+
+
+                   //10
                     Container(
                       margin: EdgeInsets.all(10),
                       width: 300,
@@ -210,27 +234,7 @@ class _Ask extends State<Ask> {
 
 
 
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      width: 300,
-                      height: 70,
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color:Colors.indigo.shade700,
-                      ),
-
-                      child: Center(child: Text("info")),),
-
-
-
-
-
-
-
-
-
-
+                   //11
                     Container(
                       margin: EdgeInsets.all(10),
                       width: 300,
