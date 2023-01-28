@@ -66,14 +66,6 @@ class VideoGalleryState extends State<VideoGallery> {
   }
 }
 
-
-
-
-
-
-
-
-
 TextFormField buildEmailField() {
   return TextFormField(
     textAlign: TextAlign.start,
