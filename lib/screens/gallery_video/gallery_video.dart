@@ -51,12 +51,26 @@ class VideoGalleryState extends State<VideoGallery> {
           ),
         ),
 
+
+         // Container(
+         //   margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
+         //   child: Icon(Icons.image, size: 40.0, color: Colors.lightGreenAccent,
+       //     ),
+        //  )
       ),
     );
     // // TODO: implement build
     // throw UnimplementedError();
   }
 }
+
+
+
+
+
+
+
+
 
 TextFormField buildEmailField() {
   return TextFormField(
