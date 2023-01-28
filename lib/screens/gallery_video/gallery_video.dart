@@ -38,8 +38,10 @@ class VideoGalleryState extends State<VideoGallery> {
         centerTitle: true,
         title: Text(
           'Video Gallery',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.yellowAccent, fontWeight: FontWeight.bold),
+          child icon(icon.imge,size:40.0, color:colors.lightGreen,)
         ),
+
         automaticallyImplyLeading: false,
         leadingWidth: 100,
         leading: ElevatedButton.icon(
@@ -51,9 +53,9 @@ class VideoGalleryState extends State<VideoGallery> {
           ),
         ),
 // done this
-//child(
-//  ElevatedButton.icon(onPressed: onPressed, icon: icon, label: label)
-// )
+child(
+ ElevatedButton.icon(onPressed: onPressed, icon: icon, label: label)
+ )
 
       ),
     );
