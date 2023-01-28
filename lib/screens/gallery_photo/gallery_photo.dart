@@ -53,16 +53,13 @@ class PhotoGalleryState extends State<PhotoGallery> {
                 ),
                   Container(
                     margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
-                    child: Icon(Icons.image, size: 40.0, color: Colors.green,
+                    child: Icon(Icons.image, size: 40.0, color: Colors.blueGrey,
                     ),
                   )
                 ]
               ),
             ),
           )
-
-
-
         )
 
         ,
