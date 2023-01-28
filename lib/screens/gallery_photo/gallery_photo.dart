@@ -83,12 +83,15 @@ class PhotoGalleryState extends State<PhotoGallery> {
                children: [
                  Text("data", style: TextStyle(
                    fontSize: 25,
+                   backgroundColor: Colors.blueAccent,
 
                  ))
                ] 
               ) ,
               Column(
-
+                    children: [
+                       Icon(Icons.image, size: 40.0, color: Colors.lightGreenAccent,)
+                    ],
               )
             ],
           )
