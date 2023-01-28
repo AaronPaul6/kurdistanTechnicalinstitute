@@ -39,7 +39,7 @@ class VideoGalleryState extends State<VideoGallery> {
         title: Text(
           'Video Gallery',
           style: TextStyle(color: Colors.yellowAccent, fontWeight: FontWeight.bold),
-          child icon(icon.imge,size:40.0, color:colors.lightGreen,)
+         //  child icon(icon.imge,size:40.0, color:colors.lightGreen,)
         ),
 
         automaticallyImplyLeading: false,
