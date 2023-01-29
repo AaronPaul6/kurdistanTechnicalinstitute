@@ -48,7 +48,7 @@ class PhotoGalleryState extends State<PhotoGallery> {
                   child: Text(
                     'Photo Gallery',
                     style:
-                        TextStyle(color: Colors.yellowAccent, fontWeight: FontWeight.bold),
+                        TextStyle(color: Colors.orangeAccent, fontWeight: FontWeight.bold),
                   ),
                 ),
                   Container(
