@@ -88,59 +88,5 @@ class _AboutUs extends State<AboutUs> {
         )));
   }
 
-// TextFormField buildEmailField() {
-//   return TextFormField(
-//     textAlign: TextAlign.start,
-//     keyboardType: TextInputType.emailAddress,
-//     style: kInputTextStyle,
-//     decoration: InputDecoration(
-//       labelText: 'Mobile Number/Email',
-//       floatingLabelBehavior: FloatingLabelBehavior.always,
-//     ),
-//     validator: (value) {
-//       for validation
-// RegExp regExp = new RegExp(emailPattern);
-// if (value == null || value.isEmpty) {
-//   return 'Please enter some text';
-//   if it does not matches the pattern, like
-// it not contains @
-// } else if (!regExp.hasMatch(value)) {
-//   return 'Please enter a valid email address';
-// }
-// },
-// );
-// }
-
-// TextFormField buildPasswordField() {
-//   return TextFormField(
-//     // obscureText: _passwordVisible,
-//     textAlign: TextAlign.start,
-//     keyboardType: TextInputType.visiblePassword,
-//     style: kInputTextStyle,
-//     decoration: InputDecoration(
-//       labelText: 'Password',
-//       floatingLabelBehavior: FloatingLabelBehavior.always,
-//       suffixIcon: IconButton(
-//         onPressed: () {
-//           setState(() {
-//             // _passwordVisible = !_passwordVisible;
-//           });
-//         },
-//         // icon: Icon(
-//           // _passwordVisible
-//           //     ? Icons.visibility_off_outlined
-//               : Icons.visibility_off_outlined,
-//         // ),
-//         iconSize: kDefaultPadding,
-//       ),
-//     ),
-//     validator: (value) {
-//       if (value!.length < 5) {
-//         return 'Must be more than 5 characters';
-//       }
-//     },
-//   );
-// }
 }
 
-// }
