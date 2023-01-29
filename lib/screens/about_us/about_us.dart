@@ -77,6 +77,7 @@ class _AboutUs extends State<AboutUs> {
                         ' center of the learning process, so it insists on providing the students with the ability to provide new equipment and technology for the students of the institute according to the stage and the era. To provide and develop the skills and science of students, in a way that leads to the development of science and technology in the region, so that it can serve the homeland from here and achieve the desires of the nation.',
                         style: TextStyle(
                           color: Colors.black,
+                          fontSize: 12,
                         ),
                       ),
                     ),
