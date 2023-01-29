@@ -49,7 +49,7 @@ class PhotoGalleryState extends State<PhotoGallery> {
                         child: Text(
                           'Photo Gallery',
                           style:
-                          TextStyle(color: Colors.orangeAccent,
+                          TextStyle(color: Colors.white,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -93,10 +93,32 @@ class PhotoGalleryState extends State<PhotoGallery> {
             return Image.asset(images[index]);
           },
         ),
-      )
+      ),
+      bottomSheet: Container(
+        color: Colors.blue.withOpacity(0.50),
+        height: 100,
+        width: 100,
+        child: Container(
+          width: double.infinity,
+          child: Text(
+              'developer: Aland ',
+              style: TextStyle(
+                color: Colors.black,
+              ),
+            )
+        ),
+      ),
     );
   }
 }
+List<String> images = [
+  'assets/images/KTI1.jpg',
+  'assets/images/KTI2.jpg',
+  'assets/images/KTI3.jpg',
+  'assets/images/KTI4.jpg',
+  'assets/images/KTI5.jpg',
+  'assets/images/KTI6.jpg',
+];
 
 
 
@@ -121,12 +143,4 @@ TextFormField buildEmailField() {
   );
 }
 
-List<String> images = [
-  'assets/images/KTI1.jpg',
-  'assets/images/KTI2.jpg',
-  'assets/images/KTI3.jpg',
-  'assets/images/KTI4.jpg',
-  'assets/images/KTI5.jpg',
-  'assets/images/KTI6.jpg',
-];
 
