@@ -30,6 +30,7 @@ class _signup extends State<signup> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.blue.shade800,
         centerTitle: true,
         title: Text(
           'Signup',

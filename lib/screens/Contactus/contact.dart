@@ -109,9 +109,10 @@ class contact extends StatelessWidget {
                         ),
                         Text("FAQs"),
                         Text(
-                          "Frequently Asked Questions",
+                          "\nFrequently Asked Questions",
                           style: TextStyle(fontSize: 11),
                         ),
+
                       ],
                     ),
                     padding: const EdgeInsets.symmetric(vertical: 8),
@@ -177,7 +178,7 @@ class contact extends StatelessWidget {
               ],
             ),
             const Text(
-              "\n\n\n\n\n\nCopyright. @2023 KTI",
+              "\n\n\nCopyright. @2023 KTI",
               style: TextStyle(color: Colors.blue),
             ),
             const Text(
