@@ -19,158 +19,160 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            padding: EdgeInsets.all(kDefaultPadding),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        StudentName(
-                          studentName: 'WELCOME TO KTI',
-                        ),
-                      ],
-                    ),
-                    kHalfSizedBox,
-                    StoryEffect(
-                      colors: [Colors.orangeAccent, Colors.blueAccent],
-                      child: StudentPicture(
-                          picAddress: 'assets/images/logo.jpg',
-                          onPress: () {
-                            Navigator.pushNamed(
-                                context, MyProfileScreen.routeName);
-                          }),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-
-          Expanded(
-            child: Container(
-              width: 100.w,
-              decoration: BoxDecoration(
-                color: kOtherColor,
-                borderRadius: kTopBorderRadius,
-              ),
-              child: SingleChildScrollView(
-
-                physics: BouncingScrollPhysics(),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        HomeCard(
-                          onPress: () {
-                            Navigator.pushNamed(
-                                context,  News.routeName);
-                          },
-                          icon: 'assets/icons/event.svg',
-                          title: 'News',
-                        ),
-                        HomeCard(
-                          onPress: () {
-                             Navigator.pushNamed(
-                               context, timetable.routeName);
-                          },
-                          icon: 'assets/icons/timetable.svg',
-                          title: 'Time Table',
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        HomeCard(
-                          onPress: () {
-                             Navigator.pushNamed(
-                                 context, Ask.routeName);
-                          },
-                          icon: 'assets/icons/ask.svg',
-                          title: 'Ask',
-                        ),
-                        HomeCard(
-                          onPress: () {
-                            Navigator.pushNamed(
-                                context, PhotoGallery.routeName);
-                          },
-                          icon: 'assets/icons/gallery.svg',
-                          title: 'Photo Gallery',
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        HomeCard(
-                          onPress: () {
-                            Navigator.pushNamed(
-                                 context, AboutUs.routeName);
-                          },
-                          icon: 'assets/icons/resume.svg',
-                          title: 'About Us',
-                        ),
-                        HomeCard(
-                          onPress: () {
-                            Navigator.pushNamed(
-                                context, VideoGallery.routeName);
-                          },
-                          icon: 'assets/icons/gallery.svg',
-                          title: 'Video Gallery',
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        HomeCard(
-                          onPress: () {
-                            Navigator.pushNamed(
-                                context, contact.routeName);
-                          },
-                          icon: 'assets/icons/resume.svg',
-                          title: 'Contact Us',
-                        ),
-                        HomeCard(
-                          onPress: () {
-                            Navigator.pushNamed(
-                                context, MyProfileScreen.routeName);
-                          },
-                          icon: 'assets/icons/p.svg',
-                          title: 'Profile',
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        HomeCard(
-                          onPress: () {
-                            Navigator.pushNamed(
-                                context, LoginScreen.routeName);
-                          },
-                          icon: 'assets/icons/logout.svg',
-                          title: 'Logout',
-                        ),
-
-                      ],
-                    ),
-                  ],
-                ),
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(kDefaultPadding),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          StudentName(
+                            studentName: 'WELCOME TO KTI',
+                          ),
+                        ],
+                      ),
+                      kHalfSizedBox,
+                      StoryEffect(
+                        colors: [Colors.orangeAccent, Colors.blueAccent],
+                        child: StudentPicture(
+                            picAddress: 'assets/images/logo.jpg',
+                            onPress: () {
+                              Navigator.pushNamed(
+                                  context, MyProfileScreen.routeName);
+                            }),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
-          ),
-        ],
+
+            Expanded(
+              child: Container(
+                width: 100.w,
+                decoration: BoxDecoration(
+                  color: kOtherColor,
+                  borderRadius: kTopBorderRadius,
+                ),
+                child: SingleChildScrollView(
+
+                  physics: BouncingScrollPhysics(),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          HomeCard(
+                            onPress: () {
+                              Navigator.pushNamed(
+                                  context,  News.routeName);
+                            },
+                            icon: 'assets/icons/event.svg',
+                            title: 'News',
+                          ),
+                          HomeCard(
+                            onPress: () {
+                               Navigator.pushNamed(
+                                 context, timetable.routeName);
+                            },
+                            icon: 'assets/icons/timetable.svg',
+                            title: 'Time Table',
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          HomeCard(
+                            onPress: () {
+                               Navigator.pushNamed(
+                                   context, Ask.routeName);
+                            },
+                            icon: 'assets/icons/ask.svg',
+                            title: 'Ask',
+                          ),
+                          HomeCard(
+                            onPress: () {
+                              Navigator.pushNamed(
+                                  context, PhotoGallery.routeName);
+                            },
+                            icon: 'assets/icons/gallery.svg',
+                            title: 'Photo Gallery',
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          HomeCard(
+                            onPress: () {
+                              Navigator.pushNamed(
+                                   context, AboutUs.routeName);
+                            },
+                            icon: 'assets/icons/resume.svg',
+                            title: 'About Us',
+                          ),
+                          HomeCard(
+                            onPress: () {
+                              Navigator.pushNamed(
+                                  context, VideoGallery.routeName);
+                            },
+                            icon: 'assets/icons/gallery.svg',
+                            title: 'Video Gallery',
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          HomeCard(
+                            onPress: () {
+                              Navigator.pushNamed(
+                                  context, contact.routeName);
+                            },
+                            icon: 'assets/icons/resume.svg',
+                            title: 'Contact Us',
+                          ),
+                          HomeCard(
+                            onPress: () {
+                              Navigator.pushNamed(
+                                  context, MyProfileScreen.routeName);
+                            },
+                            icon: 'assets/icons/p.svg',
+                            title: 'Profile',
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          HomeCard(
+                            onPress: () {
+                              Navigator.pushNamed(
+                                  context, LoginScreen.routeName);
+                            },
+                            icon: 'assets/icons/logout.svg',
+                            title: 'Logout',
+                          ),
+
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
