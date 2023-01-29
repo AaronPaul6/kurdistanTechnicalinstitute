@@ -11,6 +11,7 @@ import '../news_screen/news.dart';
 import 'widgets/student_data.dart';
 import 'package:brain_school/screens/Ask/Ask.dart';
 import 'package:brain_school/screens/about_us/about_us.dart';
+import 'package:brain_school/screens/Contactus/contact.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -135,10 +136,10 @@ class HomeScreen extends StatelessWidget {
                         HomeCard(
                           onPress: () {
                             Navigator.pushNamed(
-                                context, LoginScreen.routeName);
+                                context, contact.routeName);
                           },
-                          icon: 'assets/icons/logout.svg',
-                          title: 'Logout',
+                          icon: 'assets/icons/resume.svg',
+                          title: 'Contact Us',
                         ),
                         HomeCard(
                           onPress: () {
@@ -148,6 +149,20 @@ class HomeScreen extends StatelessWidget {
                           icon: 'assets/icons/p.svg',
                           title: 'Profile',
                         ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        HomeCard(
+                          onPress: () {
+                            Navigator.pushNamed(
+                                context, LoginScreen.routeName);
+                          },
+                          icon: 'assets/icons/logout.svg',
+                          title: 'Logout',
+                        ),
+
                       ],
                     ),
                   ],

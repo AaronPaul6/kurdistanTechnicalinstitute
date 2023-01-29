@@ -10,6 +10,7 @@ import 'screens/home_screen/home_screen.dart';
 import 'screens/my_profile/my_profile.dart';
 import 'package:brain_school/screens/Ask/Ask.dart';
 import 'package:brain_school/screens/signup/signup.dart';
+import 'package:brain_school/screens/Contactus/contact.dart';
 
 Map<String, WidgetBuilder> routes = {
   SplashScreen.routeName: (context) => SplashScreen(),
@@ -22,6 +23,7 @@ Map<String, WidgetBuilder> routes = {
   Ask.routeName: (context) => Ask(),
   signup.routeName: (context) => signup(),
   VideoGallery.routeName: (context) => VideoGallery(),
-  PhotoGallery.routeName: (context) => PhotoGallery()
+  PhotoGallery.routeName: (context) => PhotoGallery(),
+  contact.routeName: (context) => contact()
 
 };

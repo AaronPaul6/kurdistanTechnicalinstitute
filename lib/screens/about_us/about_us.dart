@@ -36,7 +36,7 @@ class _AboutUs extends State<AboutUs> {
       backgroundColor: Colors.white,
       //when user taps anywhere on the screen, keyboard hides
       appBar: AppBar(
-        // Overide the default Back button
+
         centerTitle: true,
         title: Text(
           'ABOUT US',
