@@ -47,6 +47,7 @@ class VideoGalleryState extends State<VideoGallery> {
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
             elevation: 0,
+
           ),
         ),
 
@@ -64,7 +65,7 @@ class VideoGalleryState extends State<VideoGallery> {
         child: Column(
           children: [
             Text(
-              'slaw',
+              'developer: Aland ',
               style: TextStyle(
                 color: Colors.black,
               ),

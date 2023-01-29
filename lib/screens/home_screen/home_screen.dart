@@ -12,6 +12,7 @@ import 'widgets/student_data.dart';
 import 'package:brain_school/screens/Ask/Ask.dart';
 import 'package:brain_school/screens/about_us/about_us.dart';
 import 'package:brain_school/screens/Contactus/contact.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -126,7 +127,7 @@ class HomeScreen extends StatelessWidget {
                               Navigator.pushNamed(
                                   context, VideoGallery.routeName);
                             },
-                            icon: 'assets/icons/gallery.svg',
+                            icon: 'assets/icons/video_1.svg',
                             title: 'Video Gallery',
                           ),
                         ],

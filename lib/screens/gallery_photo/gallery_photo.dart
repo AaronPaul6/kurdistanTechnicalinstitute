@@ -28,6 +28,7 @@ class PhotoGalleryState extends State<PhotoGallery> {
     // TODO: implement initState
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,31 +36,33 @@ class PhotoGalleryState extends State<PhotoGallery> {
       //when user taps anywhere on the screen, keyboard hides
       appBar: AppBar(
         centerTitle: true,
-        title:Center(
-          child: Container(
-            // decoration: BoxDecoration(
-            //   border: Border.all(color:Colors.black38,width: 1.0, style: BorderStyle.solid)
-            // ),
-            child: Center(
-              child: Row(
-                children:[
-                Container(
-                  margin: EdgeInsets.fromLTRB(25, 0, 15, 0),
-                  child: Text(
-                    'Photo Gallery',
-                    style:
-                        TextStyle(color: Colors.orangeAccent, fontWeight: FontWeight.bold),
-                  ),
+        title: Center(
+            child: Container(
+              // decoration: BoxDecoration(
+              //   border: Border.all(color:Colors.black38,width: 1.0, style: BorderStyle.solid)
+              // ),
+              child: Center(
+                child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(25, 0, 15, 0),
+                        child: Text(
+                          'Photo Gallery',
+                          style:
+                          TextStyle(color: Colors.orangeAccent,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                        child: Icon(Icons.image, size: 40.0,
+                          color: Colors.lightGreenAccent,
+                        ),
+                      )
+                    ]
                 ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
-                    child: Icon(Icons.image, size: 40.0, color: Colors.lightGreenAccent,
-                    ),
-                  )
-                ]
               ),
-            ),
-          )
+            )
         )
 
         ,
@@ -75,30 +78,27 @@ class PhotoGalleryState extends State<PhotoGallery> {
         ),
 
       ),
-      body:
-      Container(
-          child: Row(
-            children: [
-              Column(
-               children: [
-                 Text("data", style: TextStyle(
-                   fontSize: 25,
-                   backgroundColor: Colors.blueAccent,
+      body: Container(
+        padding: EdgeInsets.all(15.0),
+        child: GridView.builder(
+          itemCount: images.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 12.0,
+              mainAxisSpacing: 12.0,
+            mainAxisExtent: 155.0
 
-                 ))
-               ] 
-              ) ,
-              Column(
-                    children: [
-                       Icon(Icons.image, size: 40.0, color: Colors.lightGreenAccent,)
-                    ],
-              )
-            ],
-          )
+          ),
+          itemBuilder: (BuildContext context, int index) {
+            return Image.asset(images[index]);
+          },
+        ),
       )
     );
   }
 }
+
+
 
 TextFormField buildEmailField() {
   return TextFormField(
@@ -120,4 +120,13 @@ TextFormField buildEmailField() {
     },
   );
 }
+
+List<String> images = [
+  'assets/images/KTI1.jpg',
+  'assets/images/KTI2.jpg',
+  'assets/images/KTI3.jpg',
+  'assets/images/KTI4.jpg',
+  'assets/images/KTI5.jpg',
+  'assets/images/KTI6.jpg',
+];
 
