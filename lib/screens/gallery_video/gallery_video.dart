@@ -10,15 +10,12 @@ import 'package:brain_school/constants.dart';
 import 'package:brain_school/screens/home_screen/home_screen.dart';
 import 'package:sizer/sizer.dart';
 
-
 class VideoGallery extends StatefulWidget {
   static String routeName = 'VideoGallery';
 
   @override
   VideoGalleryState createState() => VideoGalleryState();
-
 }
-
 
 class VideoGalleryState extends State<VideoGallery> {
   final _formKey = GlobalKey<FormState>();
@@ -28,9 +25,9 @@ class VideoGalleryState extends State<VideoGallery> {
     // TODO: implement initState
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Colors.white,
       //when user taps anywhere on the screen, keyboard hides
@@ -38,11 +35,9 @@ class VideoGalleryState extends State<VideoGallery> {
         centerTitle: true,
         title: Text(
           'Video Gallery',
-          style: TextStyle(color: Colors.yellowAccent, fontWeight: FontWeight.bold),
-
+          style: TextStyle(
+              color: Colors.yellowAccent, fontWeight: FontWeight.bold),
         ),
-
-
 
         automaticallyImplyLeading: false,
         leadingWidth: 100,
@@ -54,11 +49,28 @@ class VideoGalleryState extends State<VideoGallery> {
             elevation: 0,
           ),
         ),
+
 // done this
 //child(
 // ElevatedButton.icon(onPressed: onPressed, icon: icon, label: label)
- //)
+        //)
+      ),
 
+      body: Column(children: []),
+
+      bottomSheet: Container(
+        color: Colors.blue.withOpacity(0.50),
+        height: 100,
+        child: Column(
+          children: [
+            Text(
+              'slaw',
+              style: TextStyle(
+                color: Colors.black,
+              ),
+            )
+          ],
+        ),
       ),
     );
     // // TODO: implement build
@@ -86,5 +98,3 @@ TextFormField buildEmailField() {
     },
   );
 }
-
-
