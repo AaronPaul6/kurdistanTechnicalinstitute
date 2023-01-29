@@ -30,6 +30,7 @@ class _timetable extends State<timetable> {
       backgroundColor: Colors.white,
       //when user taps anywhere on the screen, keyboard hides
       appBar: AppBar(
+        backgroundColor: Colors.blue.shade800,
         centerTitle: true,
         title: Text(
           'Time Table',
@@ -43,6 +44,7 @@ class _timetable extends State<timetable> {
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
             elevation: 0,
+            backgroundColor: Colors.blue.shade800,
           ),
         ),
 
