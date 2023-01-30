@@ -118,7 +118,7 @@ class HomeScreen extends StatelessWidget {
                               Navigator.pushNamed(
                                    context, AboutUs.routeName);
                             },
-                            icon: 'assets/icons/resume.svg',
+                            icon: 'assets/icons/AB.svg',
                             title: 'About Us',
                           ),
                           HomeCard(
