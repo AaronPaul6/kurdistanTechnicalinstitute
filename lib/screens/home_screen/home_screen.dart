@@ -41,13 +41,12 @@ class HomeScreen extends StatelessWidget {
                           width: 10,
                         ),
                         StoryEffect(
-                          colors: [Colors.orangeAccent, Colors.blueAccent],
-                          child: StudentPicture(
-                              picAddress: 'assets/images/logo.jpg',
-                              onPress: () {
-                                Navigator.pushNamed(
-                                    context, MyProfileScreen.routeName);
-                              }),
+                          color: Colors.orangeAccent,
+                          image: Image.asset('assets/images/logo.jpg'),
+                          onPress: () {
+                            Navigator.pushNamed(
+                                context, MyProfileScreen.routeName);
+                          },
                         ),
                       ],
                     ),

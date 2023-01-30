@@ -1,3 +1,4 @@
+import 'package:fancy_avatar/fancy_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
@@ -33,14 +34,14 @@ const kHalfWidthSizedBox = SizedBox(
 final kTopBorderRadius = BorderRadius.only(
   topLeft: Radius.circular(SizerUtil.deviceType == DeviceType.tablet ? 40 : 20),
   topRight:
-      Radius.circular(SizerUtil.deviceType == DeviceType.tablet ? 40 : 20),
+  Radius.circular(SizerUtil.deviceType == DeviceType.tablet ? 40 : 20),
 );
 
 final kBottomBorderRadius = BorderRadius.only(
   bottomRight:
-      Radius.circular(SizerUtil.deviceType == DeviceType.tablet ? 40 : 20),
+  Radius.circular(SizerUtil.deviceType == DeviceType.tablet ? 40 : 20),
   bottomLeft:
-      Radius.circular(SizerUtil.deviceType == DeviceType.tablet ? 40 : 20),
+  Radius.circular(SizerUtil.deviceType == DeviceType.tablet ? 40 : 20),
 );
 
 final kInputTextStyle = GoogleFonts.poppins(
@@ -53,7 +54,25 @@ const String mobilePattern = r'(^(?:[+0]9)?[0-9]{10,12}$)';
 const String emailPattern =
     r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
 
-Widget StoryEffect({required Widget child, List<Color>? colors}) {
+Widget StoryEffect(
+    {required Image image, Color? color, required VoidCallback onPress}) {
+  return InkWell(
+    onTap: onPress,
+    borderRadius: BorderRadius.circular(50.sp),
+    child: FancyAvatar(
+      radius: 50.sp,
+      avatarBackgroundColor: kPrimaryColor,
+      ringWidth: 5,
+      spaceWidth: 5,
+      elevation: 5,
+      innerRingColor: kPrimaryColor,
+      userImage: image,
+      ringColor: color ?? Colors.white,
+    ),
+  );
+}
+
+/*Widget StoryEffect({required Widget child, List<Color>? colors}) {
   return Container(
     padding: EdgeInsets.all(5),
     decoration: BoxDecoration(
@@ -70,4 +89,4 @@ Widget StoryEffect({required Widget child, List<Color>? colors}) {
           color: kPrimaryColor, borderRadius: BorderRadius.circular(200)),
     ),
   );
-}
+}*/
