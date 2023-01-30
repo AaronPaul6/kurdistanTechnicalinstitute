@@ -57,12 +57,13 @@ class VideoGalleryState extends State<VideoGallery> {
         //)
       ),
 
-      body: Column(children: []),
+      body: Row(children: []),
 
       bottomSheet: Container(
         color: Colors.blue.withOpacity(0.50),
         height: 100,
-        child: Column(
+
+        child: Row(
           children: [
             Text(
               'developer: Aland ',

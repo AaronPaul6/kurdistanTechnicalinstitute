@@ -101,7 +101,7 @@ class PhotoGalleryState extends State<PhotoGallery> {
         child: Container(
           width: double.infinity,
           child: Text(
-              'developer: Aland ',
+              'futte ',
               style: TextStyle(
                 color: Colors.black,
               ),
