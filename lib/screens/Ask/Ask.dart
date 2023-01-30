@@ -69,7 +69,7 @@ class _Ask extends State<Ask> {
                       ),
                       child: Center(
                         child: ExpansionTile(
-                          title: Text('how much does studying cost?', style : TextStyle(
+                          title: Text('How much does studying cost?', style : TextStyle(
                         fontSize: 18 ),),
                           children: [
                             Container(
