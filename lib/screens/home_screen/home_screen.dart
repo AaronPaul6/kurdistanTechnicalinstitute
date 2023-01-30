@@ -184,32 +184,35 @@ class HomeCard extends StatelessWidget {
 // hi
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onPress,
-      child: Container(
-        margin: EdgeInsets.only(top: 1.h),
-        width: 40.w,
-        height: 20.h,
-        decoration: BoxDecoration(
-          color: kPrimaryColor,
-          borderRadius: BorderRadius.circular(kDefaultPadding / 2),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SvgPicture.asset(
-              icon,
-              height: SizerUtil.deviceType == DeviceType.tablet ? 30.sp : 40.sp,
-              width: SizerUtil.deviceType == DeviceType.tablet ? 30.sp : 40.sp,
-              color: kOtherColor,
-            ),
-            Text(
-              title,
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.subtitle2,
-            ),
-          ],
+    return Expanded(
+      child: InkWell(
+        onTap: onPress,
+        child: Container(
+          margin: EdgeInsets.all(10),
+          padding: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: kPrimaryColor,
+            borderRadius: BorderRadius.circular(kDefaultPadding / 2),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SvgPicture.asset(
+                icon,
+                height:
+                    SizerUtil.deviceType == DeviceType.tablet ? 30.sp : 40.sp,
+                width:
+                    SizerUtil.deviceType == DeviceType.tablet ? 30.sp : 40.sp,
+                color: kOtherColor,
+              ),
+              Text(
+                title,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.subtitle2,
+              ),
+            ],
+          ),
         ),
       ),
     );
