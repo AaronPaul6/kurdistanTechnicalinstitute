@@ -30,28 +30,27 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          StudentName(
-                            studentName: 'WELCOME TO KTI',
-                          ),
-                        ],
-                      ),
-                      kHalfSizedBox,
-                      StoryEffect(
-                        colors: [Colors.orangeAccent, Colors.blueAccent],
-                        child: StudentPicture(
-                            picAddress: 'assets/images/logo.jpg',
-                            onPress: () {
-                              Navigator.pushNamed(
-                                  context, MyProfileScreen.routeName);
-                            }),
-                      ),
-                    ],
+                  FittedBox(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        StudentName(
+                          studentName: 'WELCOME TO KTI',
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        StoryEffect(
+                          colors: [Colors.orangeAccent, Colors.blueAccent],
+                          child: StudentPicture(
+                              picAddress: 'assets/images/logo.jpg',
+                              onPress: () {
+                                Navigator.pushNamed(
+                                    context, MyProfileScreen.routeName);
+                              }),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
