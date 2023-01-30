@@ -76,7 +76,7 @@ class _AboutUs extends State<AboutUs> {
                 children: [
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.all(6.0),
+                      padding: EdgeInsets.all(8.0),
                       child: Text('The Technical Institute of Kurdistan, established on 19/10/2015 by the ministerial decree No. 21923, wants to take part in this historical and national responsibility. '
                         'A leading institute, although the Kurdistan Technical Institute was established in a very timely manner, meant it was a necessity for the stage, as Kurdistan’s students needed '
                         'a modern institute with a modern program.In this way, the Institute insists on '
