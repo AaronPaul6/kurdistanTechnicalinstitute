@@ -56,7 +56,6 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
@@ -64,7 +63,6 @@ class HomeScreen extends StatelessWidget {
                   borderRadius: kTopBorderRadius,
                 ),
                 child: SingleChildScrollView(
-
                   physics: BouncingScrollPhysics(),
                   child: Column(
                     children: [
@@ -73,16 +71,14 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           HomeCard(
                             onPress: () {
-                              Navigator.pushNamed(
-                                  context,  News.routeName);
+                              Navigator.pushNamed(context, News.routeName);
                             },
                             icon: 'assets/icons/event.svg',
                             title: 'News',
                           ),
                           HomeCard(
                             onPress: () {
-                               Navigator.pushNamed(
-                                 context, timetable.routeName);
+                              Navigator.pushNamed(context, timetable.routeName);
                             },
                             icon: 'assets/icons/timetable.svg',
                             title: 'Time Table',
@@ -94,8 +90,7 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           HomeCard(
                             onPress: () {
-                               Navigator.pushNamed(
-                                   context, Ask.routeName);
+                              Navigator.pushNamed(context, Ask.routeName);
                             },
                             icon: 'assets/icons/ask.svg',
                             title: 'Ask',
@@ -115,10 +110,9 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           HomeCard(
                             onPress: () {
-                              Navigator.pushNamed(
-                                   context, AboutUs.routeName);
+                              Navigator.pushNamed(context, AboutUs.routeName);
                             },
-                            icon: 'assets/icons/AB.svg',
+                            icon: 'assets/icons/about_us.svg',
                             title: 'About Us',
                           ),
                           HomeCard(
@@ -136,8 +130,7 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           HomeCard(
                             onPress: () {
-                              Navigator.pushNamed(
-                                  context, contact.routeName);
+                              Navigator.pushNamed(context, contact.routeName);
                             },
                             icon: 'assets/icons/resume.svg',
                             title: 'Contact Us',
@@ -163,7 +156,6 @@ class HomeScreen extends StatelessWidget {
                             icon: 'assets/icons/logout.svg',
                             title: 'Logout',
                           ),
-
                         ],
                       ),
                     ],
@@ -188,6 +180,7 @@ class HomeCard extends StatelessWidget {
   final VoidCallback onPress;
   final String icon;
   final String title;
+
 // hi
   @override
   Widget build(BuildContext context) {

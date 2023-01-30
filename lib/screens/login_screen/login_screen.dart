@@ -108,8 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         DefaultButton(
                           //signup
                           onPress: () {
-                            Navigator.pushNamed(
-                                context, signup.routeName);
+                            Navigator.pushNamed(context, signup.routeName);
                           },
                           title: 'Signup',
 
@@ -133,6 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
       textAlign: TextAlign.start,
       keyboardType: TextInputType.emailAddress,
       style: kInputTextStyle,
+      initialValue: 'hax@mail.com',
       decoration: InputDecoration(
         labelText: 'Mobile Number/Email',
         floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -155,6 +155,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return TextFormField(
       obscureText: _passwordVisible,
       textAlign: TextAlign.start,
+      initialValue: '123456789',
       keyboardType: TextInputType.visiblePassword,
       style: kInputTextStyle,
       decoration: InputDecoration(
