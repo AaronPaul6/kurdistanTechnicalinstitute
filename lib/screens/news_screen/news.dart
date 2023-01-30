@@ -30,7 +30,7 @@ class _News extends State<News> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.blue.shade800,
+        backgroundColor: Color(0xFF345FB4),
         centerTitle: true,
         title: Text(
           'News',
@@ -44,7 +44,7 @@ class _News extends State<News> {
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
             elevation: 0,
-            backgroundColor: Colors.blue.shade800,
+            backgroundColor: Color(0xFF345FB4),
           ),
         ),
 

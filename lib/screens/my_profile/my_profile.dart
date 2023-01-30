@@ -9,7 +9,6 @@ class MyProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //app bar theme for tablet
       appBar: AppBar(
         title: Text('My Profile'),
         actions: [
@@ -36,7 +35,6 @@ class MyProfileScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              width: 100.w,
               height: SizerUtil.deviceType == DeviceType.tablet ? 19.h : 15.h,
               decoration: BoxDecoration(
                 color: kPrimaryColor,

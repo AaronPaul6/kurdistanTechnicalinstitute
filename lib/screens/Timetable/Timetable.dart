@@ -1,14 +1,5 @@
 import 'package:brain_school/constants.dart';
-import 'package:brain_school/screens/my_profile/my_profile.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:sizer/sizer.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:brain_school/components/custom_buttons.dart';
-import 'package:brain_school/constants.dart';
-import 'package:brain_school/screens/home_screen/home_screen.dart';
-import 'package:sizer/sizer.dart';
 
 class timetable extends StatefulWidget {
   static String routeName = 'timetable';
@@ -30,7 +21,7 @@ class _timetable extends State<timetable> {
       backgroundColor: Colors.white,
       //when user taps anywhere on the screen, keyboard hides
       appBar: AppBar(
-        backgroundColor: Colors.blue.shade800,
+        backgroundColor: Color(0xFF345FB4),
         centerTitle: true,
         title: Text(
           'Time Table',
@@ -44,7 +35,7 @@ class _timetable extends State<timetable> {
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
             elevation: 0,
-            backgroundColor: Colors.blue.shade800,
+            backgroundColor: Color(0xFF345FB4),
           ),
         ),
 
