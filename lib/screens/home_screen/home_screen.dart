@@ -59,7 +59,6 @@ class HomeScreen extends StatelessWidget {
 
             Expanded(
               child: Container(
-                width: 100.w,
                 decoration: BoxDecoration(
                   color: kOtherColor,
                   borderRadius: kTopBorderRadius,

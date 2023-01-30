@@ -90,6 +90,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                     fontWeight: FontWeight.w500),
                           ),
                         ),
+                        sizedBox,
+
                         DefaultButton(
                           //login
                           onPress: () {
@@ -101,6 +103,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           title: 'LOGIN',
                           iconData: Icons.arrow_forward_outlined,
                         ),
+                        sizedBox,
+
                         DefaultButton(
                           //signup
                           onPress: () {

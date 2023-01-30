@@ -27,7 +27,7 @@ class _Ask extends State<Ask> {
         backgroundColor: Colors.white,
         //when user taps anywhere on the screen, keyboard hides
         appBar: AppBar(
-          backgroundColor: Colors.blue.shade800,
+          backgroundColor: Color(0xFF345FB4),
           centerTitle: true,
           title: Text(
             'Ask',
@@ -41,7 +41,7 @@ class _Ask extends State<Ask> {
             label: const Text('Back'),
             style: ElevatedButton.styleFrom(
               elevation: 0,
-              backgroundColor: Colors.blue.shade800,
+              backgroundColor: Color(0xFF345FB4),
             ),
           ),
         ),

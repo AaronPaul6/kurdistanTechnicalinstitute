@@ -23,7 +23,7 @@ class contact extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue.shade800,
+          backgroundColor: Color(0xFF345FB4),
           centerTitle: true,
           title: Text(
             'CONTACT US',
@@ -37,7 +37,7 @@ class contact extends StatelessWidget {
             label: const Text('Back'),
             style: ElevatedButton.styleFrom(
               elevation: 0,
-              backgroundColor: Colors.blue.shade800,
+              backgroundColor: Color(0xFF345FB4),
             ),
           ),
 

@@ -25,9 +25,9 @@ class _signup extends State<signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF345FB4),
       appBar: AppBar(
-        backgroundColor: Colors.blue.shade800,
+        backgroundColor: Color(0xFF345FB4),
         centerTitle: true,
         title: Text(
           'Signup',
@@ -41,7 +41,7 @@ class _signup extends State<signup> {
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
             elevation: 0,
-            backgroundColor: Colors.blue.shade800,
+            backgroundColor: Color(0xFF345FB4),
           ),
         ),
       ),
@@ -49,7 +49,7 @@ class _signup extends State<signup> {
         children: [
           Container(
             decoration: BoxDecoration(
-              color: Colors.blue.shade800,
+              color: Color(0xFF345FB4),
             ),
             width: 100.w,
             height: 28.h,
