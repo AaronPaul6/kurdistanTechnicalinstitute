@@ -73,6 +73,7 @@ class PhotoGalleryState extends State<PhotoGallery> {
           icon: const Icon(Icons.arrow_left_sharp),
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
+            backgroundColor: kPrimaryColor,
             elevation: 0,
           ),
         ),

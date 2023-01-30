@@ -35,8 +35,7 @@ class VideoGalleryState extends State<VideoGallery> {
         centerTitle: true,
         title: Text(
           'Video Gallery',
-          style: TextStyle(
-              color: Colors.grey, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
 
         automaticallyImplyLeading: false,
@@ -46,8 +45,8 @@ class VideoGalleryState extends State<VideoGallery> {
           icon: const Icon(Icons.arrow_left_sharp),
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
+            backgroundColor: kPrimaryColor,
             elevation: 0,
-
           ),
         ),
 
@@ -62,7 +61,6 @@ class VideoGalleryState extends State<VideoGallery> {
       bottomSheet: Container(
         color: Colors.blue.withOpacity(0.50),
         height: 100,
-
         child: Row(
           children: [
             Text(

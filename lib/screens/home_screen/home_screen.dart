@@ -176,11 +176,11 @@ class HomeCard extends StatelessWidget {
       required this.icon,
       required this.title})
       : super(key: key);
+
   final VoidCallback onPress;
   final String icon;
   final String title;
 
-// hi
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -204,6 +204,9 @@ class HomeCard extends StatelessWidget {
                 width:
                     SizerUtil.deviceType == DeviceType.tablet ? 30.sp : 40.sp,
                 color: kOtherColor,
+              ),
+              SizedBox(
+                height: 10,
               ),
               Text(
                 title,

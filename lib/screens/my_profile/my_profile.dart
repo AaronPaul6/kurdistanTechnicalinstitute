@@ -11,18 +11,30 @@ class MyProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('My Profile'),
+        automaticallyImplyLeading: false,
+        leadingWidth: 100,
+        leading: ElevatedButton.icon(
+          onPressed: () => Navigator.of(context).pop(),
+          icon: const Icon(Icons.arrow_left_sharp),
+          label: const Text('Back'),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: kPrimaryColor,
+            elevation: 0,
+          ),
+        ),
         actions: [
           InkWell(
-            onTap: () {
-            },
+            onTap: () {},
             child: Container(
-              padding: EdgeInsets.only(right: kDefaultPadding / 2),
+              padding: EdgeInsets.all(10),
               child: Row(
                 children: [
-
                   Text(
                     'Edit Profile',
-                    style: Theme.of(context).textTheme.labelLarge,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                    ),
                   ),
                 ],
               ),
@@ -47,8 +59,7 @@ class MyProfileScreen extends StatelessWidget {
                     radius:
                         SizerUtil.deviceType == DeviceType.tablet ? 12.w : 13.w,
                     backgroundColor: kSecondaryColor,
-                    backgroundImage:
-                        AssetImage('assets/images/logo.jpg'),
+                    backgroundImage: AssetImage('assets/images/logo.jpg'),
                   ),
                   kWidthSizedBox,
                   Column(
@@ -65,7 +76,6 @@ class MyProfileScreen extends StatelessWidget {
               ),
             ),
             sizedBox,
-
             sizedBox,
             ProfileDetailColumn(
               title: 'Email',
@@ -95,6 +105,7 @@ class ProfileDetailRow extends StatelessWidget {
       : super(key: key);
   final String title;
   final String value;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -142,6 +153,7 @@ class ProfileDetailColumn extends StatelessWidget {
       : super(key: key);
   final String title;
   final String value;
+
   @override
   Widget build(BuildContext context) {
     return Container(
