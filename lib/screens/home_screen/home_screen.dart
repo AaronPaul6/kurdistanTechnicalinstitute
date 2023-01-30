@@ -184,36 +184,42 @@ class HomeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: InkWell(
-        onTap: onPress,
+      child: Material(
         child: Container(
           margin: EdgeInsets.all(10),
-          padding: EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            color: kPrimaryColor,
-            borderRadius: BorderRadius.circular(kDefaultPadding / 2),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SvgPicture.asset(
-                icon,
-                height:
-                    SizerUtil.deviceType == DeviceType.tablet ? 30.sp : 40.sp,
-                width:
-                    SizerUtil.deviceType == DeviceType.tablet ? 30.sp : 40.sp,
-                color: kOtherColor,
+          child: InkWell(
+            onTap: onPress,
+            child: Ink(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: kPrimaryColor,
+                borderRadius: BorderRadius.circular(10),
               ),
-              SizedBox(
-                height: 10,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(
+                    icon,
+                    height: SizerUtil.deviceType == DeviceType.tablet
+                        ? 30.sp
+                        : 40.sp,
+                    width: SizerUtil.deviceType == DeviceType.tablet
+                        ? 30.sp
+                        : 40.sp,
+                    color: kOtherColor,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    title,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.subtitle2,
+                  ),
+                ],
               ),
-              Text(
-                title,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.subtitle2,
-              ),
-            ],
+            ),
           ),
         ),
       ),
