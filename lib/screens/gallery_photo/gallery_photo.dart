@@ -56,7 +56,7 @@ class PhotoGalleryState extends State<PhotoGallery> {
                       Container(
                         margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
                         child: Icon(Icons.image, size: 40.0,
-                          color: Colors.lightGreenAccent,
+                          color: Colors.white,
                         ),
                       )
                     ]
@@ -97,10 +97,9 @@ class PhotoGalleryState extends State<PhotoGallery> {
       ),
       bottomSheet: Container(
         color: Colors.blue.withOpacity(0.50),
-        height: 100,
-        width: 100,
         child: Container(
-          width: double.infinity,
+          width: MediaQuery.of(context).size.width,
+          height: 100,
           child: Text(
               'futte ',
               style: TextStyle(
