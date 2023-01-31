@@ -30,7 +30,7 @@ class _Ask extends State<Ask> {
           backgroundColor: Color(0xFF345FB4),
           centerTitle: true,
           title: Text(
-            'Ask',
+            'Question & Answer',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           automaticallyImplyLeading: false,
@@ -50,7 +50,7 @@ class _Ask extends State<Ask> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 30),
+                // SizedBox(height: 30),
                 Row(
                   children: [
                     Text(""),
@@ -65,11 +65,11 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade800,
+                        color: Color(0xFF345FB4),
                       ),
                       child: Center(
                         child: ExpansionTile(
-                          title: Text('How much does studying cost?', style : TextStyle(
+                          title: Text('How much does it cost to study at KTI?', style : TextStyle(
                         fontSize: 18 ),),
                           children: [
                             Container(
@@ -101,7 +101,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade800,
+                        color: Color(0xFF345FB4),
                       ),
                       child: Center(
                         child: ExpansionTile(
@@ -140,7 +140,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade800,
+                        color: Color(0xFF345FB4),
                       ),
                       child: Center(
                         child: ExpansionTile(
@@ -178,7 +178,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade800,
+                        color: Color(0xFF345FB4),
                       ),
                       child: Center(
                         child: ExpansionTile(
@@ -205,20 +205,13 @@ class _Ask extends State<Ask> {
                         ),
                       ),
                     ),
-
-
-
-
-
-
-
 //5
                     Container(
                       margin: EdgeInsets.all(10),
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade800,
+                        color: Color(0xFF345FB4),
                       ),
                       child: Center(
                         child: ExpansionTile(
@@ -257,7 +250,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade800,
+                        color: Color(0xFF345FB4),
                       ),
                       child: Center(
                         child: ExpansionTile(
@@ -285,17 +278,13 @@ class _Ask extends State<Ask> {
                       ),
                     ),
 
-
-
-
-
                     //7
                     Container(
                       margin: EdgeInsets.all(10),
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade800,
+                        color: Color(0xFF345FB4),
                       ),
                       child: Center(
                         child: ExpansionTile(
@@ -323,16 +312,13 @@ class _Ask extends State<Ask> {
                       ),
                     ),
 
-
-
-
                     //8
                     Container(
                       margin: EdgeInsets.all(10),
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade800,
+                        color: Color(0xFF345FB4),
                       ),
                       child: Center(
                         child: ExpansionTile(
@@ -364,17 +350,13 @@ class _Ask extends State<Ask> {
 
 
 
-
-
-
-
                     //9
                     Container(
                       margin: EdgeInsets.all(10),
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade800,
+                        color: Color(0xFF345FB4),
                       ),
                       child: Center(
                         child: ExpansionTile(
@@ -412,7 +394,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade800,
+                        color: Color(0xFF345FB4),
                       ),
                       child: Center(
                         child: ExpansionTile(
@@ -441,22 +423,13 @@ class _Ask extends State<Ask> {
                     ),
 
 
-
-
-
-
-
-
-
-
-
                     //11
                     Container(
                       margin: EdgeInsets.all(10),
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade800,
+                        color: Color(0xFF345FB4),
                       ),
                       child: Center(
                         child: ExpansionTile(
@@ -485,18 +458,13 @@ class _Ask extends State<Ask> {
                     ),
 
 
-
-
-
-
-
                     //12
                     Container(
                       margin: EdgeInsets.all(10),
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade800,
+                        color: Color(0xFF345FB4),
                       ),
                       child: Center(
                         child: ExpansionTile(
@@ -524,12 +492,6 @@ class _Ask extends State<Ask> {
                       ),
                     ),
 
-
-
-
-
-
-
                     //13
 
                     //11
@@ -538,7 +500,7 @@ class _Ask extends State<Ask> {
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue.shade800,
+                        color: Color(0xFF345FB4),
                       ),
                       child: Center(
                         child: ExpansionTile(
@@ -565,19 +527,6 @@ class _Ask extends State<Ask> {
                         ),
                       ),
                     ),
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                   ]),

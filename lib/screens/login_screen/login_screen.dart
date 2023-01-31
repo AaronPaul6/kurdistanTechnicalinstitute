@@ -42,8 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('WELCOME TO',
-                          style: Theme.of(context).textTheme.subtitle1),
+                      Text('WELCOME TO'),
                       Text('Kurdistan Technical Institute',
                           style: Theme.of(context).textTheme.subtitle2),
                       sizedBox,

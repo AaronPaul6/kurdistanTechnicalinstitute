@@ -18,6 +18,7 @@ class _signup extends State<signup> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Color(0xFF345FB4),
       appBar: AppBar(
@@ -42,6 +43,7 @@ class _signup extends State<signup> {
       body: Column(
         children: [
           Container(
+
             decoration: BoxDecoration(
               color: Color(0xFF345FB4),
             ),
