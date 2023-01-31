@@ -68,8 +68,23 @@ class _AboutUs extends State<AboutUs> {
               height: 22,
             ),
             Container(
+              child: Align(
+                alignment: AlignmentDirectional(0, -1),
+                child: Text(
+                  'History of KTI',
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    color: Colors.blue.shade800,
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            Container(
               width: MediaQuery.of(context).size.width,
               height: 500,
+              color: Colors.grey[300],
               child: Column(
                 children: [
                   Expanded(
@@ -97,6 +112,10 @@ class _AboutUs extends State<AboutUs> {
             ),
             Container(
               width: MediaQuery.of(context).size.width,
+              height: 22,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
               child: Image.asset(
                 'assets/images/kti_dean.png',
                 fit: BoxFit.cover,
@@ -107,8 +126,23 @@ class _AboutUs extends State<AboutUs> {
               height: 22,
             ),
             Container(
+              child: Align(
+                alignment: AlignmentDirectional(0, -1),
+                child: Text(
+                  'Dean Message ',
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    color: Colors.blue.shade800,
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            Container(
               width: MediaQuery.of(context).size.width,
-              height: 300,
+              height: 730,
+              color: Colors.grey[300],
               child: Column(
                 children: [
                   Expanded(
@@ -134,8 +168,49 @@ class _AboutUs extends State<AboutUs> {
             Container(
               width: MediaQuery.of(context).size.width,
               child: Image.asset(
-                'assets/images/kti_dean.png',
+                'assets/images/kti_bolonga.jpeg',
                 fit: BoxFit.cover,
+              ),
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 22,
+            ),
+            Container(
+              child: Align(
+                alignment: AlignmentDirectional(0, -1),
+                child: Text(
+                  'The System that KTI uses ',
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    color: Colors.blue.shade800,
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 730,
+              color: Colors.grey[300],
+              child: Column(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                          'Kurdistan Technical Institute (KTI) officially decided to change the study system considering the standards and paradigms of the international Bologna system, and following the Institute trustee committee in Meeting No. (7) on 7/ 21/2016, to  perform the process during the academic year of 2016-2017. Therefore, following the institute decree No. 324 on 4/19/2016 a particular committee has been established. The committee perpetually has done some meetings since then, the minutes have been sent to the trustee committee of the institute to make decisions. The Institute’s specialized Committee for the Bologna process has visited the Ministry of Higher Education and Scientific Research of Kurdistan region and University of Human Development (UHD) to be more acquaintances with the steps of launching the Bologna process and to meet the related requirements'
+                          'Several workshops on how to launch the Bologna process have been conducted by the Institute’s Bologna process committee, in which a number of foreigner  and local experts have been invited. Therefore, upon this issue,  KTI has done complete cooperation with University Technology Malaysia (UTM). The Bologna High Committee has also made several visits to the University of Human Development to benefit from the university’s experience. What is worth mentioning is that most of our institute’s lecturers have completed their studies abroad, particularly in countries such as Britain, Europe, Malaysia and Turkey, all of whom follow the Bologna process.',
+                          style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontFamily: 'Roboto',
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ], //children
