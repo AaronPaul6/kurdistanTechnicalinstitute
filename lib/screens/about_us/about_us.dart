@@ -36,7 +36,7 @@ class _AboutUs extends State<AboutUs> {
       //when user taps anywhere on the screen, keyboard hides
       appBar: AppBar(
         // Overide the default Back button
-        backgroundColor: Colors.blue.shade800,
+        backgroundColor: Color(0xFF345FB4),
         centerTitle: true,
         title: Text(
           'ABOUT US',
@@ -50,7 +50,7 @@ class _AboutUs extends State<AboutUs> {
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
             elevation: 0,
-            backgroundColor: Colors.blue.shade800,
+            backgroundColor: Color(0xFF345FB4),
           ),
         ),
       ),
@@ -58,11 +58,16 @@ class _AboutUs extends State<AboutUs> {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            Image.asset(
-              'assets/images/kti_image.jpg',
-              fit: BoxFit.cover,
-              width: MediaQuery.of(context).size.width,
-            ),
+            Container(
+                // margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+                child:
+                Image.asset(
+                  'assets/images/kti_image.jpg',
+                  fit: BoxFit.cover,
+                  width: MediaQuery.of(context).size.width,
+                ),
+                ),
+
             Container(
               width: MediaQuery.of(context).size.width,
               height: 22,
@@ -74,7 +79,7 @@ class _AboutUs extends State<AboutUs> {
                   'History of KTI',
                   style: TextStyle(
                     fontFamily: 'Poppins',
-                    color: Colors.blue.shade800,
+                    color: Color(0xFF345FB4),
                     fontSize: 26,
                     fontWeight: FontWeight.bold,
                   ),
@@ -82,9 +87,13 @@ class _AboutUs extends State<AboutUs> {
               ),
             ),
             Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(22)),
+                color: Colors.grey[100],
+              ),
               width: MediaQuery.of(context).size.width,
               height: 500,
-              color: Colors.grey[300],
+              margin: const EdgeInsets.all(10),
               child: Column(
                 children: [
                   Expanded(
@@ -115,6 +124,7 @@ class _AboutUs extends State<AboutUs> {
               height: 22,
             ),
             Container(
+              // margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
               width: MediaQuery.of(context).size.width,
               child: Image.asset(
                 'assets/images/kti_dean.png',
@@ -132,7 +142,7 @@ class _AboutUs extends State<AboutUs> {
                   'Dean Message ',
                   style: TextStyle(
                     fontFamily: 'Poppins',
-                    color: Colors.blue.shade800,
+                    color: Color(0xFF345FB4),
                     fontSize: 26,
                     fontWeight: FontWeight.bold,
                   ),
@@ -140,9 +150,13 @@ class _AboutUs extends State<AboutUs> {
               ),
             ),
             Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(22)),
+                color: Colors.grey[200],
+              ),
+              margin: const EdgeInsets.all(10),
               width: MediaQuery.of(context).size.width,
               height: 730,
-              color: Colors.grey[300],
               child: Column(
                 children: [
                   Expanded(
@@ -166,6 +180,7 @@ class _AboutUs extends State<AboutUs> {
               height: 22,
             ),
             Container(
+              // margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
               width: MediaQuery.of(context).size.width,
               child: Image.asset(
                 'assets/images/kti_bolonga.jpeg',
@@ -183,7 +198,7 @@ class _AboutUs extends State<AboutUs> {
                   'The System that KTI uses ',
                   style: TextStyle(
                     fontFamily: 'Poppins',
-                    color: Colors.blue.shade800,
+                    color: Color(0xFF345FB4),
                     fontSize: 26,
                     fontWeight: FontWeight.bold,
                   ),
@@ -191,9 +206,13 @@ class _AboutUs extends State<AboutUs> {
               ),
             ),
             Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(22)),
+                color: Colors.grey[100],
+              ),
               width: MediaQuery.of(context).size.width,
+              margin: const EdgeInsets.all(10),
               height: 730,
-              color: Colors.grey[300],
               child: Column(
                 children: [
                   Expanded(
