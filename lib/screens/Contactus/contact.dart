@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const contact());
+}
+_makingPhoneCall() async {
+  var url = Uri.parse("tel:9776765434");
+  if (await canLaunchUrl(url)) {
+    await launchUrl(url);
+  } else {
+    throw 'Could not launch $url';
+  }
 }
 
 class contact extends StatelessWidget {
@@ -51,135 +60,12 @@ class contact extends StatelessWidget {
             const SizedBox(
               height: 7,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 120,
-                    width: 170,
-                    decoration:
-                        const BoxDecoration(color: Colors.white, boxShadow: [
-                      BoxShadow(
-                        color: Colors.white24,
-                        blurRadius: 20,
-                      ),
-                    ]),
-                    child: Column(
-                      children: const [
-                        Icon(
-                          Icons.alternate_email,
-                          color: Colors.orange,
-                          size: 50,
-                        ),
-                        Text("Write to Us"),
-                        Text("info@kti.edu.iq"),
-                      ],
-                    ),
-                    padding: const EdgeInsets.all(8),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 120,
-                    width: 170,
-                    decoration:
-                        const BoxDecoration(color: Colors.white, boxShadow: [
-                      BoxShadow(
-                        color: Colors.white24,
-                        blurRadius: 20,
-                      ),
-                    ]),
-                    child: Column(
-                      children: const [
-                        Icon(
-                          Icons.help_outline,
-                          color: Colors.orange,
-                          size: 50,
-                        ),
-                        Text("FAQs"),
-                        Text(
-                          "\nFrequently Asked Questions",
-                          style: TextStyle(fontSize: 11),
-                        ),
 
-                      ],
-                    ),
-                    padding: const EdgeInsets.symmetric(vertical: 8),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 120,
-                    width: 170,
-                    decoration:
-                        const BoxDecoration(color: Colors.white, boxShadow: [
-                      BoxShadow(
-                        color: Colors.white24,
-                        blurRadius: 20,
-                      ),
-                    ]),
-                    child: Column(
-                      children: const [
-                        Icon(
-                          Icons.phone,
-                          color: Colors.orange,
-                          size: 50,
-                        ),
-                        Text("Contact Phone"),
-                        Text("+(964)07717028282"),
-                      ],
-                    ),
-                    padding: const EdgeInsets.all(8),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 120,
-                    width: 170,
-                    decoration:
-                        const BoxDecoration(color: Colors.white, boxShadow: [
-                      BoxShadow(
-                        color: Colors.white24,
-                        blurRadius: 20,
-                      ),
-                    ]),
-                    child: Column(
-                      children: const [
-                        Icon(
-                          Icons.location_city,
-                          color: Colors.orange,
-                          size: 50,
-                        ),
-                        Text("Address"),
-                        Text("Suli Heights Project"),
-                      ],
-                    ),
-                    padding: const EdgeInsets.all(8),
-                  ),
-                ),
-              ],
-            ),
-            const Text(
-              "\n\n\nCopyright. @2023 KTI",
-              style: TextStyle(color: Colors.blue),
-            ),
-            const Text(
-              "All rights are reserved",
-              style: TextStyle(color: Colors.blue),
-            ),
-          ],
-        ),
+  ],
+      ),
       ),
     );
   }
 }
+
+
