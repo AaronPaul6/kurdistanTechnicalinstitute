@@ -95,19 +95,19 @@ class PhotoGalleryState extends State<PhotoGallery> {
           },
         ),
       ),
-      bottomSheet: Container(
-        color: Colors.blue.withOpacity(0.50),
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          height: 100,
-          child: Text(
-              'futte ',
-              style: TextStyle(
-                color: Colors.black,
-              ),
-            )
-        ),
-      ),
+      // bottomSheet: Container(
+      //   color: Colors.blue.withOpacity(0.50),
+      //   child: Container(
+      //     width: MediaQuery.of(context).size.width,
+      //     height: 100,
+      //     child: Text(
+      //         'futte ',
+      //         style: TextStyle(
+      //           color: Colors.black,
+      //         ),
+      //       )
+      //   ),
+      // ),
     );
   }
 }
@@ -118,6 +118,10 @@ List<String> images = [
   'assets/images/KTI4.jpg',
   'assets/images/KTI5.jpg',
   'assets/images/KTI6.jpg',
+  'assets/images/KTI7.jpg',
+  'assets/images/KTI8.jpg',
+  'assets/images/KTI9.jpg',
+  'assets/images/KTI10.jpg',
 ];
 
 
