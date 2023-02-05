@@ -10,7 +10,8 @@ class MyProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Profile'),
+        title: Text('My Profile',
+        style : TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
         automaticallyImplyLeading: false,
         leadingWidth: 100,
         leading: ElevatedButton.icon(
@@ -67,7 +68,7 @@ class MyProfileScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Arya Burhan',
+                        'Ashna Hamad',
                         style: Theme.of(context).textTheme.subtitle1,
                       ),
                     ],
@@ -79,19 +80,19 @@ class MyProfileScreen extends StatelessWidget {
             sizedBox,
             ProfileDetailColumn(
               title: 'Email',
-              value: 'aryaburhan3@gmail.com',
+              value: 'ashna1234@gmail.com',
             ),
             ProfileDetailColumn(
               title: 'Last Name',
-              value: 'Burhan',
+              value: 'Hamad',
             ),
             ProfileDetailColumn(
               title: 'First Name',
-              value: 'Arya',
+              value: 'Ashna',
             ),
             ProfileDetailColumn(
               title: 'Phone Number',
-              value: '+9647701374991',
+              value: '+9647701234567',
             ),
           ],
         ),
