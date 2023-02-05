@@ -10,15 +10,15 @@ import 'package:brain_school/constants.dart';
 import 'package:brain_school/screens/home_screen/home_screen.dart';
 import 'package:sizer/sizer.dart';
 
-class Ask extends StatefulWidget {
-  static String routeName = 'Ask';
+class QA extends StatefulWidget {
+  static String routeName = 'Q&A';
 
 //String content = "";
   @override
-  _Ask createState() => _Ask();
+  _QA createState() => _QA();
 }
 
-class _Ask extends State<Ask> {
+class _QA extends State<QA> {
   final _formKey = GlobalKey<FormState>();
 
   @override

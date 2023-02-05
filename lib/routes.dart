@@ -8,7 +8,7 @@ import 'package:flutter/cupertino.dart';
 import 'screens/about_us/about_us.dart';
 import 'screens/home_screen/home_screen.dart';
 import 'screens/my_profile/my_profile.dart';
-import 'package:brain_school/screens/Ask/Ask.dart';
+import 'package:brain_school/screens/Q&A//Q&A.dart';
 import 'package:brain_school/screens/signup/signup.dart';
 import 'package:brain_school/screens/Contactus/contact.dart';
 
@@ -20,7 +20,7 @@ Map<String, WidgetBuilder> routes = {
   AboutUs.routeName: (context) => AboutUs(),
   News.routeName: (context) => News(),
   timetable.routeName: (context) => timetable(),
-  Ask.routeName: (context) => Ask(),
+  QA.routeName: (context) => QA(),
   signup.routeName: (context) => signup(),
   VideoGallery.routeName: (context) => VideoGallery(),
   PhotoGallery.routeName: (context) => PhotoGallery(),
