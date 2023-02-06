@@ -85,8 +85,8 @@ class PhotoGalleryState extends State<PhotoGallery> {
           itemCount: images.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              crossAxisSpacing: 12.0,
-              mainAxisSpacing: 12.0,
+              crossAxisSpacing: 8.0,
+              mainAxisSpacing: 8.0,
             mainAxisExtent: 155.0
 
           ),
