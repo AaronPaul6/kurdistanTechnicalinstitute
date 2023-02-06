@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Ask extends StatefulWidget {
-  static String routeName = 'Ask';
+class QA extends StatefulWidget {
+  static String routeName = 'Q&A';
 
   @override
-  _Ask createState() => _Ask();
+  _QA createState() => _QA();
 }
 
-class _Ask extends State<Ask> {
+class _QA extends State<QA> {
   final _formKey = GlobalKey<FormState>();
 
   @override

@@ -9,7 +9,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 import '../news_screen/news.dart';
 import 'widgets/student_data.dart';
-import 'package:brain_school/screens/Ask/Ask.dart';
+import 'package:brain_school/screens/Q&A//Q&A.dart';
 import 'package:brain_school/screens/about_us/about_us.dart';
 import 'package:brain_school/screens/Contactus/contact.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -88,10 +88,10 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           HomeCard(
                             onPress: () {
-                              Navigator.pushNamed(context, Ask.routeName);
+                              Navigator.pushNamed(context, QA.routeName);
                             },
                             icon: 'assets/icons/ask.svg',
-                            title: 'Ask',
+                            title: 'Q&A',
                           ),
                           HomeCard(
                             onPress: () {
