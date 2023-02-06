@@ -1,14 +1,5 @@
 import 'package:brain_school/constants.dart';
-import 'package:brain_school/screens/my_profile/my_profile.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:sizer/sizer.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:brain_school/components/custom_buttons.dart';
-import 'package:brain_school/constants.dart';
-import 'package:brain_school/screens/home_screen/home_screen.dart';
-import 'package:sizer/sizer.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoGallery extends StatefulWidget {
@@ -56,10 +47,6 @@ class VideoGalleryState extends State<VideoGallery> {
           ),
         ),
 
-// done this
-//child(
-// ElevatedButton.icon(onPressed: onPressed, icon: icon, label: label)
-        //)
       ),
 
       body:Center(
@@ -67,13 +54,14 @@ class VideoGalleryState extends State<VideoGallery> {
           decoration: BoxDecoration(
             border: Border.all(color: Colors.blueGrey,width: 3.3),
           ),
-          width: 350,
+          width: 400,
           height: 350,
           child: _controller.value.isInitialized
               ? VideoPlayer(_controller)
               : Container(),
         ),
       ),
+
       floatingActionButton: FloatingActionButton(child: Icon(_controller.value.isPlaying ? Icons.pause : Icons.play_arrow), onPressed: () {
         setState(() {
           _controller.value.isPlaying ? _controller.pause() : _controller.play();
@@ -98,11 +86,6 @@ class VideoGalleryState extends State<VideoGallery> {
     // throw UnimplementedError();
   }
 }
-
-
-
-
-
 
 TextFormField buildEmailField() {
   return TextFormField(
