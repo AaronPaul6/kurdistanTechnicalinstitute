@@ -17,6 +17,7 @@ class contact extends StatelessWidget {
   static String routeName = 'contact';
   const contact({Key? key}) : super(key: key);
 
+  final String _phoneNumber = '+9647710125050' ;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -60,11 +61,26 @@ class contact extends StatelessWidget {
             const SizedBox(
               height: 7,
             ),
+            Center(
+              child: MaterialButton(
+                onPressed: ( ) async{
+                  final _call='tel:$_phoneNumber';
+                },
+                color: Colors.blue.shade800,
+                child: Text('Call Us', style: TextStyle( color: Colors.white , fontSize: 20,
+                ),
+              ),
+
+            ),
+            ),
 
   ],
       ),
-      ),
-    );
+
+
+        ),
+        );
+
   }
 }
 
