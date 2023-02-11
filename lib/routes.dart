@@ -8,9 +8,13 @@ import 'package:flutter/cupertino.dart';
 import 'screens/about_us/about_us.dart';
 import 'screens/home_screen/home_screen.dart';
 import 'screens/my_profile/my_profile.dart';
-import 'package:brain_school/screens/Q&A//Q&A.dart';
+import 'package:brain_school/screens/Q&A/Q&A.dart';
 import 'package:brain_school/screens/signup/signup.dart';
 import 'package:brain_school/screens/Contactus/contact.dart';
+import 'package:brain_school/screens/gallery_photo/cafe.dart';
+import 'package:brain_school/screens/gallery_photo/campus.dart';
+import 'package:brain_school/screens/gallery_photo/car_park.dart';
+import 'package:brain_school/screens/gallery_photo/library.dart';
 
 Map<String, WidgetBuilder> routes = {
   SplashScreen.routeName: (context) => SplashScreen(),
@@ -24,6 +28,11 @@ Map<String, WidgetBuilder> routes = {
   signup.routeName: (context) => signup(),
   VideoGallery.routeName: (context) => VideoGallery(),
   PhotoGallery.routeName: (context) => PhotoGallery(),
+  CafeGallery.routeName: (context) => CafeGallery(),
+  CarParkGallery.routeName: (context) => CarParkGallery(),
+  LibraryGallery.routeName: (context) => LibraryGallery(),
+  CampusGallery.routeName: (context) => CampusGallery(),
+
   contact.routeName: (context) => contact()
 
 };
