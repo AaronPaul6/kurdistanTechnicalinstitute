@@ -9,6 +9,25 @@ import 'package:brain_school/components/custom_buttons.dart';
 import 'package:brain_school/constants.dart';
 import 'package:brain_school/screens/home_screen/home_screen.dart';
 import 'package:sizer/sizer.dart';
+import 'package:brain_school/screens/gallery_photo/cafe.dart';
+import 'package:brain_school/screens/gallery_photo/campus.dart';
+import 'package:brain_school/screens/gallery_photo/car_park.dart';
+import 'package:brain_school/screens/gallery_photo/library.dart';
+
+String cafe_route = CafeGallery.routeName;
+String campus_route = CampusGallery.routeName;
+String car_park_route = CarParkGallery.routeName;
+String library_route = LibraryGallery.routeName;
+
+
+
+
+List<dynamic> routes = [
+  [cafe_route,'assets/icons/cafe.svg', 'Cafe'],
+  [campus_route,'assets/icons/campus.svg', 'Campus'],
+  [car_park_route,'assets/icons/car_park.svg', 'Car Park'],
+  [library_route,'assets/icons/library.svg', 'Library']
+];
 
 
 class PhotoGallery extends StatefulWidget {
@@ -82,7 +101,7 @@ class PhotoGalleryState extends State<PhotoGallery> {
       body: Container(
         padding: EdgeInsets.all(15.0),
         child: GridView.builder(
-          itemCount: images.length,
+          itemCount: routes.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 8.0,
@@ -91,7 +110,13 @@ class PhotoGalleryState extends State<PhotoGallery> {
 
           ),
           itemBuilder: (BuildContext context, int index) {
-            return Image.asset(images[index]);
+            return HomeCard(
+              onPress: () {
+                Navigator.pushNamed(context, routes[index][0]);
+              },
+              icon: routes[index][1],
+              title: routes[index][2],
+            );
           },
         ),
       ),
@@ -111,18 +136,20 @@ class PhotoGalleryState extends State<PhotoGallery> {
     );
   }
 }
+
 List<String> images = [
   'assets/images/KTI1.jpg',
   'assets/images/KTI2.jpg',
   'assets/images/KTI3.jpg',
   'assets/images/KTI4.jpg',
-  'assets/images/KTI5.jpg',
-  'assets/images/KTI6.jpg',
-  'assets/images/KTI7.jpg',
-  'assets/images/KTI8.jpg',
-  'assets/images/KTI9.jpg',
-  'assets/images/KTI10.jpg',
 ];
+
+// String cafe = CafeGallery().routeName;
+// String campus = CampusGallery().routeName;
+// String car_park = CarParkGallery().routeName;
+// String library = LibraryGallery().routeName;
+
+
 
 
 
