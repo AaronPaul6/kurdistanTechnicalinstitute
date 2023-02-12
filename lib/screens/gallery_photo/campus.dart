@@ -45,7 +45,7 @@ class CampusGalleryState extends State<CampusGallery> {
                       Container(
                         margin: EdgeInsets.fromLTRB(25, 0, 15, 0),
                         child: Text(
-                          'Campus Gallery',
+                          'Campus ',
                           style:
                           TextStyle(color: Colors.white,
                               fontWeight: FontWeight.bold),
