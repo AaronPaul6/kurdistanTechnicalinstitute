@@ -26,12 +26,12 @@ dependencies:
   google_fonts: ^4.0.1
   flutter_svg: any
   sizer: ^2.0.15
+  flutter_social_button: ^1.1.4+1
 
   flutter:
     sdk: flutter
   url_launcher: ^6.1.8
   video_player: ^2.5.1
-  flutter_social_button: ^1.1.4+1
 
 dev_dependencies:
   flutter_test:

@@ -11,12 +11,12 @@ import 'widgets/student_data.dart';
 import 'package:brain_school/screens/Q&A//Q&A.dart';
 import 'package:brain_school/screens/about_us/about_us.dart';
 import 'package:brain_school/screens/Contactus/contact.dart';
+import 'package:brain_school/screens/my_profile/my_profile.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
   static String routeName = 'HomeScreen';
-
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class HomeScreen extends StatelessWidget {
                           color: Colors.orangeAccent,
                           image: Image.asset('assets/images/logo.jpg'),
                           onPress: () {
-
+                            Navigator.pushNamed(context, MyProfileScreen.routeName);
                           },
                         ),
                       ],
@@ -127,10 +127,10 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           HomeCard(
                             onPress: () {
-                              Navigator.pushNamed(context, AboutUs.routeName);
+                              Navigator.pushNamed(context, contact.routeName);
                             },
-                            icon: 'assets/icons/about_us.svg',
-                            title: 'About Us',
+                            icon: 'assets/icons/resume.svg',
+                            title: 'Contact Us',
                           ),
                           HomeCard(
                             onPress: () {
@@ -142,32 +142,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          HomeCard(
-                            onPress: () {
-                              Navigator.pushNamed(context, contact.routeName);
-                            },
-                            icon: 'assets/icons/resume.svg',
-                            title: 'Contact Us',
-                          ),
 
-                        ],
-                      ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      //   children: [
-                      //     HomeCard(
-                      //       onPress: () {
-                      //         Navigator.pushNamed(
-                      //             context, LoginScreen.routeName);
-                      //       },
-                      //       icon: 'assets/icons/logout.svg',
-                      //       title: 'Logout',
-                      //     ),
-                      //   ],
-                      // ),
                     ],
                   ),
                 ),
@@ -213,15 +188,15 @@ class HomeCard extends StatelessWidget {
                   SvgPicture.asset(
                     icon,
                     height: SizerUtil.deviceType == DeviceType.tablet
-                        ? 30.sp
-                        : 40.sp,
+                        ? 37.sp
+                        : 47.sp,
                     width: SizerUtil.deviceType == DeviceType.tablet
                         ? 30.sp
                         : 40.sp,
                     color: kOtherColor,
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 12,
                   ),
                   Text(
                     title,

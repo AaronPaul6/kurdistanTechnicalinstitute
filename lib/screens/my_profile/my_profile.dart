@@ -10,8 +10,12 @@ class MyProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Profile',
-        style : TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+        backgroundColor: Color(0xFF345FB4),
+        centerTitle: true,
+        title: Text(
+          'Notifications',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
         automaticallyImplyLeading: false,
         leadingWidth: 100,
         leading: ElevatedButton.icon(
@@ -19,63 +23,15 @@ class MyProfileScreen extends StatelessWidget {
           icon: const Icon(Icons.arrow_left_sharp),
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
-            backgroundColor: kPrimaryColor,
             elevation: 0,
+            backgroundColor: Color(0xFF345FB4),
           ),
         ),
-        actions: [
-          InkWell(
-            onTap: () {},
-            child: Container(
-              padding: EdgeInsets.all(10),
-              child: Row(
-                children: [
-                  Text(
-                    'Edit Profile',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
       ),
       body: Container(
         color: kOtherColor,
         child: Column(
           children: [
-            Container(
-              height: SizerUtil.deviceType == DeviceType.tablet ? 19.h : 15.h,
-              decoration: BoxDecoration(
-                color: kPrimaryColor,
-                borderRadius: kBottomBorderRadius,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CircleAvatar(
-                    radius:
-                        SizerUtil.deviceType == DeviceType.tablet ? 12.w : 13.w,
-                    backgroundColor: kSecondaryColor,
-                    backgroundImage: AssetImage('assets/images/logo.jpg'),
-                  ),
-                  kWidthSizedBox,
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Ashna Hamad',
-                        style: Theme.of(context).textTheme.subtitle1,
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ),
             sizedBox,
             sizedBox,
             ProfileDetailColumn(
