@@ -2,8 +2,7 @@ import 'package:brain_school/constants.dart';
 import 'package:brain_school/screens/Timetable/Timetable.dart';
 import 'package:brain_school/screens/gallery_photo/gallery_photo.dart';
 import 'package:brain_school/screens/gallery_video/gallery_video.dart';
-import 'package:brain_school/screens/login_screen/login_screen.dart';
-import 'package:brain_school/screens/my_profile/my_profile.dart';
+// import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
@@ -17,6 +16,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
   static String routeName = 'HomeScreen';
+
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +44,7 @@ class HomeScreen extends StatelessWidget {
                           color: Colors.orangeAccent,
                           image: Image.asset('assets/images/logo.jpg'),
                           onPress: () {
-                            Navigator.pushNamed(
-                                context, MyProfileScreen.routeName);
+
                           },
                         ),
                       ],
@@ -54,6 +53,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
@@ -69,17 +69,36 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           HomeCard(
                             onPress: () {
+                              Navigator.pushNamed(context, AboutUs.routeName);
+                            },
+                            icon: 'assets/icons/about_us.svg',
+                            title: 'About Us',
+                          ),
+                          HomeCard(
+                            onPress: () {
                               Navigator.pushNamed(context, News.routeName);
                             },
                             icon: 'assets/icons/event.svg',
                             title: 'News',
                           ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
                           HomeCard(
                             onPress: () {
                               Navigator.pushNamed(context, timetable.routeName);
                             },
                             icon: 'assets/icons/timetable.svg',
-                            title: 'Time Table',
+                            title: 'Calendar',
+                          ),
+                          HomeCard(
+                            onPress: () {
+
+                            },
+                            icon: 'assets/icons/p.svg',
+                            title: 'Student Portal',
                           ),
                         ],
                       ),
@@ -133,29 +152,22 @@ class HomeScreen extends StatelessWidget {
                             icon: 'assets/icons/resume.svg',
                             title: 'Contact Us',
                           ),
-                          HomeCard(
-                            onPress: () {
-                              Navigator.pushNamed(
-                                  context, MyProfileScreen.routeName);
-                            },
-                            icon: 'assets/icons/p.svg',
-                            title: 'Profile',
-                          ),
+
                         ],
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          HomeCard(
-                            onPress: () {
-                              Navigator.pushNamed(
-                                  context, LoginScreen.routeName);
-                            },
-                            icon: 'assets/icons/logout.svg',
-                            title: 'Logout',
-                          ),
-                        ],
-                      ),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      //   children: [
+                      //     HomeCard(
+                      //       onPress: () {
+                      //         Navigator.pushNamed(
+                      //             context, LoginScreen.routeName);
+                      //       },
+                      //       icon: 'assets/icons/logout.svg',
+                      //       title: 'Logout',
+                      //     ),
+                      //   ],
+                      // ),
                     ],
                   ),
                 ),
@@ -185,7 +197,7 @@ class HomeCard extends StatelessWidget {
     return Expanded(
       child: Material(
         child: Container(
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(9),
           child: InkWell(
             onTap: onPress,
             child: Ink(
