@@ -48,7 +48,7 @@ class CafeGalleryState extends State<CafeGallery> {
                         Container(
                           margin: EdgeInsets.fromLTRB(25, 0, 15, 0),
                           child: Text(
-                            'Cafeteria Gallery',
+                            'Cafe Gallery',
                             style:
                             TextStyle(color: Colors.white,
                                 fontWeight: FontWeight.bold),
