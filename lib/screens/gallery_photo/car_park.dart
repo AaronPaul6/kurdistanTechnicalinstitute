@@ -45,7 +45,7 @@ class CarParkGalleryState extends State<CarParkGallery> {
                       Container(
                         margin: EdgeInsets.fromLTRB(25, 0, 15, 0),
                         child: Text(
-                          'Car Park Gallery',
+                          'Car Park ',
                           style:
                           TextStyle(color: Colors.white,
                               fontWeight: FontWeight.bold),
