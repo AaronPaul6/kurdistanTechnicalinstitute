@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_social_button/flutter_social_button.dart';
 
 void main() {
   runApp(const contact());
@@ -61,20 +62,35 @@ class contact extends StatelessWidget {
             const SizedBox(
               height: 7,
             ),
-            Center(
-              child: MaterialButton(
-                onPressed: ( ) async{
-                  final _call='tel:$_phoneNumber';
-                },
-                color: Colors.blue.shade800,
-                child: Text('Call Us', style: TextStyle( color: Colors.white , fontSize: 20,
-                ),
-              ),
+           Row(
+             children:[
+               Container(
+                 child: MaterialButton(
+                   padding: EdgeInsets.all(20),
+                   color: Colors.blue.shade800,
+                   minWidth: 70,
+                   height: 50,
+                   child: Align(
+                     alignment: Alignment.centerLeft,
+                     child: Text('Call Us', style: TextStyle( color: Colors.white , fontSize: 20,
+                     ),
+                     ),
+                   ),
+                   onPressed: ( ) async{
+                     final _call='tel:$_phoneNumber';
+                   },
+                 ),
+               ),
+               Spacer(
+                 flex: 2,
+               ),
 
-            ),
-            ),
+             ],//children
+           ),
+
 
   ],
+
       ),
 
 
