@@ -81,6 +81,7 @@ class CafeGalleryState extends State<CafeGallery> {
 
         ),
         body:  Container(
+          color: Colors.white,
           padding: EdgeInsets.all(15.0),
           child: GridView.builder(
             itemCount: images.length,
@@ -93,25 +94,25 @@ class CafeGalleryState extends State<CafeGallery> {
             ),
             itemBuilder: (BuildContext context, int index) {
 
-              return InkWell(
+              return MouseRegion(
+                cursor: SystemMouseCursors.click,
                 child: Container(
-                    width: 50.0,
-                    height: 50.0,
-                    child: GestureDetector(
-                      onTap: () async {
-                        await showDialog(context: context, builder: (_) => ImageDialog(images[index]));
-                      },
+                  width: 50.0,
+                  height: 50.0,
+                  child: GestureDetector(
+                    onTap: () async {
+                      await showDialog(context: context, builder: (_) => ImageDialog(images[index]));
+                    },
+                  ),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(images[index])
                     ),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage(images[index])
-                      ),
-                    ),
-                 //   behavior: HitTestBehavior.opaque,
-                   // cursor: SystemMouseCursors.click
-                )
+                  ),
+
+                ),
               );
             },
           ),

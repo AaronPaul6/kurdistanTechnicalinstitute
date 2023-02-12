@@ -78,7 +78,73 @@ class LibraryGalleryState extends State<LibraryGallery> {
 
       ),
       body: Container(
+        color: Colors.white,
+        padding: EdgeInsets.all(15.0),
+        child: GridView.builder(
+          itemCount: images.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 8.0,
+              mainAxisSpacing: 8.0,
+              mainAxisExtent: 155.0
 
+          ),
+          itemBuilder: (BuildContext context, int index) {
+
+            return MouseRegion(
+              cursor: SystemMouseCursors.click,
+              child: Container(
+                width: 50.0,
+                height: 50.0,
+                child: GestureDetector(
+                  onTap: () async {
+                    await showDialog(context: context, builder: (_) => ImageDialog(images[index]));
+                  },
+                ),
+                decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(images[index])
+                  ),
+                ),
+
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+
+List<String> images = [
+  'assets/images/lib1.jpg',
+  'assets/images/lib2.jpg',
+  'assets/images/lib3.jpg',
+  'assets/images/lib4.jpg',
+];
+
+class ImageDialog extends StatelessWidget {
+  String image_route = "";
+  ImageDialog(image_route){
+    this.image_route = image_route;
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      child: Container(
+        width: 400,
+        height: 400,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: ExactAssetImage(this.image_route),
+                fit: BoxFit.cover
+            )
+        ),
       ),
     );
   }
