@@ -120,10 +120,14 @@ class CampusGalleryState extends State<CampusGallery> {
 
 
 List<String> images = [
-  'assets/images/caffe1.jpg',
-  'assets/images/caffe2.jpg',
-  'assets/images/caffe3.jpg',
-  'assets/images/caffe4.jpg',
+  'assets/images/compus11.jpg',
+  'assets/images/compus12.jpg',
+  'assets/images/compus13.jpg',
+  'assets/images/compus14.jpg',
+  'assets/images/compus15.jpg',
+  'assets/images/compus16.jpg',
+  'assets/images/compus17.jpg',
+  'assets/images/compus18.jpg',
 ];
 
 class ImageDialog extends StatelessWidget {
