@@ -32,7 +32,6 @@ Map<String, WidgetBuilder> routes = {
   CarParkGallery.routeName: (context) => CarParkGallery(),
   LibraryGallery.routeName: (context) => LibraryGallery(),
   CampusGallery.routeName: (context) => CampusGallery(),
-
   contact.routeName: (context) => contact()
 
 };
