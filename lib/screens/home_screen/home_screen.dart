@@ -1,5 +1,5 @@
 import 'package:brain_school/constants.dart';
-import 'package:brain_school/screens/Timetable/Timetable.dart';
+import 'package:brain_school/screens/Calender/Calender.dart';
 import 'package:brain_school/screens/gallery_photo/gallery_photo.dart';
 import 'package:brain_school/screens/gallery_video/gallery_video.dart';
 // import 'package:url_launcher/url_launcher.dart';
@@ -88,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           HomeCard(
                             onPress: () {
-                              Navigator.pushNamed(context, timetable.routeName);
+                              Navigator.pushNamed(context, Calender.routeName);
                             },
                             icon: 'assets/icons/timetable.svg',
                             title: 'Calendar',

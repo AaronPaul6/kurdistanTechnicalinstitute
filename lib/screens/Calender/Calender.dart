@@ -2,14 +2,14 @@ import 'package:brain_school/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class timetable extends StatefulWidget {
-  static String routeName = 'timetable';
+class Calender extends StatefulWidget {
+  static String routeName = 'Calender';
 
   @override
-  _timetable createState() => _timetable();
+  _Calender createState() => _Calender();
 }
 
-class _timetable extends State<timetable> {
+class _Calender extends State<Calender> {
   // final _formKey = GlobalKey<FormState>();
 
   Future<void> _launchURL(String url) async {

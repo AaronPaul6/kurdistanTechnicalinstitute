@@ -3,7 +3,7 @@ import 'package:brain_school/screens/gallery_video/gallery_video.dart';
 import 'package:brain_school/screens/login_screen/login_screen.dart';
 import 'package:brain_school/screens/news_screen/news.dart';
 import 'package:brain_school/screens/splash_screen/splash_screen.dart';
-import 'package:brain_school/screens/Timetable/Timetable.dart';
+import 'package:brain_school/screens/Calender/Calender.dart';
 import 'package:flutter/cupertino.dart';
 import 'screens/about_us/about_us.dart';
 import 'screens/home_screen/home_screen.dart';
@@ -23,7 +23,7 @@ Map<String, WidgetBuilder> routes = {
   MyProfileScreen.routeName: (context) => MyProfileScreen(),
   AboutUs.routeName: (context) => AboutUs(),
   News.routeName: (context) => News(),
-  timetable.routeName: (context) => timetable(),
+  Calender.routeName: (context) => Calender(),
   QA.routeName: (context) => QA(),
   signup.routeName: (context) => signup(),
   VideoGallery.routeName: (context) => VideoGallery(),
