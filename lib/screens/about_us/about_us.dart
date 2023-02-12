@@ -97,6 +97,7 @@ class _AboutUs extends State<AboutUs> {
                         ' center of the learning process, so it insists on providing the students with the ability to provide new equipment and technology for the students of the institute according to the stage'
                         ' and the era. To provide and develop the skills and science of students, in a way that leads to the development of science and technology in the region, so that it can serve the homeland from here '
                         'and achieve the desires of the nation.',
+                        textAlign: TextAlign.justify,
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 18,
@@ -153,6 +154,7 @@ class _AboutUs extends State<AboutUs> {
                       padding: EdgeInsets.all(8.0),
                       child: Text(
                         'Kurdistan is the second home of humanity and the source of human development in the world, and this homeland has had a prophet and many golden histories and talented and inventive personalities. In Kurdistan, Sulaimaniyah is the home of revolution, struggle, and the capital of culture, the cultural and political movement that has proved its history and has given it these characteristics and nicknames. From this point of view, the Technical Institute of Kurdistan, established on 19/10/2015 by the ministerial decree No. 21923, wants to take part in this historical and national responsibility. A leading institute, although the Kurdistan Technical Institute was established in a very timely manner, meant it was a necessity for the stage, as Kurdistan’s students needed a modern institute with a modern program. In this way, the Institute insists on implementing a protocol of scientific and cultural understanding with universities and institutes inside and outside the region and around the world, and has so far signed agreements with several universities and institutes. All of this, the Kurdistan Technical Institute believes that the students are the center of the learning process, so it insists on providing the students with the ability to provide new equipment and technology for the students of the institute according to the stage and the era. To provide and develop the skills and science of students, in a way that leads to the development of science and technology in the region, so that it can serve the homeland from here and achieve the desires of the nation.',
+                        textAlign: TextAlign.justify,
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 18,
@@ -210,7 +212,8 @@ class _AboutUs extends State<AboutUs> {
                       child: Text(
                           'Kurdistan Technical Institute (KTI) officially decided to change the study system considering the standards and paradigms of the international Bologna system, and following the Institute trustee committee in Meeting No. (7) on 7/ 21/2016, to  perform the process during the academic year of 2016-2017. Therefore, following the institute decree No. 324 on 4/19/2016 a particular committee has been established. The committee perpetually has done some meetings since then, the minutes have been sent to the trustee committee of the institute to make decisions. The Institute’s specialized Committee for the Bologna process has visited the Ministry of Higher Education and Scientific Research of Kurdistan region and University of Human Development (UHD) to be more acquaintances with the steps of launching the Bologna process and to meet the related requirements'
                           'Several workshops on how to launch the Bologna process have been conducted by the Institute’s Bologna process committee, in which a number of foreigner  and local experts have been invited. Therefore, upon this issue,  KTI has done complete cooperation with University Technology Malaysia (UTM). The Bologna High Committee has also made several visits to the University of Human Development to benefit from the university’s experience. What is worth mentioning is that most of our institute’s lecturers have completed their studies abroad, particularly in countries such as Britain, Europe, Malaysia and Turkey, all of whom follow the Bologna process.',
-                          style: TextStyle(
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
                           color: Colors.black,
                           fontSize: 18,
                           fontFamily: 'Roboto',
