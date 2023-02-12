@@ -109,8 +109,8 @@ class CafeGalleryState extends State<CafeGallery> {
                           image: AssetImage(images[index])
                       ),
                     ),
-                    behavior: HitTestBehavior.opaque,
-                    cursor: SystemMouseCursors.click
+                 //   behavior: HitTestBehavior.opaque,
+                   // cursor: SystemMouseCursors.click
                 )
               );
             },
