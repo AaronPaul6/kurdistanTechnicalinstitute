@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_social_button/flutter_social_button.dart';
+import 'package:flutter_email_sender/flutter_email_sender.dart';
+enum SocialMedia{facebook, twitter, email, instagram}
 
+final String _phoneNumber = '009647717028282' ;
+final Uri _url =Uri.parse('https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi52s2D-5H9AhV_YPEDHZ8FA-gQFnoECBIQAQ&url=https%3A%2F%2Fwww.facebook.com%2Fktiinstitute%2F&usg=AOvVaw0RQUWMdYVFepaV9IRSo9OO');
+final urls = {
+  SocialMedia.facebook:
+      'https://www.facebook.com/ktiinstitute/',
+};
+final url = {
+  SocialMedia.instagram:
+  'https://www.instagram.com/ktiinstitute/?hl=en',
+};
 void main() {
   runApp(const contact());
 }
@@ -18,7 +29,7 @@ class contact extends StatelessWidget {
   static String routeName = 'contact';
   const contact({Key? key}) : super(key: key);
 
-  final String _phoneNumber = '+9647710125050' ;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -60,40 +71,101 @@ class contact extends StatelessWidget {
               style: TextStyle(fontSize: 15, color: Colors.blue),
             ),
             const SizedBox(
-              height: 7,
+              height: 40,
             ),
+
            Row(
+             mainAxisAlignment: MainAxisAlignment.spaceAround,
              children:[
                Container(
                  child: MaterialButton(
-                   padding: EdgeInsets.all(20),
+                   padding: EdgeInsets.all(35),
                    color: Colors.blue.shade800,
-                   minWidth: 70,
-                   height: 50,
+                   minWidth: 100,
+                   height: 60,
                    child: Align(
                      alignment: Alignment.centerLeft,
-                     child: Text('Call Us', style: TextStyle( color: Colors.white , fontSize: 20,
-                     ),
+                     child:Icon(
+                       Icons.phone, size: 60, color: Colors.white,
                      ),
                    ),
                    onPressed: ( ) async{
                      final _call='tel:$_phoneNumber';
                    },
+
                  ),
                ),
-               Spacer(
-                 flex: 2,
+
+               Container(
+                 child: MaterialButton(
+                   padding: EdgeInsets.all(35),
+                   color: Colors.blue.shade800,
+                   minWidth: 100,
+                   height: 60,
+                   child: Align(
+                     alignment: Alignment.centerLeft,
+                     child:Icon(
+                       Icons.email, size: 60, color: Colors.white,
+                     ),
+                   ),
+                   onPressed: ( ) {
+                     launchUrl('mailto:marfsaman12345@gmail.com' as Uri);
+                   },
+
+                 ),
                ),
 
              ],//children
            ),
+        SizedBox(height: 40,),
 
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children:[
+            Container(
+              child: MaterialButton(
+                padding: EdgeInsets.all(35),
+                color: Colors.blue.shade800,
+                minWidth: 100,
+                height: 60,
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child:Icon(
+                    Icons.facebook_outlined, size: 60, color: Colors.white,
+                  ),
+                ),
+                onPressed: ( ) {
+                  launchUrl('https://www.facebook.com/ktiinstitute/' as Uri);
+                },
+
+              ),
+            ),
+
+            Container(
+              child: MaterialButton(
+                padding: EdgeInsets.all(35),
+                color: Colors.blue.shade800,
+                minWidth: 100,
+                height: 60,
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child:Icon(
+                    Icons.camera, size: 60, color: Colors.white,
+                  ),
+                ),
+                onPressed: ( ) {
+                  launchUrl('https://www.instagram.com/ktiinstitute/?hl=en' as Uri);
+                },
+
+              ),
+            ),
 
   ],
 
       ),
 
-
+],
+        ),
         ),
         );
 

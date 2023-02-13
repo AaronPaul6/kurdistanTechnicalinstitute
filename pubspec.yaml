@@ -27,6 +27,7 @@ dependencies:
   flutter_svg: any
   sizer: ^2.0.15
   flutter_social_button: ^1.1.4+1
+  flutter_email_sender: ^5.2.0
 
   flutter:
     sdk: flutter
