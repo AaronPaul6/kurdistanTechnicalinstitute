@@ -1,6 +1,8 @@
 import 'package:brain_school/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+// import 'package:youtube_player_iframe/youtube_player_iframe.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class VideoGallery extends StatefulWidget {
   static String routeName = 'VideoGallery';
@@ -10,16 +12,18 @@ class VideoGallery extends StatefulWidget {
 }
 
 class VideoGalleryState extends State<VideoGallery> {
-  late VideoPlayerController _controller;
   final _formKey = GlobalKey<FormState>();
+  final videoURL = "https://www.youtube.com/watch?v=pWNgZodebnU";
 
+  late YoutubePlayerController _controller;
   @override
   void initState() {
-    // TODO: implement initState
-    _controller = VideoPlayerController.asset('assets/videos/KTIVideos.mp4')
-      ..initialize().then((_){
-        setState(() {});
-      });
+    final videoId = YoutubePlayer.convertUrlToId(videoURL);
+
+    _controller = YoutubePlayerController(initialVideoId: videoId!,
+    flags: const YoutubePlayerFlags()
+    );
+
     super.initState();
   }
 
@@ -49,38 +53,17 @@ class VideoGalleryState extends State<VideoGallery> {
 
       ),
 
-      body:Center(
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.blueGrey,width: 3.3),
-          ),
-          width: 400,
-          height: 350,
-          child: _controller.value.isInitialized
-              ? VideoPlayer(_controller)
-              : Container(),
-        ),
-      ),
+      body:Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          YoutubePlayer(controller: _controller,
+          showVideoProgressIndicator: true,
+          )
+        ],
+      )
 
-      floatingActionButton: FloatingActionButton(child: Icon(_controller.value.isPlaying ? Icons.pause : Icons.play_arrow), onPressed: () {
-        setState(() {
-          _controller.value.isPlaying ? _controller.pause() : _controller.play();
-        });
-      },),
-      // bottomSheet: Container(
-      //   color: Colors.blue.withOpacity(0.50),
-      //   height: 100,
-      //   child: Row(
-      //     children: [
-      //       Text(
-      //         'developer: Aland ',
-      //         style: TextStyle(
-      //           color: Colors.black,
-      //         ),
-      //       )
-      //     ],
-      //   ),
-      // ),
+
+
     );
     // // TODO: implement build
     // throw UnimplementedError();
