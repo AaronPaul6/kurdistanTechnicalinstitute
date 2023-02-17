@@ -57,7 +57,7 @@ class VideoGalleryState extends State<VideoGallery> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           YoutubePlayer(controller: _controller,
-          showVideoProgressIndicator: true,
+          // showVideoProgressIndicator: true,
           )
         ],
       )
