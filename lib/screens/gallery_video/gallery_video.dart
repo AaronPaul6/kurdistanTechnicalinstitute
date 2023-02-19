@@ -13,17 +13,24 @@ class VideoGallery extends StatefulWidget {
 
 class VideoGalleryState extends State<VideoGallery> {
   final _formKey = GlobalKey<FormState>();
-  final videoURL = "https://www.youtube.com/watch?v=pWNgZodebnU";
 
-  late YoutubePlayerController _controller;
+  late List<YoutubePlayerController> _controller = [];
+
   @override
   void initState() {
-    final videoId = YoutubePlayer.convertUrlToId(videoURL);
 
-    _controller = YoutubePlayerController(initialVideoId: videoId!,
-    flags: const YoutubePlayerFlags()
-    );
+    List<String?> videoId = videos.map((e) => YoutubePlayer.convertUrlToId(e)).toList();
 
+    for(int i = 0 ; i < videos.length ; i++){
+
+      _controller[i] = YoutubePlayerController(
+          initialVideoId: videoId[i]!,
+          flags: YoutubePlayerFlags(
+          autoPlay: false,
+        )
+      );
+    }
+    print(_controller);
     super.initState();
   }
 
@@ -53,14 +60,25 @@ class VideoGalleryState extends State<VideoGallery> {
 
       ),
 
-      body:Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          YoutubePlayer(controller: _controller,
-          // showVideoProgressIndicator: true,
-          )
-        ],
-      )
+      body: Container(
+        padding: EdgeInsets.all(15.0),
+        child: GridView.builder(
+          itemCount: _controller.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 8.0,
+              mainAxisSpacing: 18.0,
+              mainAxisExtent: 155.0
+
+          ),
+          itemBuilder: (BuildContext context, int index) {
+            return  YoutubePlayer(
+                controller: _controller[index],
+                showVideoProgressIndicator: true,
+              );
+          },
+        ),
+      ),
 
 
 
@@ -70,23 +88,11 @@ class VideoGalleryState extends State<VideoGallery> {
   }
 }
 
-TextFormField buildEmailField() {
-  return TextFormField(
-    textAlign: TextAlign.start,
-    keyboardType: TextInputType.emailAddress,
-    style: kInputTextStyle,
-    decoration: InputDecoration(
-      labelText: 'Mobile Number/Email',
-      floatingLabelBehavior: FloatingLabelBehavior.always,
-    ),
-    validator: (value) {
-      //for validation
-      RegExp regExp = new RegExp(emailPattern);
-      if (value == null || value.isEmpty) {
-        return 'Please enter some text';
-      } else if (!regExp.hasMatch(value)) {
-        return 'Please enter a valid email address';
-      }
-    },
-  );
-}
+
+List<String> videos = [
+  "https://www.youtube.com/watch?v=Rsp46RIK3IY",
+  "https://www.youtube.com/watch?v=pWNgZodebnU",
+"https://www.youtube.com/watch?v=ppXj5V3G63g",
+  "https://www.youtube.com/watch?v=9R6clnaC0Yg",
+];
+
