@@ -129,6 +129,45 @@ class contact extends StatelessWidget {
               ),),],
         ),
 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                ElevatedButton(
+                  onPressed: () {
+                    _makePhoneCall('123-456-7890');
+                    // Do something
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.facebook),
+                      Text('Facebook'),
+                    ],
+                  ),
+                  style: ButtonStyle( backgroundColor: MaterialStateProperty.all<Color>(
+                    Colors.blue.shade800, ),     ), ),
+
+                ElevatedButton(
+                  onPressed: () {
+                    _sendEmail('recipient@example.com', 'Subject', 'Body');
+                    // Do something
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.web),
+                      Text('Website'),
+                    ],
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                      Colors.blue.shade800, // Change the color of the button here ),
+                    ),
+
+                    //
+                  ),),],
+            ),
+
 ],
         ),
       ),
