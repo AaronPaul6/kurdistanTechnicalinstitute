@@ -64,6 +64,9 @@ class HomeScreen extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   child: Column(
                     children: [
+                      const SizedBox(
+                        height: 15,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [

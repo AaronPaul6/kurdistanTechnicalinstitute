@@ -1,5 +1,6 @@
 import 'package:brain_school/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_social_button/flutter_social_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 
@@ -60,7 +61,6 @@ class contact extends StatelessWidget {
             ),
           ),
         ),
-        // backgroundColor: Colors.blueGrey,
         body: Column(
           children: <Widget>[
             const SizedBox(
@@ -76,7 +76,7 @@ class contact extends StatelessWidget {
               style: TextStyle(fontSize: 15, color: Colors.blue),
             ),
             const SizedBox(
-              height: 130,
+              height: 80,
             ),
             Row(
 
@@ -137,7 +137,7 @@ class contact extends StatelessWidget {
                   child: Row(
 
                     children: [
-                      Icon(Icons.camera_alt_outlined),
+                      Icon(Icons.camera_alt_outlined,),
                       Text(' Instagram'),
                     ],
                   ),
@@ -155,7 +155,7 @@ class contact extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.facebook),
+                      Icon(Icons.facebook_rounded),
                       Text(' Facebook'),
                     ],
                   ),
@@ -168,6 +168,54 @@ class contact extends StatelessWidget {
                 ),
               ],
             ),
+
+            const SizedBox(
+              height: 40,
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                ElevatedButton(
+                  onPressed: () {
+                    launch('https://www.google.com/maps/place/Kurdistan+Technical+Institute+o/@35.6078572,45.453763,17z/data=!3m1!4b1!4m5!3m4!1s0x40002d39856ea055:0x33419c40ca1376fe!8m2!3d35.6078529!4d45.4559518');
+                    // Do something
+                  },
+                  child: Row(
+
+                    children: [
+                      Icon(Icons.map_outlined,),
+                      Text('  Location  '),
+                    ],
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                      Colors.blue.shade800,
+                    ),
+                    overlayColor: MaterialStateProperty.all(Colors.blue.shade300),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    launch('https://www.youtube.com/@kurdistantechnicalinstitut8647');
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.play_arrow,),
+                      Text(' Youtube   '),
+                    ],
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.blue.shade800,
+                    ),
+                    overlayColor: MaterialStateProperty.all(Colors.blue.shade300),
+                    //comment
+                  ),
+                ),
+              ],
+            ),
+
           ],
         ),
       ),
