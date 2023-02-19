@@ -16,14 +16,31 @@ import 'package:flutter_email_sender/flutter_email_sender.dart';
 void main() {
   runApp(const contact());
 }
-_makingPhoneCall() async {
-  var url = Uri.parse("tel:9776765434");
-  if (await canLaunchUrl(url)) {
-    await launchUrl(url);
+void _makePhoneCall(String phoneNumber) async {
+  if (await canLaunch('tel:$phoneNumber')) {
+    await launch('tel:$phoneNumber');
+  } else {
+    throw 'Could not launch $phoneNumber';
+  }
+}
+void _sendEmail(String recipient, String subject, String body) async {
+  final Uri params = Uri(
+    scheme: 'mailto',
+    path: recipient,
+    query: 'subject=$subject&body=$body',
+  );
+
+  String url = params.toString();
+
+  if (await canLaunch(url)) {
+    await launch(url);
   } else {
     throw 'Could not launch $url';
   }
 }
+
+
+
 
 class contact extends StatelessWidget {
   static String routeName = 'contact';
@@ -73,100 +90,48 @@ class contact extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ElevatedButton(
+              onPressed: () {
+                _makePhoneCall('123-456-7890');
+                // Do something
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.phone),
+                  Text('call'),
+                ],
+              ),
+              style: ButtonStyle( backgroundColor: MaterialStateProperty.all<Color>(
+                Colors.blue.shade800, ),     ), ),
 
-  //          Row(
-  //            mainAxisAlignment: MainAxisAlignment.spaceAround,
-  //            children:[
-  //              Container(
-  //                child: MaterialButton(
-  //                  padding: EdgeInsets.all(35),
-  //                  color: Colors.blue.shade800,
-  //                  minWidth: 100,
-  //                  height: 60,
-  //                  child: Align(
-  //                    alignment: Alignment.centerLeft,
-  //                    child:Icon(
-  //                      Icons.phone, size: 60, color: Colors.white,
-  //                    ),
-  //                  ),
-  //                  onPressed: ( ) async{
-  //                    // final _call='tel:$_phoneNumber';
-  //                  },
+            ElevatedButton(
+              onPressed: () {
+                _sendEmail('recipient@example.com', 'Subject', 'Body');
+                // Do something
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.email),
+                  Text('email'),
+                ],
+              ),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(
+                Colors.blue.shade800, // Change the color of the button here ),
+            ),
+
   //
-  //                ),
-  //              ),
-  //
-  //              Container(
-  //                child: MaterialButton(
-  //                  padding: EdgeInsets.all(35),
-  //                  color: Colors.blue.shade800,
-  //                  minWidth: 100,
-  //                  height: 60,
-  //                  child: Align(
-  //                    alignment: Alignment.centerLeft,
-  //                    child:Icon(
-  //                      Icons.email, size: 60, color: Colors.white,
-  //                    ),
-  //                  ),
-  //                  onPressed: ( ) {
-  //                    launchUrl('mailto:marfsaman12345@gmail.com' as Uri);
-  //                  },
-  //
-  //                ),
-  //              ),
-  //
-  //            ],//children
-  //          ),
-  //       SizedBox(height: 40,),
-  //
-  //       Row(
-  //         mainAxisAlignment: MainAxisAlignment.spaceAround,
-  //         children:[
-  //           Container(
-  //             child: MaterialButton(
-  //               padding: EdgeInsets.all(35),
-  //               color: Colors.blue.shade800,
-  //               minWidth: 100,
-  //               height: 60,
-  //               child: Align(
-  //                 alignment: Alignment.centerLeft,
-  //                 child:Icon(
-  //                   Icons.facebook_outlined, size: 60, color: Colors.white,
-  //                 ),
-  //               ),
-  //               onPressed: ( ) {
-  //                 launchUrl('https://www.facebook.com/ktiinstitute/' as Uri);
-  //               },
-  //
-  //             ),
-  //           ),
-  //
-  //           Container(
-  //             child: MaterialButton(
-  //               padding: EdgeInsets.all(35),
-  //               color: Colors.blue.shade800,
-  //               minWidth: 100,
-  //               height: 60,
-  //               child: Align(
-  //                 alignment: Alignment.centerLeft,
-  //                 child:Icon(
-  //                   Icons.camera, size: 60, color: Colors.white,
-  //                 ),
-  //               ),
-  //               onPressed: ( ) {
-  //                 launchUrl('https://www.instagram.com/ktiinstitute/?hl=en' as Uri);
-  //               },
-  //
-  //             ),
-  //           ),
-  //
-  // ],
-  //
-  //     ),
+              ),),],
+        ),
 
 ],
         ),
-        ),
+      ),
         );
 
   }
