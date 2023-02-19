@@ -132,46 +132,29 @@ class contact extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                ElevatedButton(
-                  onPressed: () {
-                    _makePhoneCall('123-456-7890');
-                    // Do something
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.facebook),
-                      Text('Facebook'),
-                    ],
-                  ),
-                  style: ButtonStyle( backgroundColor: MaterialStateProperty.all<Color>(
-                    Colors.blue.shade800, ),     ), ),
-
-                ElevatedButton(
-                  onPressed: () {
-                    _sendEmail('recipient@example.com', 'Subject', 'Body');
-                    // Do something
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.web),
-                      Text('Website'),
-                    ],
-                  ),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(
-                      Colors.blue.shade800, // Change the color of the button here ),
+                Column(
+                  children: <Widget>[
+                    ElevatedButton(
+                      onPressed: () {
+                        launch('https://www.facebook.com/');
+                      },
+                      child: Text('Connect with Facebook'),
                     ),
+                    SizedBox(height: 16),
+                    ElevatedButton(
+                      onPressed: () {
+                        launch('https://www.instagram.com/');
+                      },
+                      child: Text('Follow us on Instagram'),
+                    ),
+                  ],
 
-                    //
-                  ),),],
-            ),
 
+                ),
 ],
         ),
-      ),
-        );
+      ],),
+        ),);
 
   }
 }
