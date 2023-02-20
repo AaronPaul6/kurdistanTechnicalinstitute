@@ -14,7 +14,7 @@ class VideoGallery extends StatefulWidget {
 class VideoGalleryState extends State<VideoGallery> {
   final _formKey = GlobalKey<FormState>();
 
-  late List<YoutubePlayerController> _controller = [];
+  late List _controller =[null, null, null, null];
 
   @override
   void initState() {
@@ -30,7 +30,7 @@ class VideoGalleryState extends State<VideoGallery> {
         )
       );
     }
-    print(_controller);
+    // print(_controller);
     super.initState();
   }
 
@@ -65,7 +65,7 @@ class VideoGalleryState extends State<VideoGallery> {
         child: GridView.builder(
           itemCount: _controller.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
+              crossAxisCount: 1,
               crossAxisSpacing: 8.0,
               mainAxisSpacing: 18.0,
               mainAxisExtent: 155.0
