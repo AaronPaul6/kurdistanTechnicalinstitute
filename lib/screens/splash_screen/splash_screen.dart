@@ -1,3 +1,4 @@
+import 'package:brain_school/screens/home_screen/home_screen.dart';
 import 'package:brain_school/screens/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -15,12 +16,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-
-
     Future.delayed(Duration(seconds: 2), () {
       //no return when user is on login screen and press back, it will not return the
       //user to the splash screen
-       Navigator.pushNamedAndRemoveUntil(context, LoginScreen.routeName, (route) => false);
+       Navigator.pushNamedAndRemoveUntil(context, HomeScreen.routeName, (route) => false);
     });
   }
 

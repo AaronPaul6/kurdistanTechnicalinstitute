@@ -1,8 +1,8 @@
 import 'package:brain_school/constants.dart';
+import 'package:brain_school/departments/departments.dart';
 import 'package:brain_school/screens/Calender/Calender.dart';
 import 'package:brain_school/screens/gallery_photo/gallery_photo.dart';
 import 'package:brain_school/screens/gallery_video/gallery_video.dart';
-// import 'package:url_launcher/url_launcher.dart'; //
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
@@ -12,6 +12,7 @@ import 'package:brain_school/screens/Q&A//Q&A.dart';
 import 'package:brain_school/screens/about_us/about_us.dart';
 import 'package:brain_school/screens/Contactus/contact.dart';
 import 'package:brain_school/screens/my_profile/my_profile.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -98,10 +99,30 @@ class HomeScreen extends StatelessWidget {
                           ),
                           HomeCard(
                             onPress: () {
-
+                              launch('http://my.kti.edu.krd/login');
                             },
                             icon: 'assets/icons/p.svg',
                             title: 'Student Portal',
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          HomeCard(
+                            onPress: () {
+                              Navigator.pushNamed(context, departments.routeName);
+                            },
+                            icon: 'assets/icons/ask.svg',
+                            title: 'Departments',
+                          ),
+                          HomeCard(
+                            onPress: () {
+                              Navigator.pushNamed(
+                                  context, PhotoGallery.routeName);
+                            },
+                            icon: 'assets/icons/gallery.svg',
+                            title: 'Why KTI?',
                           ),
                         ],
                       ),

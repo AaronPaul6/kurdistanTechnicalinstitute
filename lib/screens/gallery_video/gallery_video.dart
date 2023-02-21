@@ -1,7 +1,5 @@
 import 'package:brain_school/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
-// import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class VideoGallery extends StatefulWidget {
@@ -80,14 +78,11 @@ class VideoGalleryState extends State<VideoGallery> {
         ),
       ),
 
-
-
     );
     // // TODO: implement build
     // throw UnimplementedError();
   }
 }
-
 
 List<String> videos = [
   "https://www.youtube.com/watch?v=Rsp46RIK3IY",

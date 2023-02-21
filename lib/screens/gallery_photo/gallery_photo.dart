@@ -87,10 +87,10 @@ class PhotoGalleryState extends State<PhotoGallery> {
         child: GridView.builder(
           itemCount: routes.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 1,
-              crossAxisSpacing: 8.0,
-              mainAxisSpacing: 18.0,
-            mainAxisExtent: 155.0
+              crossAxisCount: 2,
+              crossAxisSpacing: 18.0,
+              mainAxisSpacing: 8.0,
+            mainAxisExtent: 195.0
 
           ),
           itemBuilder: (BuildContext context, int index) {

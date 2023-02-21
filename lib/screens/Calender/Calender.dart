@@ -1,6 +1,8 @@
-import 'package:brain_school/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'dart:async';
+import 'dart:io';
+import 'package:path_provider/path_provider.dart';
+import 'package:pdf_viewer_plugin/pdf_viewer_plugin.dart';
 
 class Calender extends StatefulWidget {
   static String routeName = 'Calender';
@@ -10,21 +12,31 @@ class Calender extends StatefulWidget {
 }
 
 class _Calender extends State<Calender> {
-  // final _formKey = GlobalKey<FormState>();
+  // final sampleUrl = 'http://www.africau.edu/images/default/sample.pdf';
 
-  Future<void> _launchURL(String url) async {
-    final Uri uri = Uri();
-    if(!await launchUrl(
-      uri,
-      mode: LaunchMode.inAppWebView,
-    )) {
-      throw "Can not launch url";
+  String? pdfFlePath;
+
+  Future<String> downloadAndSavePdf() async {
+    final directory = await getApplicationDocumentsDirectory();
+    final file = File('${directory.path}assets/cal.pdf');
+    if (await file.exists()) {
+      return file.path;
     }
+    // final response = await http.get(Uri.parse(sampleUrl));
+    // await file.writeAsBytes(response.bodyBytes);
+    return file.path;
+  }
+
+  void loadPdf() async {
+    pdfFlePath = await downloadAndSavePdf();
+    setState(() {});
   }
 
   @override
   void initState() {
+
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -50,42 +62,25 @@ class _Calender extends State<Calender> {
         ),
       ),
       body: Center(
-        child: Container(
-          height: 50,
-          width: 120,
-          color: Colors.red,
-          child: Center(
-            child: GestureDetector(
-              onTap: () {
-                _launchURL("https://drive.google.com/file/d/1OAkWW-nXTjGLZ0k9tgCJzERJHMbmg55J/view");
-              },
-              child: const Text("Launch URL"),
+        child: Column(
+          children: <Widget>[
+            ElevatedButton(
+              child: Text("Load pdf"),
+              onPressed: loadPdf,
             ),
-          ),
+            if (pdfFlePath != null)
+              Expanded(
+                child: Container(
+                  child: PdfView(path: pdfFlePath!),
+                ),
+              )
+            else
+              Text("Pdf is not Loaded"),
+          ],
         ),
       ),
-
     );
   }
 
-  TextFormField buildEmailField() {
-    return TextFormField(
-      textAlign: TextAlign.start,
-      keyboardType: TextInputType.emailAddress,
-      style: kInputTextStyle,
-      decoration: InputDecoration(
-        labelText: 'Mobile Number/Email',
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-      ),
-      validator: (value) {
-        //for validation
-        RegExp regExp = new RegExp(emailPattern);
-        if (value == null || value.isEmpty) {
-          return 'Please enter some text';
-        } else if (!regExp.hasMatch(value)) {
-          return 'Please enter a valid email address';
-        }
-      },
-    );
-  }
+
 }

@@ -2,37 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {
-  runApp(const contact());
+  runApp(const departments());
 }
 
-void _makePhoneCall(String phoneNumber) async {
-  if (await canLaunch('tel:$phoneNumber')) {
-    await launch('tel:$phoneNumber');
-  } else {
-    throw 'Could not launch $phoneNumber';
-  }
-}
+class departments extends StatelessWidget {
+  static String routeName = 'departments';
 
-void _sendEmail(String recipient, String subject, String body) async {
-  final Uri params = Uri(
-    scheme: 'mailto',
-    path: recipient,
-    query: 'subject=$subject&body=$body',
-  );
-
-  String url = params.toString();
-
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
-}
-
-class contact extends StatelessWidget {
-  static String routeName = 'contact';
-
-  const contact({Key? key}) : super(key: key);
+  const departments ({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +19,7 @@ class contact extends StatelessWidget {
           backgroundColor: Color(0xFF345FB4),
           centerTitle: true,
           title: Text(
-            'CONTACT US',
+            'DEPARTMENTS',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           automaticallyImplyLeading: false,
@@ -64,60 +40,11 @@ class contact extends StatelessWidget {
               height: 10,
             ),
             Center(
-                child: Image.asset(
-              'assets/images/logo.png',
-              height: 250,
-            )),
-            const Text(
-              "\nPlease contacts us bellow !",
-              style: TextStyle(fontSize: 15, color: Colors.blue),
-            ),
+                ),
             const SizedBox(
               height: 80,
             ),
-            Row(
 
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                ElevatedButton(
-                  onPressed: () {
-                    _makePhoneCall('+9647717028282');
-                    // Do something
-                  },
-                  child: Row(
-
-                    children: [
-                      Icon(Icons.phone),
-                      Text(' Calls Us   '),
-                    ],
-                  ),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(
-                      Colors.blue.shade800,
-                    ),
-                    overlayColor: MaterialStateProperty.all(Colors.blue.shade300),
-                  ),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    _sendEmail('info@kti.edu.iq', 'Subject', 'Body');
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.email),
-                      Text(' Email Us '),
-                    ],
-                  ),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.blue.shade800,
-                    ),
-                    overlayColor: MaterialStateProperty.all(Colors.blue.shade300),
-                    //
-                  ),
-                ),
-              ],
-            ),
 
             const SizedBox(
               height: 40,
@@ -128,14 +55,13 @@ class contact extends StatelessWidget {
               children: <Widget>[
                 ElevatedButton(
                   onPressed: () {
-                    launch('https://www.instagram.com/ktiinstitute/?hl=en');
-                    // Do something
+                    launch('https://ph.kti.edu.iq/');
                   },
                   child: Row(
 
                     children: [
-                      Icon(Icons.camera_alt_outlined,),
-                      Text(' Instagram'),
+                      Icon(Icons.local_pharmacy,),
+                      Text(' Pharmacy'),
                     ],
                   ),
                   style: ButtonStyle(
@@ -147,13 +73,13 @@ class contact extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    launch('https://www.facebook.com/ktiinstitute/');
+                    launch('https://ml.kti.edu.iq/');
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.facebook_rounded),
-                      Text(' Facebook'),
+                      Icon(Icons.medical_information),
+                      Text('Medical Lab'),
                     ],
                   ),
                   style: ButtonStyle(
@@ -175,14 +101,13 @@ class contact extends StatelessWidget {
               children: <Widget>[
                 ElevatedButton(
                   onPressed: () {
-                    launch('https://www.google.com/maps/place/Kurdistan+Technical+Institute+o/@35.6078572,45.453763,17z/data=!3m1!4b1!4m5!3m4!1s0x40002d39856ea055:0x33419c40ca1376fe!8m2!3d35.6078529!4d45.4559518');
-                    // Do something
+                    launch('https://nu.kti.edu.iq/');
                   },
                   child: Row(
 
                     children: [
-                      Icon(Icons.map_outlined,),
-                      Text('  Location  '),
+                      Icon(Icons.medication_sharp,),
+                      Text(' Nursing '),
                     ],
                   ),
                   style: ButtonStyle(
@@ -194,13 +119,13 @@ class contact extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    launch('https://www.youtube.com/@kurdistantechnicalinstitut8647');
+                    launch('https://it.kti.edu.iq/');
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.play_arrow,),
-                      Text(' Youtube   '),
+                      Icon(Icons.computer,),
+                      Text(' IT     '),
                     ],
                   ),
                   style: ButtonStyle(
@@ -212,6 +137,145 @@ class contact extends StatelessWidget {
                 ),
               ],
             ),
+
+            const SizedBox(
+              height: 40,
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                ElevatedButton(
+                  onPressed: () {
+                    launch('https://ba.kti.edu.iq/');
+                  },
+                  child: Row(
+
+                    children: [
+                      Icon(Icons.business,),
+                      Text(' Business '),
+                    ],
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                      Colors.blue.shade800,
+                    ),
+                    overlayColor: MaterialStateProperty.all(Colors.blue.shade300),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    launch('https://cs.kti.edu.iq/');
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.computer,),
+                      Text('Computer Science'),
+                    ],
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.blue.shade800,
+                    ),
+                    overlayColor: MaterialStateProperty.all(Colors.blue.shade300),
+                    //comment
+                  ),
+                ),
+              ],
+            ),
+
+            const SizedBox(
+              height: 40,
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                ElevatedButton(
+                  onPressed: () {
+                    launch('https://ac.kti.edu.iq/');
+                  },
+                  child: Row(
+
+                    children: [
+                      Icon(Icons.account_box,),
+                      Text(' Accounting '),
+                    ],
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                      Colors.blue.shade800,
+                    ),
+                    overlayColor: MaterialStateProperty.all(Colors.blue.shade300),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    launch('https://ide.kti.edu.iq/');
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.design_services,),
+                      Text('Interior Design'),
+                    ],
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.blue.shade800,
+                    ),
+                    overlayColor: MaterialStateProperty.all(Colors.blue.shade300),
+                    //comment
+                  ),
+                ),
+              ],
+            ),
+
+            const SizedBox(
+              height: 40,
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                ElevatedButton(
+                  onPressed: () {
+                    launch('https://pr.kti.edu.iq/');
+                  },
+                  child: Row(
+
+                    children: [
+                      Icon(Icons.account_box,),
+                      Text(' Petroleum '),
+                    ],
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                      Colors.blue.shade800,
+                    ),
+                    overlayColor: MaterialStateProperty.all(Colors.blue.shade300),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    launch('https://dm.kti.edu.iq/');
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.design_services,),
+                      Text('Digital Media'),
+                    ],
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.blue.shade800,
+                    ),
+                    overlayColor: MaterialStateProperty.all(Colors.blue.shade300),
+                    //comment
+                  ),
+                ),
+              ],
+            ),
+
 
           ],
         ),
