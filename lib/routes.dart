@@ -1,4 +1,4 @@
-import 'package:brain_school/departments/departments.dart';
+import 'package:brain_school/screens/departments/departments.dart';
 import 'package:brain_school/screens/gallery_photo/gallery_photo.dart';
 import 'package:brain_school/screens/gallery_video/gallery_video.dart';
 import 'package:brain_school/screens/login_screen/login_screen.dart';
