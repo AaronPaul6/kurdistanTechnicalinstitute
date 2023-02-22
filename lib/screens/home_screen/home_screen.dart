@@ -113,15 +113,14 @@ class HomeScreen extends StatelessWidget {
                             onPress: () {
                               Navigator.pushNamed(context, departments.routeName);
                             },
-                            icon: 'assets/icons/ask.svg',
+                            icon: 'assets/icons/change.svg',
                             title: 'Departments',
                           ),
                           HomeCard(
                             onPress: () {
-                              Navigator.pushNamed(
-                                  context, PhotoGallery.routeName);
+                              // Navigator.pushNamed(context, departments.routeName);
                             },
-                            icon: 'assets/icons/gallery.svg',
+                            icon: 'assets/icons/why.svg',
                             title: 'Why KTI?',
                           ),
                         ],

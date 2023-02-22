@@ -71,7 +71,7 @@ class _QA extends State<QA> {
                                 'To establish the tuition fees for all departments, annual tuition fees vary by department.',
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 12,
+                                  fontSize: 18,
                                 ),
                               ),
                             ),
@@ -108,7 +108,7 @@ class _QA extends State<QA> {
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 12,
+                                  fontSize: 18,
                                 ),
                               ),
                             ),
@@ -147,7 +147,7 @@ class _QA extends State<QA> {
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 12,
+                                  fontSize: 18,
                                 ),
                               ),
                             ),
@@ -185,7 +185,7 @@ class _QA extends State<QA> {
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 12,
+                                  fontSize: 18,
                                 ),
                               ),
                             ),
@@ -218,7 +218,7 @@ class _QA extends State<QA> {
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 12,
+                                  fontSize: 18,
                                 ),
                               ),
                             ),
@@ -257,7 +257,7 @@ class _QA extends State<QA> {
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 12,
+                                  fontSize: 18,
                                 ),
                               ),
                             ),
@@ -291,7 +291,7 @@ class _QA extends State<QA> {
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 12,
+                                  fontSize: 18,
                                 ),
                               ),
                             ),
@@ -325,7 +325,7 @@ class _QA extends State<QA> {
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 12,
+                                  fontSize: 18,
                                 ),
                               ),
                             ),
@@ -363,7 +363,7 @@ class _QA extends State<QA> {
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 12,
+                                  fontSize: 18,
                                 ),
                               ),
                             ),
@@ -401,7 +401,7 @@ class _QA extends State<QA> {
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 12,
+                                  fontSize: 18,
                                 ),
                               ),
                             ),
@@ -436,7 +436,7 @@ class _QA extends State<QA> {
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 12,
+                                  fontSize: 18,
                                 ),
                               ),
                             ),
@@ -446,7 +446,7 @@ class _QA extends State<QA> {
                     ),
 
 
-                    //12
+                    //18
                     Container(
                       margin: EdgeInsets.all(10),
                       padding: EdgeInsets.all(20),
@@ -471,7 +471,7 @@ class _QA extends State<QA> {
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 12,
+                                  fontSize: 18,
                                 ),
                               ),
                             ),
@@ -507,7 +507,7 @@ class _QA extends State<QA> {
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 12,
+                                  fontSize: 18,
                                 ),
                               ),
                             ),

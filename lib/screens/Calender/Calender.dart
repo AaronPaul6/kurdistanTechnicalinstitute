@@ -63,20 +63,27 @@ class _Calender extends State<Calender> {
       ),
       body: Center(
         child: Column(
-          children: <Widget>[
-            ElevatedButton(
-              child: Text("Load pdf"),
-              onPressed: loadPdf,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Container(
+              // margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+              child:
+              Image.asset(
+                'assets/images/pdf.jpg',
+                fit: BoxFit.cover,
+                width: MediaQuery.of(context).size.width,
+              ),
             ),
-            if (pdfFlePath != null)
-              Expanded(
-                child: Container(
-                  child: PdfView(path: pdfFlePath!),
-                ),
-              )
-            else
-              Text("Pdf is not Loaded"),
-          ],
+            Container(
+              // margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+              child:
+              Image.asset(
+                'assets/images/pdf1.jpg',
+                fit: BoxFit.cover,
+                width: MediaQuery.of(context).size.width,
+              ),
+            ),
+          ], //children
         ),
       ),
     );
