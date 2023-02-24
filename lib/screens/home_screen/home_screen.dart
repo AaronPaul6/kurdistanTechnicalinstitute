@@ -1,5 +1,5 @@
 import 'package:brain_school/constants.dart';
-import 'package:brain_school/screens/departments/departments.dart';
+// import 'package:brain_school/screens/departments/departments.dart';
 import 'package:brain_school/screens/Calender/Calender.dart';
 import 'package:brain_school/screens/gallery_photo/gallery_photo.dart';
 import 'package:brain_school/screens/gallery_video/gallery_video.dart';
@@ -109,13 +109,13 @@ class HomeScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          HomeCard(
-                            onPress: () {
-                              Navigator.pushNamed(context, departments.routeName);
-                            },
-                            icon: 'assets/icons/academic.svg',
-                            title: 'Departments',
-                          ),
+                          // HomeCard(
+                          //   onPress: () {
+                          //     Navigator.pushNamed(context, departments.routeName);
+                          //   },
+                          //   icon: 'assets/icons/academic.svg',
+                          //   title: 'Departments',
+                          // ),
                           HomeCard(
                             onPress: () {
                               // Navigator.pushNamed(context, departments.routeName);

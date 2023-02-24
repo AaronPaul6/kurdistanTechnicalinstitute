@@ -1,4 +1,4 @@
-import 'package:brain_school/screens/departments/departments.dart';
+// import 'package:brain_school/screens/departments/departments.dart';
 import 'package:brain_school/screens/gallery_photo/gallery_photo.dart';
 import 'package:brain_school/screens/gallery_video/gallery_video.dart';
 import 'package:brain_school/screens/login_screen/login_screen.dart';
@@ -16,7 +16,7 @@ import 'package:brain_school/screens/gallery_photo/cafe.dart';
 import 'package:brain_school/screens/gallery_photo/campus.dart';
 import 'package:brain_school/screens/gallery_photo/car_park.dart';
 import 'package:brain_school/screens/gallery_photo/library.dart';
-import 'package:brain_school/screens/departments/departments.dart';
+// import 'package:brain_school/screens/departments/departments.dart';
 
 Map<String, WidgetBuilder> routes = {
   SplashScreen.routeName: (context) => SplashScreen(),
