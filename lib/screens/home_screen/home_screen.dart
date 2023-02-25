@@ -3,6 +3,7 @@ import 'package:brain_school/constants.dart';
 import 'package:brain_school/screens/Calender/Calender.dart';
 import 'package:brain_school/screens/gallery_photo/gallery_photo.dart';
 import 'package:brain_school/screens/gallery_video/gallery_video.dart';
+import 'package:brain_school/screens/why_kti/why_kti.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
@@ -118,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                           // ),
                           HomeCard(
                             onPress: () {
-                              // Navigator.pushNamed(context, departments.routeName);
+                              Navigator.pushNamed(context, WhyKti.routeName);
                             },
                             icon: 'assets/icons/why.svg',
                             title: 'Why KTI?',

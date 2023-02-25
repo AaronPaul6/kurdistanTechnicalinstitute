@@ -16,6 +16,8 @@ import 'package:brain_school/screens/gallery_photo/cafe.dart';
 import 'package:brain_school/screens/gallery_photo/campus.dart';
 import 'package:brain_school/screens/gallery_photo/car_park.dart';
 import 'package:brain_school/screens/gallery_photo/library.dart';
+import 'package:brain_school/screens/Contactus/contact.dart';
+import 'package:brain_school/screens/why_kti/why_kti.dart';
 // import 'package:brain_school/screens/departments/departments.dart';
 
 Map<String, WidgetBuilder> routes = {
@@ -35,6 +37,7 @@ Map<String, WidgetBuilder> routes = {
   LibraryGallery.routeName: (context) => LibraryGallery(),
   CampusGallery.routeName: (context) => CampusGallery(),
   contact.routeName: (context) => contact(),
+  WhyKti.routeName: (context) => WhyKti(),
   //departments.routeName: (context) => departments()
 
 };
