@@ -20,14 +20,13 @@ class WhyKtiState extends State<WhyKti> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-
       appBar: AppBar(
+        backgroundColor: Color(0xFF345FB4),
         centerTitle: true,
         title: Text(
           'WHY KTI?',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
-
         automaticallyImplyLeading: false,
         leadingWidth: 100,
         leading: ElevatedButton.icon(
@@ -35,19 +34,36 @@ class WhyKtiState extends State<WhyKti> {
           icon: const Icon(Icons.arrow_left_sharp),
           label: const Text('Back'),
           style: ElevatedButton.styleFrom(
-            backgroundColor: kPrimaryColor,
             elevation: 0,
+            backgroundColor: Color(0xFF345FB4),
           ),
         ),
-
       ),
-
-      body: Column(
-
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Container(
+              // margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+              child:
+              Image.asset(
+                'assets/images/why1.jpg',
+                fit: BoxFit.cover,
+                width: MediaQuery.of(context).size.width,
+              ),
+            ),
+            Container(
+              // margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+              child:
+              Image.asset(
+                'assets/images/why2.jpg',
+                fit: BoxFit.cover,
+                width: MediaQuery.of(context).size.width,
+              ),
+            ),
+          ], //children
+        ),
       ),
-
     );
-    // // TODO: implement build
-    // throw UnimplementedError();
   }
 }
