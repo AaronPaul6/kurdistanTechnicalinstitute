@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-import 'dart:io';
-import 'package:path_provider/path_provider.dart';
-import 'package:pdf_viewer_plugin/pdf_viewer_plugin.dart';
 
 class Calender extends StatefulWidget {
   static String routeName = 'Calender';
@@ -12,30 +8,6 @@ class Calender extends StatefulWidget {
 }
 
 class _Calender extends State<Calender> {
-  final sampleUrl = 'http://www.africau.edu/images/default/sample.pdf';
-
-  String? pdfFlePath;
-
-  Future<String> downloadAndSavePdf() async {
-    final directory = await getApplicationDocumentsDirectory();
-    final file = File('${directory.path}assets/cal.pdf');
-    if (await file.exists()) {
-      return file.path;
-    }
-    // final response = await http.get(Uri.parse(sampleUrl));
-    // await file.writeAsBytes(response.bodyBytes);
-    return file.path;
-  }
-
-  void loadPdf() async {
-    pdfFlePath = await downloadAndSavePdf();
-    setState(() {});
-  }
-
- // void initState() {
-
-  // }
-
 
   @override
   Widget build(BuildContext context) {

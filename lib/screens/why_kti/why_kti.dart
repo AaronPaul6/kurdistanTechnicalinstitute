@@ -1,5 +1,4 @@
 import 'package:brain_school/constants.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class WhyKti extends StatefulWidget {
@@ -21,11 +20,11 @@ class WhyKtiState extends State<WhyKti> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      //when user taps anywhere on the screen, keyboard hides
+
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Video Gallery',
+          'WHY KTI?',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
 
@@ -44,24 +43,7 @@ class WhyKtiState extends State<WhyKti> {
       ),
 
       body: Column(
-          children: <Widget>[
-            CarouselSlider(
-              items: child,
-              carouselController: buttonCarouselController,
-              options: CarouselOptions(
-                autoPlay: false,
-                enlargeCenterPage: true,
-                viewportFraction: 0.9,
-                aspectRatio: 2.0,
-                initialPage: 2,
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () => buttonCarouselController.nextPage(
-                  duration: Duration(milliseconds: 300), curve: Curves.linear),
-              child: Text('→'),
-            )
-          ]
+
       ),
 
     );
