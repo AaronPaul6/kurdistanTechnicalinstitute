@@ -39,6 +39,8 @@ class WhyKtiState extends State<WhyKti> {
         ),
       ),
       body: Center(
+        child: SingleChildScrollView(
+    physics: BouncingScrollPhysics(),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -65,6 +67,7 @@ class WhyKtiState extends State<WhyKti> {
                 fit: BoxFit.cover,
                 width: MediaQuery.of(context).size.width,
               ),
+
             ),
             Container(
               child:
@@ -85,6 +88,6 @@ class WhyKtiState extends State<WhyKti> {
           ], //children
         ),
       ),
-    );
+      ));
   }
 }
