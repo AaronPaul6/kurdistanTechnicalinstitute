@@ -1,4 +1,3 @@
-import 'package:brain_school/constants.dart';
 import 'package:flutter/material.dart';
 
 class WhyKti extends StatefulWidget {
@@ -44,7 +43,6 @@ class WhyKtiState extends State<WhyKti> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Container(
-              // margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
               child:
               Image.asset(
                 'assets/images/why1.jpg',
@@ -53,10 +51,33 @@ class WhyKtiState extends State<WhyKti> {
               ),
             ),
             Container(
-              // margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
               child:
               Image.asset(
                 'assets/images/why2.jpg',
+                fit: BoxFit.cover,
+                width: MediaQuery.of(context).size.width,
+              ),
+            ),
+            Container(
+              child:
+              Image.asset(
+                'assets/images/why3.jpg',
+                fit: BoxFit.cover,
+                width: MediaQuery.of(context).size.width,
+              ),
+            ),
+            Container(
+              child:
+              Image.asset(
+                'assets/images/why4.jpg',
+                fit: BoxFit.cover,
+                width: MediaQuery.of(context).size.width,
+              ),
+            ),
+            Container(
+              child:
+              Image.asset(
+                'assets/images/why5.jpg',
                 fit: BoxFit.cover,
                 width: MediaQuery.of(context).size.width,
               ),
