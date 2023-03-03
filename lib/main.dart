@@ -44,19 +44,19 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 
 }
 
-Future<bool> loadingSingleDocument() async {
-  DocumentSnapshot data = await FirebaseFirestore.instance
-      .collection('users')
-      .doc("oFJvU3CdR7Viyb7PVxzV")
-      .get();
-
-  Map<String, dynamic> map = data.data() as Map<String, dynamic>;
-
-  print('single document data=' + map['email']);
-  print('single document data=' + map['email']);
-
-  return true;
-}
+// Future<bool> loadingSingleDocument() async {
+//   DocumentSnapshot data = await FirebaseFirestore.instance
+//       .collection('users')
+//       .doc("oFJvU3CdR7Viyb7PVxzV")
+//       .get();
+//
+//   Map<String, dynamic> map = data.data() as Map<String, dynamic>;
+//
+//   print('single document data=' + map['email']);
+//   print('single document data=' + map['email']);
+//
+//   return true;
+// }
 
 
 void displayNotification(RemoteMessage msg) async {
@@ -151,7 +151,7 @@ class MyApp extends StatelessWidget {
 }
 
 extension HexColor on Color {
-  /// String is in the format "aabbcc" or "ffaabbcc" with an optional leading "#".
+
   static Color fromHex(String hexString) {
     final buffer = StringBuffer();
     if (hexString.length == 6 || hexString.length == 7) buffer.write('ff');
