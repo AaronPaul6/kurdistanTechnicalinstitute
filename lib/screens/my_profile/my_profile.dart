@@ -30,28 +30,6 @@ class MyProfileScreen extends StatelessWidget {
       ),
       body: Container(
         color: kOtherColor,
-        child: Column(
-          children: [
-            sizedBox,
-            sizedBox,
-            ProfileDetailColumn(
-              title: 'Email',
-              value: 'ashna1234@gmail.com',
-            ),
-            ProfileDetailColumn(
-              title: 'Last Name',
-              value: 'Hamad',
-            ),
-            ProfileDetailColumn(
-              title: 'First Name',
-              value: 'Ashna',
-            ),
-            ProfileDetailColumn(
-              title: 'Phone Number',
-              value: '+9647701234567',
-            ),
-          ],
-        ),
       ),
     );
   }

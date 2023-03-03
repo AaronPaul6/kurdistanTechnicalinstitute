@@ -3,11 +3,137 @@ import 'package:brain_school/screens/splash_screen/splash_screen.dart';
 import 'package:brain_school/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-void main() {
+final FirebaseAuth fba = FirebaseAuth.instance;
+final FirebaseMessaging fcm = FirebaseMessaging.instance;
+late List<User> users = [];
+
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
+  await Firebase.initializeApp();
+
+  initFirebaseMessaging();
+
+  FirebaseMessaging messaging = FirebaseMessaging.instance;
+
+  FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+    print('Got a message whilst in the foreground!');
+    print('Message data: ${message.data}');
+
+    if (message.notification != null) {
+      print('Message also contained a notification: ${message.notification}');
+    }
+  });
+
+  runApp(MaterialApp(
+    home: MyApp(),
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(primarySwatch: Colors.lightGreen),
+
+  ));
 }
+
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  print("Handling a background message: ${message.messageId}");
+
+}
+
+Future<bool> loadingSingleDocument() async {
+  DocumentSnapshot data = await FirebaseFirestore.instance
+      .collection('users')
+      .doc("oFJvU3CdR7Viyb7PVxzV")
+      .get();
+
+  Map<String, dynamic> map = data.data() as Map<String, dynamic>;
+
+  print('single document data=' + map['email']);
+  print('single document data=' + map['email']);
+
+  return true;
+}
+
+
+void displayNotification(RemoteMessage msg) async {
+  String title = "";
+
+  title = msg.data['offer'] ?? msg.notification?.title ?? '';
+
+  Color notificationColor = Colors.blue;
+
+  if (msg.data.containsKey("color")) {
+    if (msg.data['color'].toString().startsWith("#")) {
+      notificationColor = HexColor.fromHex(msg.data['color']);
+    } else {
+      switch (msg.data['color'].toString()) {
+        case "red":
+          notificationColor = Colors.red;
+          break;
+        case "green":
+          notificationColor = Colors.green;
+          break;
+        case "blue":
+          notificationColor = Colors.blue;
+          break;
+        case "purple":
+          notificationColor = Colors.purple;
+          break;
+      }
+    }
+  }
+
+  var flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+
+  // Set up the initialization settings
+  var initializationSettingsAndroid =
+  const AndroidInitializationSettings('kti');
+  var initializationSettings =
+  InitializationSettings(android: initializationSettingsAndroid);
+
+  await flutterLocalNotificationsPlugin.initialize(initializationSettings);
+
+
+
+}
+
+void initFirebaseMessaging() async {
+  String? token = await fcm.getToken();
+  print("token=" + token.toString());
+
+  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+
+  //let firebase handle background notification
+  NotificationSettings settings = await fcm.requestPermission(
+    alert: true,
+    badge: true,
+    sound: true,
+    provisional: false,
+    announcement: true,
+    carPlay: false,
+    criticalAlert: true,
+  );
+
+  print("user auth=" + settings.authorizationStatus.toString());
+
+  await FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+    print('Got a message whilst in the foreground!');
+    print('Message data: ${message.data}');
+
+    //Ran only when app is in foreground. firebase take's care of when app is in background.
+    displayNotification(message);
+
+    if (message.notification != null) {
+      print('Message also contained a notification: ${message.notification}');
+    }
+  });
+}
+
+
 
 class MyApp extends StatelessWidget {
   @override
@@ -22,4 +148,21 @@ class MyApp extends StatelessWidget {
       );
     });
   }
+}
+
+extension HexColor on Color {
+  /// String is in the format "aabbcc" or "ffaabbcc" with an optional leading "#".
+  static Color fromHex(String hexString) {
+    final buffer = StringBuffer();
+    if (hexString.length == 6 || hexString.length == 7) buffer.write('ff');
+    buffer.write(hexString.replaceFirst('#', ''));
+    return Color(int.parse(buffer.toString(), radix: 16));
+  }
+
+  /// Prefixes a hash sign if [leadingHashSign] is set to `true` (default is `true`).
+  String toHex({bool leadingHashSign = true}) => '${leadingHashSign ? '#' : ''}'
+      '${alpha.toRadixString(16).padLeft(2, '0')}'
+      '${red.toRadixString(16).padLeft(2, '0')}'
+      '${green.toRadixString(16).padLeft(2, '0')}'
+      '${blue.toRadixString(16).padLeft(2, '0')}';
 }

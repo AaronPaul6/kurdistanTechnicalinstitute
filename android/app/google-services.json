@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "154665055419",
+    "project_id": "kurdistantechnicalinstit-c751a",
+    "storage_bucket": "kurdistantechnicalinstit-c751a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:154665055419:android:35525a5d6ba7a55fe4a59e",
+        "android_client_info": {
+          "package_name": "com.alixumer.schoolapp.brain_school"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "154665055419-2u7pk823v0p2nrnre3tnr2osoal3onln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj1b2PmXRvYQj3Ih_lySCkneJYF6mU9-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "154665055419-2u7pk823v0p2nrnre3tnr2osoal3onln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
