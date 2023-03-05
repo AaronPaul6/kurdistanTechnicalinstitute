@@ -24,9 +24,6 @@ class LibraryGalleryState extends State<LibraryGallery> {
         centerTitle: true,
         title: Center(
             child: Container(
-              // decoration: BoxDecoration(
-              //   border: Border.all(color:Colors.black38,width: 1.0, style: BorderStyle.solid)
-              // ),
               child: Center(
                 child: Row(
                     children: [
@@ -39,12 +36,6 @@ class LibraryGalleryState extends State<LibraryGallery> {
                               fontWeight: FontWeight.bold),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
-                        child: Icon(Icons.image, size: 40.0,
-                          color: Colors.white,
-                        ),
-                      )
                     ]
                 ),
               ),

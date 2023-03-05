@@ -7,8 +7,7 @@ import 'package:brain_school/screens/why_kti/why_kti.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
-import '../news_screen/news.dart';
-import 'widgets/student_data.dart';
+// import '../news_screen/news.dart';
 import 'package:brain_school/screens/Q&A//Q&A.dart';
 import 'package:brain_school/screens/about_us/about_us.dart';
 import 'package:brain_school/screens/Contactus/contact.dart';
@@ -36,8 +35,11 @@ class HomeScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        StudentName(
-                          studentName: 'WELCOME TO KTI',
+                        Text(
+                          'WELCOME TO KTI',
+                          textAlign: TextAlign.center,
+                          overflow: TextOverflow.ellipsis,
+                          style: Theme.of(context).textTheme.titleMedium,
                         ),
                         SizedBox(
                           width: 10,
@@ -228,7 +230,7 @@ class HomeCard extends StatelessWidget {
                   Text(
                     title,
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.subtitle2,
+                    style: Theme.of(context).textTheme.titleSmall,
                   ),
                 ],
               ),

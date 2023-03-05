@@ -56,12 +56,6 @@ class PhotoGalleryState extends State<PhotoGallery> {
                               fontWeight: FontWeight.bold),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
-                        child: Icon(Icons.image, size: 30.0,
-                          color: Colors.white,
-                        ),
-                      )
                     ]
                 ),
               ),

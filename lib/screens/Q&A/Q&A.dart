@@ -39,11 +39,6 @@ class _QA extends State<QA> {
             child: Column(
               children: [
                 // SizedBox(height: 30),
-                Row(
-                  children: [
-                    Text(""),
-                  ],
-                ),
                 SingleChildScrollView(
                   scrollDirection: Axis.vertical,
                   child: Column(children: [

@@ -35,12 +35,6 @@ class CafeGalleryState extends State<CafeGallery> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        Container(
-                          margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
-                          child: Icon(Icons.image, size: 40.0,
-                            color: Colors.white,
-                          ),
-                        )
                       ]
                   ),
                 ),
