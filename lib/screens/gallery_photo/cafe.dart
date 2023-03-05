@@ -1,36 +1,20 @@
 import 'package:brain_school/constants.dart';
-import 'package:brain_school/screens/my_profile/my_profile.dart';
-import 'package:fancy_avatar/fancy_avatar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:sizer/sizer.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-// import 'package:brain_school/components/custom_buttons.dart';
-import 'package:brain_school/constants.dart';
-import 'package:brain_school/screens/home_screen/home_screen.dart';
-import 'package:sizer/sizer.dart';
-
 
 class CafeGallery extends StatefulWidget {
   static String routeName = 'CafeGallery';
 
   @override
   CafeGalleryState createState() => CafeGalleryState();
-
 }
-
 
 class CafeGalleryState extends State<CafeGallery> {
   final _formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -39,9 +23,6 @@ class CafeGalleryState extends State<CafeGallery> {
           centerTitle: true,
           title: Center(
               child: Container(
-                // decoration: BoxDecoration(
-                //   border: Border.all(color:Colors.black38,width: 1.0, style: BorderStyle.solid)
-                // ),
                 child: Center(
                   child: Row(
                       children: [
@@ -87,9 +68,9 @@ class CafeGalleryState extends State<CafeGallery> {
             itemCount: images.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                crossAxisSpacing: 8.0,
-                mainAxisSpacing: 8.0,
-                mainAxisExtent: 155.0
+                crossAxisSpacing: 18.0,
+                mainAxisSpacing: 18.0,
+                mainAxisExtent: 175.0
 
             ),
             itemBuilder: (BuildContext context, int index) {
@@ -111,7 +92,6 @@ class CafeGalleryState extends State<CafeGallery> {
                         image: AssetImage(images[index])
                     ),
                   ),
-
                 ),
               );
             },

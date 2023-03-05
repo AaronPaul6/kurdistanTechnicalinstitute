@@ -80,8 +80,11 @@ class HomeScreen extends StatelessWidget {
                             title: 'About Us',
                           ),
                           HomeCard(
+                            // onPress: () {
+                            //   Navigator.pushNamed(context, News.routeName);
+                            // },
                             onPress: () {
-                              Navigator.pushNamed(context, News.routeName);
+                              launch('http://kti.edu.iq/archives/author/hashm');
                             },
                             icon: 'assets/icons/event.svg',
                             title: 'News',

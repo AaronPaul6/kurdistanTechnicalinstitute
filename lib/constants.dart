@@ -47,10 +47,8 @@ final kBottomBorderRadius = BorderRadius.only(
 final kInputTextStyle = GoogleFonts.poppins(
     color: kTextBlackColor, fontSize: 11.sp, fontWeight: FontWeight.w500);
 
-//validation for mobile
 const String mobilePattern = r'(^(?:[+0]9)?[0-9]{10,12}$)';
 
-//validation for email
 const String emailPattern =
     r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
 
@@ -62,8 +60,8 @@ Widget StoryEffect(
     child: FancyAvatar(
       radius: 50.sp,
       avatarBackgroundColor: kPrimaryColor,
-      ringWidth: 5,
-      spaceWidth: 5,
+      ringWidth: 4,
+      spaceWidth: 3,
       elevation: 5,
       innerRingColor: kPrimaryColor,
       userImage: image,

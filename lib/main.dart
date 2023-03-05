@@ -6,7 +6,6 @@ import 'package:sizer/sizer.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
@@ -44,21 +43,6 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 
 }
 
-// Future<bool> loadingSingleDocument() async {
-//   DocumentSnapshot data = await FirebaseFirestore.instance
-//       .collection('users')
-//       .doc("oFJvU3CdR7Viyb7PVxzV")
-//       .get();
-//
-//   Map<String, dynamic> map = data.data() as Map<String, dynamic>;
-//
-//   print('single document data=' + map['email']);
-//   print('single document data=' + map['email']);
-//
-//   return true;
-// }
-
-
 void displayNotification(RemoteMessage msg) async {
   String title = "";
 
@@ -89,16 +73,12 @@ void displayNotification(RemoteMessage msg) async {
 
   var flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
-  // Set up the initialization settings
   var initializationSettingsAndroid =
   const AndroidInitializationSettings('kti');
   var initializationSettings =
   InitializationSettings(android: initializationSettingsAndroid);
 
   await flutterLocalNotificationsPlugin.initialize(initializationSettings);
-
-
-
 }
 
 void initFirebaseMessaging() async {
@@ -107,7 +87,6 @@ void initFirebaseMessaging() async {
 
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
 
-  //let firebase handle background notification
   NotificationSettings settings = await fcm.requestPermission(
     alert: true,
     badge: true,

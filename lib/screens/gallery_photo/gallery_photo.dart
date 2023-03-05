@@ -58,7 +58,7 @@ class PhotoGalleryState extends State<PhotoGallery> {
                       ),
                       Container(
                         margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
-                        child: Icon(Icons.image, size: 40.0,
+                        child: Icon(Icons.image, size: 30.0,
                           color: Colors.white,
                         ),
                       )
@@ -83,14 +83,14 @@ class PhotoGalleryState extends State<PhotoGallery> {
 
       ),
       body: Container(
-        padding: EdgeInsets.all(15.0),
+        padding: EdgeInsets.all(10.0),
         child: GridView.builder(
           itemCount: routes.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 18.0,
+              crossAxisCount: 1,
+              crossAxisSpacing: 8.0,
               mainAxisSpacing: 8.0,
-            mainAxisExtent: 195.0
+            mainAxisExtent: 155.0
 
           ),
           itemBuilder: (BuildContext context, int index) {

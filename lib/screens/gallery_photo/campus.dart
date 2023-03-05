@@ -1,24 +1,12 @@
 import 'package:brain_school/constants.dart';
-import 'package:brain_school/screens/my_profile/my_profile.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:sizer/sizer.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-// import 'package:brain_school/components/custom_buttons.dart';
-import 'package:brain_school/constants.dart';
-import 'package:brain_school/screens/home_screen/home_screen.dart';
-import 'package:sizer/sizer.dart';
-
 
 class CampusGallery extends StatefulWidget {
   static String routeName = 'CampusGallery';
 
   @override
   CampusGalleryState createState() => CampusGalleryState();
-
 }
-
 
 class CampusGalleryState extends State<CampusGallery> {
   final _formKey = GlobalKey<FormState>();
@@ -36,9 +24,6 @@ class CampusGalleryState extends State<CampusGallery> {
         centerTitle: true,
         title: Center(
             child: Container(
-              // decoration: BoxDecoration(
-              //   border: Border.all(color:Colors.black38,width: 1.0, style: BorderStyle.solid)
-              // ),
               child: Center(
                 child: Row(
                     children: [
@@ -84,9 +69,9 @@ class CampusGalleryState extends State<CampusGallery> {
           itemCount: images.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              crossAxisSpacing: 8.0,
-              mainAxisSpacing: 8.0,
-              mainAxisExtent: 155.0
+              crossAxisSpacing: 18.0,
+              mainAxisSpacing: 18.0,
+              mainAxisExtent: 175.0
 
           ),
           itemBuilder: (BuildContext context, int index) {
