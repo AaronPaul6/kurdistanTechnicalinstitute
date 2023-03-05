@@ -1,5 +1,5 @@
-import 'package:brain_school/screens/home_screen/home_screen.dart';
-import 'package:brain_school/screens/login_screen/login_screen.dart';
+import 'package:arya_kti/screens/home_screen/home_screen.dart';
+import 'package:arya_kti/screens/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 

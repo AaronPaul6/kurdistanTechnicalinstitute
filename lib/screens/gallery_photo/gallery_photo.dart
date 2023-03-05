@@ -1,10 +1,10 @@
-import 'package:brain_school/constants.dart';
+import 'package:arya_kti/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:brain_school/screens/home_screen/home_screen.dart';
-import 'package:brain_school/screens/gallery_photo/cafe.dart';
-import 'package:brain_school/screens/gallery_photo/campus.dart';
-import 'package:brain_school/screens/gallery_photo/car_park.dart';
-import 'package:brain_school/screens/gallery_photo/library.dart';
+import 'package:arya_kti/screens/home_screen/home_screen.dart';
+import 'package:arya_kti/screens/gallery_photo/cafe.dart';
+import 'package:arya_kti/screens/gallery_photo/campus.dart';
+import 'package:arya_kti/screens/gallery_photo/car_park.dart';
+import 'package:arya_kti/screens/gallery_photo/library.dart';
 
 String cafe_route = CafeGallery.routeName;
 String campus_route = CampusGallery.routeName;

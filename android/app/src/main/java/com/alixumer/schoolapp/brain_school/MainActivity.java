@@ -1,4 +1,4 @@
-package com.alixumer.schoolapp.brain_school;
+package com.arya.kti;
 
 import io.flutter.embedding.android.FlutterActivity;
 

@@ -1,7 +1,7 @@
-import 'package:brain_school/components/custom_buttons.dart';
-import 'package:brain_school/constants.dart';
-import 'package:brain_school/screens/home_screen/home_screen.dart';
-import 'package:brain_school/screens/signup/signup.dart';
+import 'package:arya_kti/components/custom_buttons.dart';
+import 'package:arya_kti/constants.dart';
+import 'package:arya_kti/screens/home_screen/home_screen.dart';
+import 'package:arya_kti/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 

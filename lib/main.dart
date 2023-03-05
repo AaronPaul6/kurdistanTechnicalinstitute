@@ -1,6 +1,6 @@
-import 'package:brain_school/routes.dart';
-import 'package:brain_school/screens/splash_screen/splash_screen.dart';
-import 'package:brain_school/theme.dart';
+import 'package:arya_kti/routes.dart';
+import 'package:arya_kti/screens/splash_screen/splash_screen.dart';
+import 'package:arya_kti/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:firebase_core/firebase_core.dart';

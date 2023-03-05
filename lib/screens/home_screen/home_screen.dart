@@ -1,17 +1,17 @@
-import 'package:brain_school/constants.dart';
-import 'package:brain_school/screens/Departments/Departments.dart';
-import 'package:brain_school/screens/Calender/Calender.dart';
-import 'package:brain_school/screens/gallery_photo/gallery_photo.dart';
-import 'package:brain_school/screens/gallery_video/gallery_video.dart';
-import 'package:brain_school/screens/why_kti/why_kti.dart';
+import 'package:arya_kti/constants.dart';
+import 'package:arya_kti/screens/Departments/Departments.dart';
+import 'package:arya_kti/screens/Calender/Calender.dart';
+import 'package:arya_kti/screens/gallery_photo/gallery_photo.dart';
+import 'package:arya_kti/screens/gallery_video/gallery_video.dart';
+import 'package:arya_kti/screens/why_kti/why_kti.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 // import '../news_screen/news.dart';
-import 'package:brain_school/screens/Q&A//Q&A.dart';
-import 'package:brain_school/screens/about_us/about_us.dart';
-import 'package:brain_school/screens/Contactus/contact.dart';
-import 'package:brain_school/screens/my_profile/my_profile.dart';
+import 'package:arya_kti/screens/Q&A//Q&A.dart';
+import 'package:arya_kti/screens/about_us/about_us.dart';
+import 'package:arya_kti/screens/Contactus/contact.dart';
+import 'package:arya_kti/screens/my_profile/my_profile.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

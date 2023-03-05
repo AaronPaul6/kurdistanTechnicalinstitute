@@ -1,4 +1,4 @@
-import 'package:brain_school/constants.dart';
+import 'package:arya_kti/constants.dart';
 import 'package:flutter/material.dart';
 
 class CafeGallery extends StatefulWidget {

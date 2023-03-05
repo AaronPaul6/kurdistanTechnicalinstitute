@@ -1,7 +1,7 @@
-import 'package:brain_school/constants.dart';
+import 'package:arya_kti/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:brain_school/components/custom_buttons.dart';
+import 'package:arya_kti/components/custom_buttons.dart';
 
 class signup extends StatefulWidget {
   static String routeName = 'signup';
