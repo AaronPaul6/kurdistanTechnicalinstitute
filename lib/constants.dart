@@ -69,22 +69,3 @@ Widget StoryEffect(
     ),
   );
 }
-
-/*Widget StoryEffect({required Widget child, List<Color>? colors}) {
-  return Container(
-    padding: EdgeInsets.all(5),
-    decoration: BoxDecoration(
-        color: Colors.white,
-        gradient: LinearGradient(
-          transform: GradientRotation(45),
-          colors: colors ?? [Colors.red, Colors.white],
-        ),
-        borderRadius: BorderRadius.circular(200)),
-    child: Container(
-      child: child,
-      padding: EdgeInsets.all(5),
-      decoration: BoxDecoration(
-          color: kPrimaryColor, borderRadius: BorderRadius.circular(200)),
-    ),
-  );
-}*/

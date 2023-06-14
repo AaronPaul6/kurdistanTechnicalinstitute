@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:arya_kti/components/custom_buttons.dart';
 
+import '../login_screen/login_screen.dart';
 class signup extends StatefulWidget {
   static String routeName = 'signup';
 
@@ -56,22 +57,18 @@ class _signup extends State<signup> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text('WELCOME TO',
+                    Text('Create An Account',
                         style: Theme.of(context).textTheme.subtitle1),
-                    Text('Kurdistan Technical Institute',
-                        style: Theme.of(context).textTheme.subtitle2),
+
                     sizedBox,
                   ],
                 ),
                 Image.asset(
-                  'assets/images/logo.png',
-                  height: 40.h,
-                  width: 30.w,
+                  'assets/images/temp.jpg',
+                  height: 60.h,
+                  width: 40.w,
                 ),
-                SizedBox(
-                  height: kDefaultPadding / 2,
-                ),
-              ],
+               ],
             ),
           ),
           Expanded(
@@ -85,17 +82,21 @@ class _signup extends State<signup> {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      // color: kOtherColor,
                       sizedBox,
-                      // buildEmailField(),
                       sizedBox,
-                      // buildPasswordField(),
+                      buildNameField(),
+                      sizedBox,
+                      buildEmailField(),
+                      sizedBox,
+                      buildPasswordField(),
+                      sizedBox,
+
                       sizedBox,
 
                       DefaultButton(
                         //signup
                         onPress: () {
-                          Navigator.pushNamed(context, signup.routeName);
+                          Navigator.pushNamed(context, LoginScreen.routeName);
                         },
                         title: 'Signup',
 
@@ -112,4 +113,72 @@ class _signup extends State<signup> {
       ),
     );
   }
+
+  TextFormField buildNameField() {
+    return TextFormField(
+      textAlign: TextAlign.start,
+      keyboardType: TextInputType.emailAddress,
+      style: kInputTextStyle,
+
+      decoration: InputDecoration(
+        labelText: 'USERNAME',
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+      ),
+      validator: (value) {
+        //for validation
+        RegExp regExp = new RegExp(emailPattern);
+        if (value == null || value.isEmpty) {
+          return 'Please enter some text';
+          //if it does not matches the pattern, like
+          //it not contains @
+        } else if (!regExp.hasMatch(value)) {
+          return 'Please enter a valid email address';
+        }
+      },
+    );
+  }
+
+  TextFormField buildEmailField() {
+    return TextFormField(
+      textAlign: TextAlign.start,
+      keyboardType: TextInputType.emailAddress,
+      style: kInputTextStyle,
+
+      decoration: InputDecoration(
+        labelText: 'EMAIL',
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+      ),
+      validator: (value) {
+        //for validation
+        RegExp regExp = new RegExp(emailPattern);
+        if (value == null || value.isEmpty) {
+          return 'Please enter some text';
+          //if it does not matches the pattern, like
+          //it not contains @
+        } else if (!regExp.hasMatch(value)) {
+          return 'Please enter a valid email address';
+        }
+      },
+    );
+  }
+
+  TextFormField buildPasswordField() {
+    return TextFormField(
+
+      textAlign: TextAlign.start,
+
+      style: kInputTextStyle,
+      decoration: InputDecoration(
+        labelText: 'PASSWORD',
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+
+      ),
+      validator: (value) {
+        if (value!.length < 5) {
+          return 'Must be more than 5 characters';
+        }
+      },
+    );
+  }
+
 }

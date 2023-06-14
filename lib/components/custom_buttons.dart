@@ -21,17 +21,13 @@ class DefaultButton extends StatelessWidget {
         onTap: onPress,
         child: Ink(
           padding: EdgeInsets.only(right: kDefaultPadding),
-          width: 100.w,
-          height: SizerUtil.deviceType == DeviceType.tablet ? 9.h : 7.h,
+          width: 79.w,
+          height: SizerUtil.deviceType == DeviceType.tablet ? 7.h : 7.4.h,
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [kSecondaryColor, kPrimaryColor],
-                begin: const FractionalOffset(0.0, 0.0),
-                end: const FractionalOffset(0.5, 0.0),
-                stops: [0.0, 1.0],
-                tileMode: TileMode.clamp,
+                colors: [kPrimaryColor, kPrimaryColor],
               ),
-              borderRadius: BorderRadius.circular(kDefaultPadding)),
+              borderRadius: BorderRadius.circular(15)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -40,7 +36,7 @@ class DefaultButton extends StatelessWidget {
               Spacer(),
               Icon(
                 iconData,
-                size: 26.sp,
+                size: 20.sp,
                 color: kOtherColor,
               )
             ],

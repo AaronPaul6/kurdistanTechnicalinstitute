@@ -4,6 +4,7 @@ import 'package:arya_kti/screens/Calender/Calender.dart';
 import 'package:arya_kti/screens/gallery_photo/gallery_photo.dart';
 import 'package:arya_kti/screens/gallery_video/gallery_video.dart';
 import 'package:arya_kti/screens/why_kti/why_kti.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
@@ -15,9 +16,14 @@ import 'package:arya_kti/screens/my_profile/my_profile.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../login_screen/login_screen.dart';
+
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  // const HomeScreen({Key? key}) : super(key: key);
   static String routeName = 'HomeScreen';
+
+
+  final user = FirebaseAuth.instance.currentUser!;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +42,8 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Text(
-                          'WELCOME TO KTI',
+                          'Welcome '+user.email!,
+
                           textAlign: TextAlign.center,
                           overflow: TextOverflow.ellipsis,
                           style: Theme.of(context).textTheme.titleMedium,
@@ -46,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         StoryEffect(
                           color: Colors.orangeAccent,
-                          image: Image.asset('assets/images/logo.jpg'),
+                          image: Image.asset('assets/images/temp.jpg'),
                           onPress: () {
                             Navigator.pushNamed(context, MyProfileScreen.routeName);
                           },
@@ -127,7 +134,7 @@ class HomeScreen extends StatelessWidget {
                               Navigator.pushNamed(context, WhyKti.routeName);
                             },
                             icon: 'assets/icons/why.svg',
-                            title: 'Why KTI?',
+                            title: 'Why US!',
                           ),
                         ],
                       ),
@@ -168,6 +175,19 @@ class HomeScreen extends StatelessWidget {
                             },
                             icon: 'assets/icons/video_1.svg',
                             title: 'Video Gallery',
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          HomeCard(
+                            onPress: () {
+                              // Navigator.pushNamed(context, LoginScreen.routeName);
+                              FirebaseAuth.instance.signOut();
+                            },
+                            icon: 'assets/icons/logout.svg',
+                            title: 'LogOut',
                           ),
                         ],
                       ),

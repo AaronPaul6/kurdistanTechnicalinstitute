@@ -1,11 +1,10 @@
-import 'package:arya_kti/components/custom_buttons.dart';
 import 'package:arya_kti/constants.dart';
-import 'package:arya_kti/screens/home_screen/home_screen.dart';
 import 'package:arya_kti/screens/signup/signup.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-late bool _passwordVisible;
+import '../../components/custom_buttons.dart';
 
 class LoginScreen extends StatefulWidget {
   static String routeName = 'LoginScreen';
@@ -15,15 +14,22 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  //validate our form now
-  final _formKey = GlobalKey<FormState>();
 
-  //changes current state
-  @override
-  void initState() {
-    super.initState();
-    _passwordVisible = true;
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  Future signIn() async{
+    await FirebaseAuth.instance.signInWithEmailAndPassword(email: _emailController.text.trim(), password: _passwordController.text.trim(),);
   }
+
+  @override
+  void dispose(){
+    super.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+  }
+
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -42,20 +48,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('WELCOME TO'),
-                      Text('Kurdistan Technical Institute',
-                          style: Theme.of(context).textTheme.subtitle2),
-                      sizedBox,
+                      Text('UNIVERSITY'),
+                      Text('MOBILE'),
+                      Text('APPLICATION'),
                     ],
                   ),
-                  Image.asset(
-                    'assets/images/logo.png',
-                    height: 40.h,
-                    width: 30.w,
-                  ),
-                  SizedBox(
-                    height: kDefaultPadding / 2,
-                  ),
+                  // Image.asset(
+                  //   'assets/images/temp.jpg',
+                  //   height: 100.h,
+                  //   width: 50.w,
+                  // ),
+                  // SizedBox(
+                  //   height: kDefaultPadding / 2,
+                  // ),
                 ],
               ),
             ),
@@ -63,57 +68,112 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Container(
                 padding: EdgeInsets.only(left: 6.w, right: 6.w),
                 decoration: BoxDecoration(
-                  color: kOtherColor,
+                  color: Colors.white,
                 ),
                 child: Form(
                   key: _formKey,
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        // color: kOtherColor,
-                        sizedBox,
-                        buildEmailField(),
-                        sizedBox,
-                        buildPasswordField(),
-                        sizedBox,
-                        Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Text(
-                            'Forgot Password',
-                            textAlign: TextAlign.center,
-                            style: Theme.of(context)
-                                .textTheme
-                                .subtitle2!
-                                .copyWith(
-                                    color: Colors.blueGrey,
-                                    fontWeight: FontWeight.w500),
+
+                        SizedBox(
+                          height: 60,
+                        ),
+
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Color(0xFF345FB4),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 15),
+                              child: TextField(
+                                controller: _emailController,
+                                decoration: InputDecoration(
+                                  border: InputBorder.none,
+                                  hintText: 'Enter Email Address',
+                                  hintStyle: TextStyle(color: Colors.white, fontSize: 15),
+                                ),
+                              ),
+                            ),
                           ),
                         ),
-                        sizedBox,
 
-                        DefaultButton(
-                          //login
-                          onPress: () {
-                            if (_formKey.currentState!.validate()) {
-                              Navigator.pushNamedAndRemoveUntil(context,
-                                  HomeScreen.routeName, (route) => false);
-                            }
-                          },
-                          title: 'LOGIN',
-                          iconData: Icons.arrow_forward_outlined,
+                        SizedBox(
+                          height: 40,
                         ),
-                        sizedBox,
+
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Color(0xFF345FB4),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 15),
+                              child: TextField(
+                                controller: _passwordController,
+                                obscureText: true,
+                                decoration: InputDecoration(
+                                  border: InputBorder.none,
+                                  hintText: 'Enter Password',
+                                  hintStyle: TextStyle(color: Colors.white, fontSize: 15),
+
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(
+                          height: 60,
+                        ),
+
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: GestureDetector(
+                            onTap: signIn,
+                            child: Container(
+                              padding: EdgeInsets.all(16),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: Color(0xFF345FB4)),
+                              child: Center(child:
+                              Text('Sign In',)),
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(
+                          height: 60,
+                        ),
+
+                        Row(
+
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('Dont Have An Account? ',
+                                style: TextStyle(color: Colors.black, fontSize: 19)),
+                          ],
+                        ),
+
+                        SizedBox(
+                          height: 10,
+                        ),
 
                         DefaultButton(
                           //signup
                           onPress: () {
                             Navigator.pushNamed(context, signup.routeName);
+                            Navigator.pushNamed(context, 'signup');
                           },
                           title: 'Signup',
-
                           iconData: Icons.person_add,
                         ),
-                        sizedBox,
+
                       ],
                     ),
                   ),
@@ -126,59 +186,9 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  TextFormField buildEmailField() {
-    return TextFormField(
-      textAlign: TextAlign.start,
-      keyboardType: TextInputType.emailAddress,
-      style: kInputTextStyle,
-      initialValue: 'hax@mail.com',
-      decoration: InputDecoration(
-        labelText: 'Mobile Number/Email',
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-      ),
-      validator: (value) {
-        //for validation
-        RegExp regExp = new RegExp(emailPattern);
-        if (value == null || value.isEmpty) {
-          return 'Please enter some text';
-          //if it does not matches the pattern, like
-          //it not contains @
-        } else if (!regExp.hasMatch(value)) {
-          return 'Please enter a valid email address';
-        }
-      },
-    );
   }
 
-  TextFormField buildPasswordField() {
-    return TextFormField(
-      obscureText: _passwordVisible,
-      textAlign: TextAlign.start,
-      initialValue: '123456789',
-      keyboardType: TextInputType.visiblePassword,
-      style: kInputTextStyle,
-      decoration: InputDecoration(
-        labelText: 'Password',
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: IconButton(
-          onPressed: () {
-            setState(() {
-              _passwordVisible = !_passwordVisible;
-            });
-          },
-          icon: Icon(
-            _passwordVisible
-                ? Icons.visibility_off_outlined
-                : Icons.visibility_off_outlined,
-          ),
-          iconSize: kDefaultPadding,
-        ),
-      ),
-      validator: (value) {
-        if (value!.length < 5) {
-          return 'Must be more than 5 characters';
-        }
-      },
-    );
-  }
-}
+
+
+
+
