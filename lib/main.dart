@@ -4,22 +4,21 @@ import 'package:arya_kti/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
+// import 'firebase_options.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
+import 'auth.dart';
+
 final FirebaseAuth fba = FirebaseAuth.instance;
 final FirebaseMessaging fcm = FirebaseMessaging.instance;
-late List<User> users = [];
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
   initFirebaseMessaging();
-
-  FirebaseMessaging messaging = FirebaseMessaging.instance;
 
   FirebaseMessaging.onMessage.listen((RemoteMessage message) {
     print('Got a message whilst in the foreground!');
@@ -44,32 +43,6 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 }
 
 void displayNotification(RemoteMessage msg) async {
-  String title = "";
-
-  title = msg.data['offer'] ?? msg.notification?.title ?? '';
-
-  Color notificationColor = Colors.blue;
-
-  if (msg.data.containsKey("color")) {
-    if (msg.data['color'].toString().startsWith("#")) {
-      notificationColor = HexColor.fromHex(msg.data['color']);
-    } else {
-      switch (msg.data['color'].toString()) {
-        case "red":
-          notificationColor = Colors.red;
-          break;
-        case "green":
-          notificationColor = Colors.green;
-          break;
-        case "blue":
-          notificationColor = Colors.blue;
-          break;
-        case "purple":
-          notificationColor = Colors.purple;
-          break;
-      }
-    }
-  }
 
   var flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
@@ -122,8 +95,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'KTI',
         theme: CustomTheme().baseTheme,
-        initialRoute: SplashScreen.routeName,
-        routes: routes,
+        // initialRoute: SplashScreen.routeName,
+        // routes: routes,
+        home: Auth(),
       );
     });
   }

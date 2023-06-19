@@ -65,7 +65,7 @@ class contact extends StatelessWidget {
             ),
             Center(
                 child: Image.asset(
-              'assets/images/logo.png',
+              'assets/images/temp.jpg',
               height: 250,
             )),
             const Text(
